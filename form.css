@@ -1,0 +1,54 @@
+/* Form Container */
+form#editForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: none;
+    background-color:  rgb(236, 204, 204);
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    left: 20px; /* Align form to the left */
+    font-family: monospace;
+    font-size: 16px;
+}
+
+/* Form Labels */
+form#editForm label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Inputs */
+form#editForm input[type="text"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+/* Submit Button */
+form#editForm button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: hotpink;
+    color: white;
+    font-size: 2.2vh;
+    font-family: monospace;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Submit Button Hover Effect */
+form#editForm button[type="submit"]:hover {
+    background-color: black;
+}

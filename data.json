@@ -1,0 +1,81 @@
+{
+    "people": [
+        {
+            "id": "1",
+            "firstName": "John",
+            "middleName": "",
+            "familyName": "Doe",
+            "gender": "male",
+            "birthday": "1970-01-01",
+            "mother": "",
+            "father": "",
+            "spouse": "2"
+        },
+        {
+            "id": "2",
+            "firstName": "Emily",
+            "middleName": "",
+            "familyName": "Doe",
+            "gender": "female",
+            "birthday": "1975-05-10",
+            "mother": "",
+            "father": "",
+            "spouse": "1"
+        },
+        {
+            "id": "3",
+            "firstName": "Sophia",
+            "middleName": "",
+            "familyName": "Smith",
+            "gender": "female",
+            "birthday": "1994-12-25",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+        },
+        {
+            "id": "4",
+            "firstName": "Johnny",
+            "middleName": "",
+            "familyName": "Smith",
+            "gender": "other",
+            "birthday": "1993-12-25",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+        },
+        {
+            "id": "5",
+            "firstName": "Billy",
+            "middleName": "",
+            "familyName": "Smith",
+            "gender": "male",
+            "birthday": "1990-12-25",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+        },
+        {
+            "id": "5",
+            "firstName": "Boo",
+            "middleName": "",
+            "familyName": "Smith",
+            "gender": "other",
+            "birthday": "1993-12-25",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+        },
+        {
+            "id": "6",
+            "firstName": "BradThing",
+            "middleName": "",
+            "familyName": "Smith",
+            "gender": "male",
+            "birthday": "1990-12-25",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+        }
+    ]
+}
