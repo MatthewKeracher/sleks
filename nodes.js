@@ -1,26 +1,80 @@
-export function addEgo(ego){
+export function returnRect(id){
+
+const div = document.getElementById(id);
+const divRect = div.getClientRects();
+return divRect[0];
+
+}
+
+// Function to calculate the midpoint of a line
+export function calculateMidpoint(x1, y1, x2, y2) {
+    const xMid = (x1 + x2) / 2;
+    const yMid = (y1 + y2) / 2;
+    return { xMid, yMid };
+}
+
+
+
+export function addEgo(people){
+
+let egos = [];
+let familyX = [];
+let currentX = 20;
+
+const peopleByAge = people.sort((a, b) => {
+return a.birthyear - b.birthyear;
+});
+
+peopleByAge.forEach(ego =>{
+
 //Add Ego
 const treeContainer = document.getElementById("tree");
-treeContainer.innerHTML = '';
+const yearCheck = egos.filter(person => person.birthyear === ego.birthyear).length;
 
-//Add Branch Container
-const branch = document.createElement("div");
-branch.classList.add('branch');
-branch.setAttribute('id', 'branch');
-branch.style.top = '35vh';
-branch.style.left = '55vh';
-branch.style.width = '22vw';
-treeContainer.appendChild(branch);
+//Is oldest person with the familyName; set familyX.
+const family = people.filter(person => person.familyName === ego.familyName);
+const sortByAge = family.sort((a, b) => {
+return a.birthyear - b.birthyear;
+});
 
-//Add Ego to Branch
+let isElder = sortByAge[0] === ego? true:false;
+
+//Add Node Container
 const node = document.createElement("div");
-node.classList.add("node");
-node.textContent = `${ego.firstName} ${ego.familyName}`;
+const nodeWidth = 8;
+
+//Determine XY for Node Position
+const yearRect = returnRect(ego.birthyear);
+const nodeY = yearRect.top;
+let nodeX = '';
+
+if(isElder){
+currentX = currentX + (nodeWidth * 3)
+familyX.push({name: ego.familyName, x: currentX});
+nodeX = currentX}
+else{
+const familyEntry = familyX.find(entry => entry.name === ego.familyName);
+nodeX = familyEntry.x
+};
+
+node.classList.add('node');
 node.setAttribute('id', ego.id);
-node.style.top = '10vh';
-node.style.left = '3vh';
-node.style.width = '10vh';
-branch.appendChild(node);
+node.style.top = nodeY + 'px';
+node.style.left = nodeX + (yearCheck * (nodeWidth * 2)) + 'vw'
+node.style.width = nodeWidth + 'vw';
+treeContainer.appendChild(node);
+
+egos.push(ego);
+
+
+//Add Name to Node
+const name = document.createElement("div");
+name.classList.add("name");
+name.textContent = `${ego.firstName} ${ego.familyName}`;
+name.setAttribute('id', ego.id);
+name.style.top = '8vh';
+name.style.width = nodeWidth + 'vw';
+node.appendChild(name);
 
 //Add Shape
 let shape = '';
@@ -35,161 +89,133 @@ const egoShape = document.createElement("div");
 egoShape.classList.add(shape);
 node.appendChild(egoShape);
 
+})
 };
 
-export function addSpouse(ego, people){
+export function addSpouse(people){
+
+let spouses = [];
+let marriedPeople = people.filter(person => person.spouse !== "");
+
+marriedPeople.forEach(ego =>{
+
+const isSpouse = spouses.find(spouse => spouse.id === ego.id);
+
+if(isSpouse === undefined){
 
 //get Spouse
-const spouse = findPersonById(people, ego.spouse)
-console.log(spouse)
+const spouse = findPersonById(people, ego.spouse);
+const spouseNode = document.getElementById(spouse.id);
 
-//add Spouse
-const container = document.getElementById("branch");
-const node = document.createElement("div");
-node.classList.add("node");
-node.textContent = `${spouse.firstName} ${spouse.familyName}`;
-node.setAttribute('id', spouse.id);
-node.style.top = '10vh';
-node.style.left = '20vh';
-container.appendChild(node);
+// //move spouseNode
+// const spouseRect = returnRect(spouse.id);
+// spouseNode.style.left = spouseRect.left + 250 + 'px'
+spouses.push(spouse)
 
-//add Shape
-let shape = '';
+// Add spousal connection
+const line = document.createElement('div');
+line.classList.add('marriageLine');
 
-if(spouse.gender === "male"){
-shape = "triangle"}
-else if (spouse.gender === "female"){
-shape = "circle"}
-else { shape = "square"};
+// Get bounding rectangles again after moving spouseNode
+const spouseRect1 = returnRect(ego.id);
+const spouseRect2 = returnRect(spouse.id);
 
-const spouseShape = document.createElement("div");
-spouseShape.classList.add(shape);
-node.appendChild(spouseShape);
+const x1 = spouseRect1.left + spouseRect1.width / 2 + window.scrollX;
+const y1 = spouseRect1.top + spouseRect1.height / 2 + window.scrollY;
+const x2 = spouseRect2.left + spouseRect2.width / 2 + window.scrollX;
+const y2 = spouseRect2.top + spouseRect2.height / 2 + window.scrollY;
 
-//add Connector
-const marriage = document.createElement("div");
-marriage.classList.add("married");
-marriage.setAttribute('id', 'marriage');
-marriage.textContent = '=';
-marriage.style.top = '5vh';
-marriage.style.left = '15vh';
-container.appendChild(marriage);
-};
 
-export function addChildren(ego,people){
+const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
 
-//find Children
-const children = people.filter(child => child.mother === ego.id ||
-child.father === ego.id);
-console.log(ego.id, children)
-
-//sort Children
-const sortedChildren = children.sort((a, b) => {
-return new Date(a.birthday).getFullYear() - new Date(b.birthday).getFullYear();
-});
+line.style.width = `${length}px`;
+line.style.transform = `rotate(${angle}deg)`;
+line.style.top = `${y1}px`;
+line.style.left = `${x1}px`;
 
 const treeContainer = document.getElementById("tree");
-const parentContainer = document.getElementById("branch");
-const marriage = document.getElementById("marriage").getClientRects();
+treeContainer.appendChild(line);
 
-//Add Branch Container
-const branch = document.createElement("div");
-branch.classList.add('branch');
-branch.setAttribute('id', 'branch2');
-branch.style.top = '55vh';
-branch.style.left = parentContainer.style.left;
-branch.style.width = children.length * 10 + 'vw';
-treeContainer.appendChild(branch);
+// Calculate and return the midpoint
+const midpoint = calculateMidpoint(x1, y1, x2, y2);
 
-const container = document.getElementById("branch2");
-
-//add Parent Connector
-const pLine = document.createElement("div");
-pLine.classList.add("line");
-//pLine.style.top = (lineY + 1) + 'px';
-pLine.style.left = marriage[0].left + 14 + 'px'; // bisect '='
-pLine.style.width = 4 + 'px';
-pLine.style.top = marriage[0].bottom + 'px'; // stem from '='
-pLine.style.height = '115px'
-
-container.appendChild(pLine);
+addChildren(midpoint, ego, people);
+}
 
 
-sortedChildren.forEach((child, index) => {
-
-//Add Child
-const node = document.createElement("div");
-node.classList.add("node");
-node.textContent = `${child.firstName} ${child.familyName}`;
-node.setAttribute('id', child.id);
-node.style.top = '10vh';
-node.style.left = (index * 12) + 'vw';
-container.appendChild(node);
-
-//Add Shape
-let shape = '';
-
-if(child.gender === "male"){
-shape = "triangle"}
-else if (child.gender === "female"){
-shape = "circle"}
-else { shape = "square"};
-
-const egoShape = document.createElement("div");
-egoShape.setAttribute('id', 'Child' + (index + 1))
-egoShape.classList.add(shape);
-node.appendChild(egoShape);
 
 });
 
-//add Children Connector
-const hLine = document.createElement("div");
+};
 
-//dynamically find lineX and lineY based on firstChild position
-const firstChild = document.getElementById('Child1');
-const startRect = firstChild.getClientRects();
-const lastChild = document.getElementById('Child' + children.length);
-const endRect = container.getClientRects();
+export function addChildren(midpoint, ego, people){
 
-const lineX = startRect[0].left + 20;
-const lineW = endRect[0].width - 120;
-const lineY = startRect[0].top - (startRect[0].height);
+    //find Children
+    const children = people.filter(child => child.mother === ego.id ||
+    child.father === ego.id);
 
-//add Lines
-hLine.classList.add("line");
+    children.forEach(child => {
+        const line = document.createElement('div');
+        line.classList.add('childLine');
 
-hLine.style.top = lineY + 'px';
-hLine.style.left = lineX + 'px';
-hLine.style.width = lineW + 'px';
+        // Get bounding rectangles again after moving spouseNode
+        const childRect = returnRect(child.id);
+
+        const x1 = midpoint.xMid;
+        const y1 = midpoint.yMid;
+        const x2 = childRect.left + childRect.width / 2 + window.scrollX;
+        const y2 = childRect.top + childRect.height / 2 + window.scrollY;
 
 
-container.appendChild(hLine);
+        const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
 
-const lineInterval = (lineW) / (children.length -1);
-console.log(lineInterval + 'px')
+        line.style.width = `${length}px`;
+        line.style.transform = `rotate(${angle}deg)`;
+        line.style.top = `${y1}px`;
+        line.style.left = `${x1}px`;
 
-const i = children.length
-
-for (let j = 0; j < i; j++) {
-
-const vLine = document.createElement("div");
-
-const vlineX = lineInterval * (j)
-console.log(vlineX)
-
-vLine.classList.add("line");
-vLine.style.top = (lineY + 1) + 'px';
-vLine.style.left = lineX + (vlineX) + 'px';
-vLine.style.width = 4 + 'px';
-vLine.style.height = 10 + 'px';
-
-container.appendChild(vLine);
-
-}
+        const treeContainer = document.getElementById("tree");
+        treeContainer.appendChild(line);
+    });
 
 }
 
 export function findPersonById(people, id) {
 return people.find(person => person.id === id);
 
+}
+
+export function addTimeScale(people) {
+// Create a unique set of birth years
+const birthYears = [...new Set(people.map(person => person.birthyear))];
+const scaleContainer = document.getElementById("yearScale");
+
+// Sort the birth years
+birthYears.sort((a, b) => a - b);
+
+// Generate year scale
+birthYears.forEach((year, index) => {
+const yearNode = document.createElement("div");
+yearNode.textContent = year;
+yearNode.setAttribute('class', 'date');
+yearNode.setAttribute('id', `${year}`);
+yearNode.style.width = '200vw'
+yearNode.style.height = '200px'
+scaleContainer.appendChild(yearNode);
+
+// Add space between years except for the last year
+if (index !== birthYears.length - 1) {
+    const nextYear = birthYears[index + 1];
+    const yearDifference = 1 //nextYear - year;
+
+    for (let i = 0; i < yearDifference; i++) {
+        const spaceNode = document.createElement("div");
+        spaceNode.style.height = '200px';
+        spaceNode.setAttribute('id', `${year + i}`);
+        scaleContainer.appendChild(spaceNode);
+    }
+}
+});
 }

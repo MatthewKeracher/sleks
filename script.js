@@ -1,5 +1,5 @@
 import { createForm } from './form.js';
-import { addEgo, addSpouse, addChildren} from './nodes.js';
+import { addEgo, addSpouse, addChildren, addTimeScale} from './nodes.js';
 export let data = [];
 
 
@@ -23,12 +23,18 @@ generateFamilyTree(data);
 
 // Function to generate the family tree HTML
 export async function generateFamilyTree(data) {
+const treeContainer = document.getElementById("tree");   
+treeContainer.innerHTML = ''; 
+const scaleContainer = document.getElementById("yearScale");
+scaleContainer.innerHTML = '';
+
 const people = data.people
-const ego = people[0]
+const ego = people;
 console.log(people)
+addTimeScale(people);
 addEgo(ego);
-addSpouse(ego, people);
-addChildren(ego, people);
+addSpouse(people);
+// addChildren(ego, people);
 
 
 
@@ -38,7 +44,8 @@ node.addEventListener('click', () => {
 const nodeId = node.getAttribute('id')
 console.log(nodeId, people)
 const index = people.findIndex(person => parseInt(person.id) === parseInt(nodeId))
-createForm(index);
+const divId = node.getAttribute('id')
+createForm(index, divId);
 });
 });
 

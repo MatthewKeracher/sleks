@@ -1,125 +1,171 @@
-
-.node {
-    /* position */
-    position: absolute;
-    /* style */
-    width: auto;
-    background-color: transparent;
-    /* text */
-    font-size: 2vh;
-    color: black;
-    font-family: monospace;
-    text-align: center;
-}
-
-.node:hover {
-    /* style */
-    background-color: yellow;
-    /* text */
-    font-size: 2.2vh;
-    color: black;
-    cursor: pointer;
-}
-
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid hotpink; 
-    position: absolute;
-    top: -5.3vh; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.square {
-    width: 50px;
-    height: 50px;
-    background-color: lightblue;
-    position: absolute;
-    top: -3vh; /* Adjust as needed */
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.circle {
-    width: 50px;
-    height: 50px;
-    background-color: lime;
-    border-radius: 50%;
-    position: absolute;
-    top: -3vh; /* Adjust as needed */
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-}
-
-.married {
-    position: absolute;
-    font-size: 4vh;
-    width: 2vw;
-    font-weight: bold;
-}
-
-.line {
-    position: fixed;
-    height: 0.3vh; /* Thickness of the line */
-    background-color: black; /* Color of the line */
-}
-
-
-.tree {
-    position: relative;
-    left: 0;
-    width: 100vw;
-}
-
-
 .year-scale {
-    /* position */
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    /* style */
-    width: 5vw;
-    background-color: transparent;
-    padding: 10px;
-    /* text */
-    font-size: 2vh;
-    color: gray;
-    font-family: monospace;
-    text-align: center;
-}
 
-.connector {
-    /* position */
-    position: relative;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    /* style */
-    width: auto;
-    background-color: black;
-    padding: 0.2vh;
-    
-}
-
-.branch{
 /* position */
 position: absolute;
+left: 0;
+top: 0;
+bottom: 0;
+
+/* style */
+width: 5vw;
+background-color: transparent;
+padding: 10px;
+
+/* text */
+font-size: 2vh;
+color: gray;
+font-family: monospace;
+text-align: center;
+
+}
+
+
+.date {
+
+/* position */
+position: absolute;
+
+/* style */
+width: auto;
+background-color: transparent;
+
+/* text */
+font-size: 22px;
+color: black;
+font-family: monospace;
+text-align: left;
+
+}
+
+.date:hover {
+
+/* style */
+background-color: rgba(255, 255, 0, 0.503);
+
+/* text */
+font-size: 2.2vh;
+color: black;
+cursor: pointer;
+
+}
+
+
+.node{
+
+/* position */
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+justify-content: space-between;
+z-index: 20;
 
 /* style */
 width: 100vw;
 height: 13vh;
 background-color: rgb(236, 204, 204);
 padding: 10px;
-/* text */
-font-size: 2vh;
-color: black;
-font-family: monospace;
-text-align: center;
-
 
 }
+
+
+
+.name {
+
+/* position */
+position: absolute;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 0;
+
+/* style */
+color: black;
+font-family: monospace;
+font-size: 2vh;
+
+}
+
+.node:hover {
+
+/* style */
+background-color: yellow;
+
+/* text */
+font-size: 2.2vh;
+color: black;
+cursor: pointer;
+
+}
+
+.triangle {
+width: 0;
+height: 0;
+border-left: 25px solid transparent;
+border-right: 25px solid transparent;
+border-bottom: 50px solid hotpink; 
+position: relative;
+top: 4vh; /* Adjust as needed */
+transform: translateY(-50%);
+}
+
+.square {
+width: 50px;
+height: 50px;
+background-color: lightblue;
+position: relative;
+top: 4vh; /* Adjust as needed */
+transform: translateY(-50%);
+}
+
+.circle {
+width: 50px;
+height: 50px;
+background-color: lime;
+border-radius: 50%;
+position: relative;
+top: 4vh; /* Adjust as needed */
+transform: translateY(-50%);
+}
+
+.marriageLine {
+position: absolute;
+border-top: 2px dotted black; 
+height: 2px; 
+width: 2px;
+transform-origin: top left; 
+}
+
+.childLine {
+position: absolute;
+border-top: 2px dotted black; 
+height: 2px; 
+width: 2px;
+transform-origin: top left; 
+}
+
+
+.tree {
+position: relative;
+left: 0;
+width: 100vw;
+}
+
+
+
+
+.connector {
+/* position */
+position: relative;
+left: 0;
+top: 0;
+bottom: 0;
+/* style */
+width: auto;
+background-color: black;
+padding: 0.2vh;
+
+}
+
