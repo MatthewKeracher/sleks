@@ -8,11 +8,28 @@
 <link rel="stylesheet" href="form.css">
 </head>
 <body>
-<div class="tree" id="tree"></div>
-<div id="yearScale" class="year-scale"></div>
+
+<input type="file" id="fileInput" accept=".json" style="display: none;">
+
+<div id="exportContainer">
+    <div class="tree" id="tree"></div>
+    <div id="yearScale" class="year-scale"></div>
+</div>
+
+<div class="bottom-container" id="bottomContainer">
+
+<div class="button-container">
+</div>
+
+<input type="text" id="fileName" placeholder="Enter fileName...">
+
+</div>
+
+
 <script type="module" src="script.js"></script>
 <script type="module" src="form.js"></script>
 <script type="module" src="nodes.js"></script>
 <script type="module" src="helper.js"></script>
+<script type="module" src="buttons.js"></script>
 </body>
 </html>

@@ -2,124 +2,36 @@
     "people": [
         {
             "id": "1",
-            "firstName": "John",
+            "firstName": "Tom",
             "middleName": "",
-            "familyName": "Doe",
+            "familyName": "Keracher",
             "gender": "male",
-            "birthyear": "1970",
+            "birthyear": "1938",
             "mother": "",
             "father": "",
             "spouse": "2"
         },
         {
             "id": "2",
-            "firstName": "Emily",
+            "firstName": "Effie",
             "middleName": "",
-            "familyName": "Smith",
+            "familyName": "Todd",
             "gender": "female",
-            "birthyear": "1975",
+            "birthyear": "1938",
             "mother": "",
             "father": "",
             "spouse": "1"
         },
         {
             "id": "3",
-            "firstName": "Sophia",
+            "firstName": "Peter",
             "middleName": "",
-            "familyName": "Doe",
-            "gender": "female",
-            "birthyear": "1994",
+            "familyName": "Keracher",
+            "gender": "male",
+            "birthyear": "1957",
             "mother": "2",
             "father": "1",
             "spouse": "9"
-        },
-        {
-            "id": "11",
-            "firstName": "Sazzo",
-            "middleName": "",
-            "familyName": "Smith",
-            "gender": "female",
-            "birthyear": "2010",
-            "mother": "3",
-            "father": "9",
-            "spouse": ""
-        },
-        {
-            "id": "4",
-            "firstName": "Johnny",
-            "middleName": "",
-            "familyName": "Doe",
-            "gender": "male",
-            "birthyear": "1993",
-            "mother": "2",
-            "father": "1",
-            "spouse": ""
-        },
-        {
-            "id": "5",
-            "firstName": "Billy",
-            "middleName": "",
-            "familyName": "Doe",
-            "gender": "male",
-            "birthyear": "1990",
-            "mother": "2",
-            "father": "1",
-            "spouse": ""
-        },
-        {
-            "id": "6",
-            "firstName": "James",
-            "middleName": "",
-            "familyName": "Smith",
-            "gender": "male",
-            "birthyear": "1982",
-            "mother": "",
-            "father": "",
-            "spouse": "7"
-        },
-        {
-            "id": "7",
-            "firstName": "Linda",
-            "middleName": "",
-            "familyName": "Jones",
-            "gender": "female",
-            "birthyear": "1975",
-            "mother": "",
-            "father": "",
-            "spouse": "6"
-        },
-        {
-            "id": "8",
-            "firstName": "Amy",
-            "middleName": "",
-            "familyName": "Smith",
-            "gender": "female",
-            "birthyear": "1997",
-            "mother": "7",
-            "father": "6",
-            "spouse": ""
-        },
-        {
-            "id": "9",
-            "firstName": "Robert",
-            "middleName": "",
-            "familyName": "Smith",
-            "gender": "male",
-            "birthyear": "1993",
-            "mother": "7",
-            "father": "6",
-            "spouse": "3"
-        },
-        {
-            "id": "10",
-            "firstName": "Michael",
-            "middleName": "",
-            "familyName": "Smith",
-            "gender": "male",
-            "birthyear": "1990",
-            "mother": "7",
-            "father": "6",
-            "spouse": ""
         }
     ]
 }

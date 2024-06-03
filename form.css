@@ -3,46 +3,49 @@
 form#editForm {
     display: flex;
     flex-direction: column;
-    width: 300px; /* Adjust width as needed */
-    padding: 10px;
-    border: 4px solid black;
-    border-radius: 8px;
+    width: 20vw; /* Adjust width as needed */
+    padding: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.44);
+    border-radius: 0.1vw;
     box-shadow: none;
-    background-color:  rgb(203, 221, 186);
+    background-color: rgba(238, 238, 161, 0.506);
     position: fixed;
     font-family: monospace;
-    font-size: 16px;
-    z-index: 100;
+    font-size: 0.8vw;
+    z-index: 2000;
     right: 0;
     top: 0;
 }
 
 /* Form Labels */
 form#editForm label {
-    margin-top: 5px;
+    margin-top: 0.1vh;
     font-weight: bold;
     color: #333;
 }
 
-/* Form Inputs */
-form#editForm input[type="text"] {
-    width: calc(100% - 10px);
-    padding: 1px;
-    margin-top: 5px;
+/* Form Inputs (text) */
+form#editForm input[type="text"],
+form#editForm input[type="date"],
+form#editForm select {
+    width: calc(100% - 0.1vw);
+    height: 1.5vw;
+    padding: 0.1vh;
+    margin-top: 0.1vh;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 /* Submit Button */
 form#editForm button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 2vh;
+    padding: 0.5vw;
     border: none;
-    border-radius: 4px;
-    background-color: hotpink;
+    border-radius: 0.5vw;
+    background-color: #4CAF50;
     color: white;
     font-size: 2.2vh;
     font-family: monospace;
@@ -52,5 +55,5 @@ form#editForm button[type="submit"] {
 
 /* Submit Button Hover Effect */
 form#editForm button[type="submit"]:hover {
-    background-color: black;
+    background-color: #156a19;
 }

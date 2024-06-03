@@ -1,3 +1,63 @@
+.bottom-container {
+    position: fixed; /* Fixed position to keep it in the same place */
+    bottom: 0; /* Position from the bottom */
+    left: 0;
+    background-color: rgba(238, 238, 161, 0.506);
+    width: 200vw;
+    height:5vh;
+    display: flex; /* Use flexbox to align buttons side by side */
+    z-index: 1000;
+    padding: 1.5vh 1.5vw;
+}
+
+
+/* Container for the buttons */
+.button-container {
+    position: fixed; /* Fixed position to keep it in the same place */
+    bottom: 1vh; /* Position from the bottom */
+    right: 0.5vw; /* Position from the right */
+    display: flex; /* Use flexbox to align buttons side by side */
+    gap: 0.5vw; /* Space between buttons */
+}
+
+/* Style for the buttons */
+.button-container button {
+    padding: 1.5vh 1.5vw;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 0.01vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+
+/* Hover effect for the button */
+#addButton:hover,
+#saveButton:hover,
+#loadButton:hover,
+#refreshButton:hover,
+#exportImageButton:hover {
+    background-color: #156a19;
+}
+
+
+/* Form Inputs (text) */
+#fileName {
+    width: 20vw;
+    bottom: 0.5vw;
+    left: 0.5vw;
+    padding: 0.5vw;
+    margin-top: 0.5vw;
+    border: 0.1vw solid #cccccc70;
+    border-radius: 0.5vw;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1vw;
+}
+
+
 .year-scale {
 
 /* position */
@@ -24,13 +84,12 @@ text-align: center;
 
 /* position */
 position: absolute;
-
 /* style */
-width: auto;
+width: 1000vw;
 background-color: transparent;
 
 /* text */
-font-size: 22px;
+font-size: 1vw;
 color: black;
 font-family: monospace;
 text-align: left;
@@ -40,12 +99,11 @@ text-align: left;
 .date:hover {
 
 /* style */
-background-color: rgba(255, 255, 0, 0.503);
+/* background-color: rgba(255, 255, 0, 0.503); */
 
 /* text */
 font-size: 2.2vh;
 color: black;
-cursor: pointer;
 
 }
 
@@ -62,17 +120,14 @@ justify-content: space-between;
 z-index: 20;
 
 /* style */
-width: 100vw;
-height: 13vh;
-background-color: rgb(236, 204, 204);
+
+height: 10vh;
+background-color: rgba(236, 204, 204, 0.062);
 padding: 10px;
 
 }
 
-
-
 .name {
-
 /* position */
 position: absolute;
 text-align: center;
@@ -103,47 +158,59 @@ cursor: pointer;
 .triangle {
 width: 0;
 height: 0;
-border-left: 25px solid transparent;
-border-right: 25px solid transparent;
-border-bottom: 50px solid hotpink; 
+border-left: 1vw solid transparent;
+border-right: 1vw solid transparent;
+border-bottom: 2vw solid hotpink; 
 position: relative;
-top: 4vh; /* Adjust as needed */
+top: 2vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
 .square {
-width: 50px;
-height: 50px;
+width: 2vw;
+height: 2vw;
 background-color: lightblue;
 position: relative;
-top: 4vh; /* Adjust as needed */
+top: 2vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
 .circle {
-width: 50px;
-height: 50px;
+width: 2vw;
+height: 2vw;
 background-color: lime;
 border-radius: 50%;
 position: relative;
-top: 4vh; /* Adjust as needed */
+top: 2vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
 .marriageLine {
 position: absolute;
-border-top: 2px dotted black; 
-height: 2px; 
-width: 2px;
+border-top: 0.2vw dotted rgba(0, 0, 255, 0.442); 
 transform-origin: top left; 
+z-index: 2000;
+}
+
+.marriageLine:hover {
+/* style */
+border-top: 0.2vw dotted rgba(0, 0, 255,1);
+cursor: crosshair; 
+
 }
 
 .childLine {
 position: absolute;
-border-top: 2px dotted black; 
-height: 2px; 
-width: 2px;
+border-top: 0.2vw dotted rgba(255, 166, 0, 0.461); 
 transform-origin: top left; 
+z-index: 2000;
+}
+
+.childLine:hover {
+/* style */
+border-top: 0.2vw dotted rgba(255, 166, 0,1);
+cursor: crosshair; 
+
 }
 
 
@@ -151,9 +218,8 @@ transform-origin: top left;
 position: relative;
 left: 0;
 width: 100vw;
+height: 90vh;
 }
-
-
 
 
 .connector {
