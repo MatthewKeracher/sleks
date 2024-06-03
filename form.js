@@ -23,7 +23,7 @@ firstName: 'text',
 middleName: 'text',
 familyName: 'text',
 gender: 'select', // Assuming you want a dropdown for gender
-birthYear: 'date',
+birthYear: 'text',
 mother: 'text',
 father: 'text',
 spouse: 'text'
