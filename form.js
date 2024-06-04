@@ -1,5 +1,5 @@
 import { generateFamilyTree, data } from './script.js';
-import { returnRect } from './nodes.js';
+import { returnRect } from './helper.js';
 
 // Function to create and append the edit form
 export function createForm(index, divId) {

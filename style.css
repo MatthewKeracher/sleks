@@ -122,7 +122,7 @@ z-index: 20;
 /* style */
 
 height: 10vh;
-background-color: rgba(236, 204, 204, 0.062);
+background-color: rgb(216, 236, 204);
 padding: 10px;
 
 }
@@ -134,7 +134,7 @@ text-align: center;
 display: flex;
 justify-content: center;
 align-items: center;
-bottom: 0;
+bottom: 1vh;
 
 /* style */
 color: black;
@@ -162,7 +162,7 @@ border-left: 1vw solid transparent;
 border-right: 1vw solid transparent;
 border-bottom: 2vw solid hotpink; 
 position: relative;
-top: 2vh; /* Adjust as needed */
+top: 3vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
@@ -171,7 +171,7 @@ width: 2vw;
 height: 2vw;
 background-color: lightblue;
 position: relative;
-top: 2vh; /* Adjust as needed */
+top: 3vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
@@ -181,34 +181,34 @@ height: 2vw;
 background-color: lime;
 border-radius: 50%;
 position: relative;
-top: 2vh; /* Adjust as needed */
+top: 3vh; /* Adjust as needed */
 transform: translateY(-50%);
 }
 
 .marriageLine {
 position: absolute;
-border-top: 0.2vw dotted rgba(0, 0, 255, 0.442); 
+border-top: 0.4vw dotted rgba(0, 0, 255, 1); 
 transform-origin: top left; 
-z-index: 2000;
+
 }
 
 .marriageLine:hover {
 /* style */
-border-top: 0.2vw dotted rgba(0, 0, 255,1);
+border-top: 0.6vw dotted hotpink;
 cursor: crosshair; 
 
 }
 
 .childLine {
 position: absolute;
-border-top: 0.2vw dotted rgba(255, 166, 0, 0.461); 
+border-top: 0.4vw dotted rgba(255, 166, 0, 1); 
 transform-origin: top left; 
-z-index: 2000;
+
 }
 
 .childLine:hover {
 /* style */
-border-top: 0.2vw dotted rgba(255, 166, 0,1);
+border-top: 0.6vw dotted hotpink;
 cursor: crosshair; 
 
 }

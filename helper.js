@@ -19,3 +19,15 @@ export function downloadData(data, filename) {
     URL.revokeObjectURL(link.href);
 }
 
+export function convertPixels(px) {
+    let viewportWidth = window.innerWidth;
+    return (px / viewportWidth) * 100;
+}
+
+export function returnRect(id){
+
+    const div = document.getElementById(id);
+    const divRect = div.getClientRects();
+    return divRect[0];
+    
+    }
