@@ -1,7 +1,20 @@
 import { createForm } from './form.js';
-import { addEgo, addSpouse, addChildren, addTimeScale} from './nodes.js';
+import { addEgo, moveWife, addChildrenLines, addTimeScale, addMarriageLine} from './nodes.js';
 import { createButtons } from './buttons.js';
-export let data = [];
+export let data = {
+    "people": [
+        {
+            "id": "0",
+            "firstName": "Click",
+            "middleName": "",
+            "familyName": "Here",
+            "gender": "other",
+            "birthyear": "1",
+            "mother": "",
+            "father": "",
+            "spouse": ""
+        }]};
+    
 
 function uploadData() {
     const inputElement = document.getElementById('fileInput'); // Get the file input element
@@ -29,12 +42,20 @@ const scaleContainer = document.getElementById("yearScale");
 scaleContainer.innerHTML = '';
 
 const people = data.people
-const ego = people;
-addTimeScale(people);
-addEgo(ego);
-addSpouse(people);
 
-// addChildren(ego, people);
+//Create Scale
+addTimeScale(people);
+
+//Position Nodes
+addEgo(people);
+
+//Move Nodes
+moveWife(people);
+
+//Draw Lines
+addMarriageLine(people);
+addChildrenLines(people);
+
 
 let focusedInput = null;
 
@@ -51,7 +72,7 @@ const nodes = document.querySelectorAll('.node');
 nodes.forEach(node => {
     node.addEventListener('click', () => {
         const nodeId = node.getAttribute('id');
-        //console.log(nodeId, people);
+
         const index = people.findIndex(person => parseInt(person.id) === parseInt(nodeId));
         const divId = node.getAttribute('id');
        
@@ -73,6 +94,7 @@ nodes.forEach(node => {
 
 // Call the function to create the button
 createButtons();
+generateFamilyTree(data);
 
 // Call the function to set up the event listener
 uploadData();
