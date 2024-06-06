@@ -1,0 +1,28 @@
+.marriageLine {
+position: absolute;
+border-top: 5px solid rgba(0, 0, 255, 1); 
+transform-origin: top left; 
+
+}
+
+
+
+.childLine {
+position: absolute;
+transform-origin: top left; 
+
+}
+
+
+.connector {
+/* position */
+position: relative;
+left: 0;
+top: 0;
+bottom: 0;
+/* style */
+width: auto;
+background-color: black;
+padding: 0.2vh;
+
+}

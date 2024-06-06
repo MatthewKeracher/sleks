@@ -1,3 +1,11 @@
+.tree {
+position: relative;
+left: 0;
+width: 100vw;
+height: 90vh;
+overflow: visible;
+}
+
 .bottom-container {
     position: fixed; /* Fixed position to keep it in the same place */
     bottom: 0; /* Position from the bottom */
@@ -108,130 +116,13 @@ color: black;
 }
 
 
-.node{
-
-/* position */
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-justify-content: space-between;
-z-index: 20;
-
-/* style */
-
-height: 10vh;
-background-color: rgb(216, 236, 204);
-padding: 10px;
-
-}
-
-.name {
-/* position */
-position: absolute;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-bottom: 1vh;
-
-/* style */
-color: black;
-font-family: monospace;
-font-size: 2vh;
-
-}
-
-.node:hover {
-
-/* style */
-background-color: yellow;
-
-/* text */
-font-size: 2.2vh;
-color: black;
-cursor: pointer;
-
-}
-
-.triangle {
-width: 0;
-height: 0;
-border-left: 1vw solid transparent;
-border-right: 1vw solid transparent;
-border-bottom: 2vw solid hotpink; 
-position: relative;
-top: 3vh; /* Adjust as needed */
-transform: translateY(-50%);
-}
-
-.square {
-width: 2vw;
-height: 2vw;
-background-color: lightblue;
-position: relative;
-top: 3vh; /* Adjust as needed */
-transform: translateY(-50%);
-}
-
-.circle {
-width: 2vw;
-height: 2vw;
-background-color: lime;
-border-radius: 50%;
-position: relative;
-top: 3vh; /* Adjust as needed */
-transform: translateY(-50%);
-}
-
-.marriageLine {
-position: absolute;
-border-top: 0.4vw dotted rgba(0, 0, 255, 1); 
-transform-origin: top left; 
-
-}
-
-.marriageLine:hover {
-/* style */
-border-top: 0.6vw dotted hotpink;
-cursor: crosshair; 
-
-}
-
-.childLine {
-position: absolute;
-border-top: 0.4vw dotted rgba(255, 166, 0, 1); 
-transform-origin: top left; 
-
-}
-
-.childLine:hover {
-/* style */
-border-top: 0.6vw dotted hotpink;
-cursor: crosshair; 
-
-}
 
 
-.tree {
-position: relative;
-left: 0;
-width: 100vw;
-height: 90vh;
-}
 
 
-.connector {
-/* position */
-position: relative;
-left: 0;
-top: 0;
-bottom: 0;
-/* style */
-width: auto;
-background-color: black;
-padding: 0.2vh;
 
-}
+
+
+
+
 

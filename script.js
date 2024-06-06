@@ -1,19 +1,143 @@
 import { createForm } from './form.js';
-import { addEgo, moveWife, addChildrenLines, addTimeScale, addMarriageLine} from './nodes.js';
+import { addPeople, addTimeScale} from './nodes.js';
+import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons } from './buttons.js';
 export let data = {
-    "people": [
+    "people":[
         {
-            "id": "0",
-            "firstName": "Click",
-            "middleName": "",
-            "familyName": "Here",
-            "gender": "other",
-            "birthyear": "1",
+            "id": "24",
+            "firstName": "Alexander",
+            "middleName": "Maclarane",
+            "familyName": "Keracher",
+            "gender": "male",
+            "birthyear": "1890",
             "mother": "",
             "father": "",
             "spouse": ""
-        }]};
+          },
+          {
+            "id": "1",
+            "firstName": "Thomas",
+            "middleName": "",
+            "familyName": "Keracher",
+            "gender": "male",
+            "birthyear": "1928",
+            "mother": "",
+            "father": "24",
+            "spouse": "2"
+          },
+          {
+            "id": "26",
+            "firstName": "Papa",
+            "middleName": "",
+            "familyName": "Wright",
+            "gender": "male",
+            "birthyear": "1920",
+            "mother": "",
+            "father": "",
+            "spouse": "25"
+          },
+          {
+            "id": "15",
+            "firstName": "Pat",
+            "middleName": "",
+            "familyName": "Keracher",
+            "gender": "female",
+            "birthyear": "1921",
+            "mother": "",
+            "father": "24",
+            "spouse": ""
+          },
+          {
+            "id": "25",
+            "firstName": "Nana",
+            "middleName": "",
+            "familyName": "Wright",
+            "gender": "female",
+            "birthyear": "1935",
+            "mother": "",
+            "father": "",
+            "spouse": "26"
+          },
+          {
+            "id": "2",
+            "firstName": "Effie",
+            "middleName": "",
+            "familyName": "Todd",
+            "gender": "female",
+            "birthyear": "1935",
+            "mother": "",
+            "father": "",
+            "spouse": "1"
+          },
+          {
+            "id": "20",
+            "firstName": "David",
+            "middleName": "Irvine",
+            "familyName": "Keracher",
+            "gender": "male",
+            "birthyear": "1948",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+          },
+          {
+            "id": "23",
+            "firstName": "Barbara",
+            "middleName": "",
+            "familyName": "Keracher",
+            "gender": "female",
+            "birthyear": "1949",
+            "mother": "2",
+            "father": "1",
+            "spouse": ""
+          },
+          {
+            "id": "21",
+            "firstName": "Peter",
+            "middleName": "",
+            "familyName": "Keracher",
+            "gender": "male",
+            "birthyear": "1949",
+            "mother": "2",
+            "father": "1",
+            "spouse": "11"
+          },
+          {
+            "id": "17",
+            "firstName": "Margaret",
+            "middleName": "",
+            "familyName": "Milton",
+            "gender": "female",
+            "birthyear": "1950",
+            "mother": "2",
+            "father": "1",
+            "spouse": "18"
+          },
+          {
+            "id": "11",
+            "firstName": "Pamela",
+            "middleName": "",
+            "familyName": "Wright",
+            "gender": "female",
+            "birthyear": "",
+            "mother": "25",
+            "father": "26",
+            "spouse": "21"
+          }]};
+
+    // "people": [
+    //     {
+    //         "id": "0",
+    //         "firstName": "Click",
+    //         "middleName": "",
+    //         "familyName": "Here",
+    //         "gender": "other",
+    //         "birthyear": "1",
+    //         "mother": "",
+    //         "father": "",
+    //         "spouse": ""
+    //     }]};
     
 
 function uploadData() {
@@ -44,13 +168,10 @@ scaleContainer.innerHTML = '';
 const people = data.people
 
 //Create Scale
-addTimeScale(people);
+//addTimeScale(people);
 
 //Position Nodes
-addEgo(people);
-
-//Move Nodes
-moveWife(people);
+addPeople(people);
 
 //Draw Lines
 addMarriageLine(people);
@@ -66,6 +187,7 @@ document.addEventListener('focusin', (event) => {
         focusedInput = null;
     }
 });
+
 
 
 const nodes = document.querySelectorAll('.node');

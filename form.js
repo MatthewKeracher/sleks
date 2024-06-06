@@ -63,7 +63,7 @@ input.classList.add("formInput")
 input.value = index === 'new'? '' : person[key];
 
 // Make input mandatory
-const mandatoryKeys = ['firstName', 'familyName', 'gender', 'birthyear']
+const mandatoryKeys = ['firstName', 'familyName', 'gender']
 if(mandatoryKeys.includes(key)){
 input.required = true;
 }
