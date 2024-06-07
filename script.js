@@ -1,143 +1,59 @@
 import { createForm } from './form.js';
-import { addPeople, addTimeScale} from './nodes.js';
+import { startTree, addTimeScale} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons } from './buttons.js';
+import { findPersonById } from './helper.js';
 export let data = {
-    "people":[
-        {
-            "id": "24",
-            "firstName": "Alexander",
-            "middleName": "Maclarane",
-            "familyName": "Keracher",
-            "gender": "male",
-            "birthyear": "1890",
-            "mother": "",
-            "father": "",
-            "spouse": ""
-          },
-          {
-            "id": "1",
-            "firstName": "Thomas",
-            "middleName": "",
-            "familyName": "Keracher",
-            "gender": "male",
-            "birthyear": "1928",
-            "mother": "",
-            "father": "24",
-            "spouse": "2"
-          },
-          {
-            "id": "26",
-            "firstName": "Papa",
-            "middleName": "",
-            "familyName": "Wright",
-            "gender": "male",
-            "birthyear": "1920",
-            "mother": "",
-            "father": "",
-            "spouse": "25"
-          },
-          {
-            "id": "15",
-            "firstName": "Pat",
-            "middleName": "",
-            "familyName": "Keracher",
-            "gender": "female",
-            "birthyear": "1921",
-            "mother": "",
-            "father": "24",
-            "spouse": ""
-          },
-          {
-            "id": "25",
-            "firstName": "Nana",
-            "middleName": "",
-            "familyName": "Wright",
-            "gender": "female",
-            "birthyear": "1935",
-            "mother": "",
-            "father": "",
-            "spouse": "26"
-          },
-          {
-            "id": "2",
-            "firstName": "Effie",
-            "middleName": "",
-            "familyName": "Todd",
-            "gender": "female",
-            "birthyear": "1935",
-            "mother": "",
-            "father": "",
-            "spouse": "1"
-          },
-          {
-            "id": "20",
-            "firstName": "David",
-            "middleName": "Irvine",
-            "familyName": "Keracher",
-            "gender": "male",
-            "birthyear": "1948",
-            "mother": "2",
-            "father": "1",
-            "spouse": ""
-          },
-          {
-            "id": "23",
-            "firstName": "Barbara",
-            "middleName": "",
-            "familyName": "Keracher",
-            "gender": "female",
-            "birthyear": "1949",
-            "mother": "2",
-            "father": "1",
-            "spouse": ""
-          },
-          {
-            "id": "21",
-            "firstName": "Peter",
-            "middleName": "",
-            "familyName": "Keracher",
-            "gender": "male",
-            "birthyear": "1949",
-            "mother": "2",
-            "father": "1",
-            "spouse": "11"
-          },
-          {
-            "id": "17",
-            "firstName": "Margaret",
-            "middleName": "",
-            "familyName": "Milton",
-            "gender": "female",
-            "birthyear": "1950",
-            "mother": "2",
-            "father": "1",
-            "spouse": "18"
-          },
-          {
-            "id": "11",
-            "firstName": "Pamela",
-            "middleName": "",
-            "familyName": "Wright",
-            "gender": "female",
-            "birthyear": "",
-            "mother": "25",
-            "father": "26",
-            "spouse": "21"
-          }]};
-
-    // "people": [
-    //     {
-    //         "id": "0",
-    //         "firstName": "Click",
-    //         "middleName": "",
-    //         "familyName": "Here",
-    //         "gender": "other",
-    //         "birthyear": "1",
-    //         "mother": "",
-    //         "father": "",
-    //         "spouse": ""
-    //     }]};
+  "people": [
+    {
+      "id": "0",
+      "firstName": "John",
+      "middleName": "",
+      "familyName": "Doe",
+      "gender": "male",
+      "birthyear": "1900",
+      "mother": "",
+      "father": "",
+      "spouse": "4",
+      "children": "1,2"
+    },
+    {
+      "id": "1",
+      "firstName": "Jane",
+      "middleName": "",
+      "familyName": "Doe",
+      "gender": "female",
+      "birthyear": "1900",
+      "mother": "",
+      "father": "0",
+      "spouse": "",
+      "children": ""
+    },
+    {
+      "id": "2",
+      "firstName": "Jim",
+      "middleName": "",
+      "familyName": "Doe",
+      "gender": "male",
+      "birthyear": "1900",
+      "mother": "",
+      "father": "0",
+      "spouse": "",
+      "children": ""
+    },
+    {
+      "id": "4",
+      "firstName": "Mrs",
+      "middleName": "",
+      "familyName": "Doe",
+      "gender": "female",
+      "birthyear": "",
+      "mother": "",
+      "father": "",
+      "spouse": "0",
+      "children": "1,2"
+    }
+  ]};
     
 
 function uploadData() {
@@ -166,22 +82,26 @@ const scaleContainer = document.getElementById("yearScale");
 scaleContainer.innerHTML = '';
 
 const people = data.people
+const ego = people[0];
+const X = window.innerWidth -  (window.innerWidth/2)
+const Y = window.innerHeight - (window.innerHeight/2)
 
 //Create Scale
 //addTimeScale(people);
 
 //Position Nodes
-addPeople(people);
+startTree(ego, people, X, Y);
+
 
 //Draw Lines
 addMarriageLine(people);
-addChildrenLines(people);
+//addChildrenLines(people);
 
 
 let focusedInput = null;
 
 document.addEventListener('focusin', (event) => {
-    if (['mother', 'father', 'spouse'].includes(event.target.name)) {
+    if (['mother', 'father', 'spouse', 'children'].includes(event.target.id)) {
         focusedInput = event.target;
     } else {
         focusedInput = null;
@@ -193,19 +113,62 @@ document.addEventListener('focusin', (event) => {
 const nodes = document.querySelectorAll('.node');
 nodes.forEach(node => {
     node.addEventListener('click', () => {
-        const nodeId = node.getAttribute('id');
-
-        const index = people.findIndex(person => parseInt(person.id) === parseInt(nodeId));
+        
         const divId = node.getAttribute('id');
-       
 
+        //Returns the person clicked on.
+        const nodeIndex = people.findIndex(person => parseInt(person.id) === parseInt(divId));
+        
         const existingForm = document.getElementById('editForm');
         const inputKeys = ['mother', 'father', 'spouse'];
 
-        if (existingForm && focusedInput && inputKeys.includes(focusedInput.name)) {
+        if (existingForm && focusedInput && inputKeys.includes(focusedInput.id)) {
             focusedInput.value = divId;
-        } else{
-            createForm(index, divId);
+
+            //Add child to targetDiv Children
+            if(focusedInput.id === "mother" || focusedInput.id === "father"){
+              const childId = document.getElementById('id').value;
+              const targetDiv = findPersonById(people, divId);
+              
+              if(targetDiv.children === ""){
+                targetDiv.children = childId
+              }else{
+                targetDiv.children =  targetDiv.children + ',' + childId;
+              }
+  
+              };
+
+
+        } else if (existingForm && focusedInput && focusedInput.id === "children") {
+          
+          if(focusedInput.value === ""){
+            focusedInput.value = divId;
+
+          }else{ 
+            focusedInput.value += ', ' + divId;
+          }
+          
+          const targetDiv = findPersonById(people, divId);
+          
+          const parentGender = document.getElementById('gender').value;
+          const parentId = document.getElementById('id').value;
+
+          if(parentGender === 'male'){
+
+          targetDiv.father = parentId
+
+          }else if(parentGender === 'female'){
+
+          targetDiv.mother = parentId
+
+          }
+          
+        
+        } else if(nodeIndex === -1){
+            createForm('new')
+
+        }else{
+            createForm(nodeIndex, divId);
         }
     });
 });

@@ -58,9 +58,14 @@ input = document.createElement('input');
 input.type = inputTypes[key] || 'text'; // Default to 'text' if no type is specified
 }
 
+input.id = key;
 input.name = key;
 input.classList.add("formInput")
-input.value = index === 'new'? '' : person[key];
+
+// Generate a new ID
+const newId = (data.people.length + 1).toString();
+
+input.value = index === 'new' && input.id === 'id'? newId : index === 'new'? '' : person[key];
 
 // Make input mandatory
 const mandatoryKeys = ['firstName', 'familyName', 'gender']
@@ -97,19 +102,13 @@ form.addEventListener('submit', (event) => {
         // Create a new object for the new person
         let newObj = {};
 
-        // Generate a new ID
-        const newId = (data.people.length + 1).toString();
-
         // Populate the new object with form data
         for (const key of formData.keys()) {
             newObj[key] = formData.get(key);
         }
 
         // Set the new ID
-        newObj['id'] = newId;
-        ID = newId;
-
-        console.log(newObj);
+        ID = newObj['id'];
 
         // Add the new person to the people array
         data.people.push(newObj);
@@ -137,7 +136,7 @@ form.addEventListener('submit', (event) => {
 
     //Update Spouse
     let spouse = formData.get('spouse');
-    if(spouse !== ''){
+    if(spouse !== "" && spouse !== undefined){
     let spouseIndex = data.people.findIndex(person => person.id === spouse)
    
         console.log(data.people[spouseIndex])

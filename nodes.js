@@ -6,124 +6,177 @@ const nodeWidth = 100;
 const nodeHeight = 100;
 export let duplicates = [];
 let currentX = 100;
-let nodeSpace = nodeWidth * 2.5
+export let nodeSpace = nodeWidth * 2
 
-export function addPeople(people){
 
-duplicates = [];
-currentX = 100 + window.scrollX;
+export function startTree(ego, people, X, Y){
 
-const noParents = people.filter(person => person.mother === "" && person.father === "");
-const sorted = noParents.sort((a, b) => a.birthyear - b.birthyear);
+// duplicates = [];
 
-sorted.forEach((ego, index) =>{
-
-const X = currentX + (index * ((noParents.length/(index+1)) * nodeWidth));
-
-// const children = people.filter(person => person.mother === ego.id || person.father === ego.id).length;
-// currentX = children * currentX;
-
-if(ego && !duplicates.includes(ego)){
-drawNode(ego, X, 100);
-addSpouse(ego, people);
-addChildren(ego, X, people);
 duplicates.push(ego); 
-}
+drawNode(ego, X, Y);
+addParents(ego, people, X, Y);
+addSiblings(ego, people, X, Y);
+addSpouse(ego, people, X, Y);
+addChildren(ego, people, X, Y);
 
-
-})
 
 };
 
-function moveAllRight(ego, people){
+export function addParents(child, people, childX, childY){
 
-const nodes = document.querySelectorAll(".node")
 
-nodes.forEach(node => {
+const mother = people.find(person => person.id === child.mother);
+const father = people.find(person => person.id === child.father);
 
-const id = node.getAttribute('id');
-const nodeRect = returnRect(id);
-const egoRect = returnRect(ego.id)
+const blankFather = {
+      "id": (people.length + 1).toString(),
+      "firstName": "Unknown",
+      "middleName": "",
+      "familyName": child.familyName,
+      "gender": "male",
+      "birthyear": "",
+      "mother": "",
+      "father": "",
+      "spouse": (people.length + 2).toString(),
+      "children": child.id
+    }
 
-if(nodeRect.x > egoRect.x){
-    const person = findPersonById(id)
-    console.log(person)
-    const currentLeft = parseInt(node.style.left) || 0;
-    node.style.left = `${currentLeft + 10}px`;
+const blankMother = {
+      "id": (people.length + 2).toString(),
+      "firstName": "Unknown",
+      "middleName": "",
+      "familyName": child.familyName,
+      "gender": "female",
+      "birthyear": "",
+      "mother": "",
+      "father": "",
+      "spouse": (people.length + 1).toString(),
+      "children": child.id
+    }
+
+//Add Father
+let fatherX 
+let fatherY 
+
+if(child.gender === 'male'){
+fatherX = childX
+fatherY = childY - nodeSpace;
+} else {
+fatherX = childX - (nodeSpace)
+fatherY = childY - nodeSpace;
 }
 
-})
+
+if(father && !duplicates.includes(father)){
+duplicates.push(father); 
+drawNode(father, fatherX, fatherY);
+}else if(!duplicates.includes(father)){
+people.push(blankFather)
+drawNode(blankFather, fatherX, fatherY);
+child.father = blankFather.id
+};
+
+//Add Mother
+let motherX 
+let motherY 
+
+if(child.gender === 'female'){
+    motherX = childX
+    motherY = childY - nodeSpace;
+} else {
+    motherX = childX + (nodeSpace)
+    motherY = childY - nodeSpace;
+}
+
+if(mother && !duplicates.includes(mother)){
+duplicates.push(mother); 
+drawNode(mother, motherX, motherY);
+}else if(!duplicates.includes(mother)){
+people.push(blankMother)
+drawNode(blankMother, motherX, motherY);
+child.mother = blankMother.id
+};
 
 }
 
-function addParents(ego, people){
+export function addSpouse(ego, people, egoX, egoY){
 
-const parents = people.filter(parent => parent.id === ego.mother || parent.id === ego.father);
-const egoRect = returnRect(ego.id);
+const spouse = people.find(person => person.id === ego.spouse);
 
-parents.forEach((parent, index) => {
-
-if(parent && !duplicates.includes(parent)){
-const parentX = egoRect.x + (index * nodeSpace);
-const parentY = egoRect.y - (nodeSpace * 1);
-duplicates.push(parent); 
-drawNode(parent, parentX, parentY);
-moveAllRight(ego, people);
-addChildren(parent, parentX, people)
-
-}
-
-})
-
-}
-
-function addSpouse(ego, people) {
-
-const egoRect = returnRect(ego.id)
-const spouse = people.find(person => person.spouse === ego.id);
-const spouseX = egoRect.x + (nodeSpace);
-
+//Add Spouse
+const spouseX = egoX - (nodeSpace * 2)
+const spouseY = egoY 
 
 if(spouse && !duplicates.includes(spouse)){
-duplicates.push(spouse); 
-drawNode(spouse, spouseX, egoRect.y);
-addParents(spouse, people);
+drawNode(spouse, spouseX, spouseY)
+addParents(spouse, people, spouseX, spouseY)
 }
 
-};
+}
 
-function addChildren(parent, X, people) {
+export function addChildren(ego, people, egoX, egoY){
 
-const children = people.filter(person => person.mother === parent.id || person.father === parent.id);
-
-children.sort((a, b) => {
-return new Date(a.birthyear) - new Date(b.birthyear);
-});
-
-const parentRect = returnRect(parent.id);
+const children = ego.children.split(',');
 
 children.forEach((child, index) => {
 
-if(index > 0 && children.length > 1){
-const onkle = children[index-1].id
-const onkleChildren = people.filter(person => person.mother === onkle || person.father === onkle);
-//console.log(child.name, onkleChildren)
+//Add Child
+const person = people.find(person => person.id === child)
+const childX = egoX + ((nodeSpace) * index)
+const childY = egoY + nodeSpace
+
+if(person && !duplicates.includes(person)){
+drawNode(person, childX, childY)
+addSpouse(person, people, childX, childY)
 }
 
-const childX = X + ((index) * (nodeSpace * 3))
+})
 
-
-if(!duplicates.includes(child)){
-drawNode(child, childX, parentRect.y + (nodeSpace));
-duplicates.push(child);
-addSpouse(child, people);
-addParents(child, people);
-addChildren(child, childX, people); 
-currentX = childX
 }
 
-});
+
+export function addSiblings(ego, people, egoX, egoY){
+
+let siblings = [];
+
+if(ego.mother !== ""){
+const index = people.findIndex(person => person.id === ego.mother)
+const parent = people[index]
+const children = parent.children.split(',');
+const filter = children.filter(child => child !== ego.id)
+siblings = [...siblings, ...filter]
+}
+
+if(ego.father !== ""){
+const index = people.findIndex(person => person.id === ego.father)
+const parent = people[index]
+const children = parent.children.split(',');
+const filter = children.filter(child => child !== ego.id)
+siblings = [...siblings, ...filter]
+}
+
+console.log(ego.id, siblings)
+
+if(siblings.length > 0){
+siblings.forEach(sibling => {
+//Add Sibling
+const person = people.find(person => person.id === sibling)
+const siblingX = egoX + nodeSpace
+const siblingY = egoY 
+
+if(person && !duplicates.includes(person)){
+duplicates.push(person);
+drawNode(person, siblingX, siblingY);
+addSpouse(person, people, siblingX, siblingY)
+
+}
+
+})
+}
+
 };
+
 
 function drawNode(ego, X, Y){
 
@@ -140,6 +193,7 @@ node.setAttribute('id', ego.id);
 node.style.top = Y + 'px';
 node.style.left = X + 'px'
 treeContainer.appendChild(node);
+
 
 //Add Name to Node
 const firstName = document.createElement("div");

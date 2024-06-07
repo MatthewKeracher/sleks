@@ -1,11 +1,11 @@
 import { returnRect, findPersonById, calculateMidpoint, convertWidth, convertHeight } from "./helper.js";
-import { duplicates } from "./nodes.js";
+import { duplicates, nodeSpace } from "./nodes.js";
 
 let marriages = []
 
 export function addMarriageLine(people){
 
-    let husbands = people.filter(person => person.spouse !== "" & person.gender === "male");
+    let husbands = people.filter(person => person.spouse !== "" && person.gender === "male");
     marriages = [];
     
     
@@ -22,18 +22,14 @@ export function addMarriageLine(people){
     line.classList.add('marriageLine');
     
     //Calculate Co-ordinates.
-    const x1 = husbandRect.left + husbandRect.width / 2 + window.scrollX;
+    const x1 = husbandRect.right + window.scrollX - 10;
     const y1 = husbandRect.top + husbandRect.height / 2 + window.scrollY;
-    const x2 = wifeRect.left + wifeRect.width / 2 + window.scrollX;
+    const x2 = wifeRect.left + window.scrollX;
     const y2 = wifeRect.top + wifeRect.height / 2 + window.scrollY;
     
-    const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
-    const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
-    
-    line.style.width = `${length}px`;
-    line.style.transform = `rotate(${angle}deg)`;
+    line.style.width = x2>x1? `${x2 - x1}px` : `${x1 - x2}px`;
     line.style.top = `${y1}px`;
-    line.style.left = `${x1}px`;
+    line.style.left = x2>x1? `${x1}px` : `${x2}px`;
     
     const treeContainer = document.getElementById("tree");
     treeContainer.appendChild(line);

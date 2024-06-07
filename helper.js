@@ -30,7 +30,7 @@ return (px / viewportHeight) * 100;
 }
 
 export function returnRect(id){
-
+console.log(id)
 const div = document.getElementById(id);
 const divRect = div.getClientRects();
 return divRect[0];
