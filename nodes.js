@@ -7,7 +7,7 @@ const nodeWidth = 100;
 export let cousinsArray = [];
 export let nodeSpace = nodeWidth * 4
 
-function drawNode(ego, X, Y){
+function drawNode(ego, X, Y, option){
 
 //Add Node Container
 const treeContainer = document.getElementById("tree");
@@ -16,6 +16,10 @@ const node = document.createElement("div");
 //Get Year for y-axis
 //const yearRect = returnRect(ego.birthyear);
 //const Y = yearRect.top + window.scrollY;
+
+if(option){
+node.classList.add(option);
+}
 
 node.classList.add('node');
 node.setAttribute('id', ego.id);
@@ -117,7 +121,7 @@ const spouseX = egoX - (nodeSpace /2)
 const spouseY = egoY 
 
 if(spouse && !duplicates.includes(spouse)){
-drawNode(spouse, spouseX, spouseY)
+drawNode(spouse, spouseX, spouseY, 'spouse')
 addParents(spouse, people, spouseX, spouseY)
 }
 

@@ -126,6 +126,12 @@ nodes.forEach(node => {
 });
 
 
+const spouseNodes = document.querySelectorAll('.spouse');
+spouseNodes.forEach(node => {
+    node.addEventListener('click', () => {
+        console.log('change family tree');
+    })
+  })
 }
 
 // Start-Up Functions:

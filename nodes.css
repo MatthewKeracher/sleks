@@ -18,6 +18,11 @@ padding: 10px;
 
 }
 
+.spouse{
+
+background-color:rgb(236, 204, 235);
+}
+
 .firstName {
 /* position */
 position: absolute;
