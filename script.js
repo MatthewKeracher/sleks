@@ -1,42 +1,44 @@
 import { createForm } from './form.js';
-import { addEgo, moveWife, addChildrenLines, addTimeScale, addMarriageLine} from './nodes.js';
+import { startTree} from './nodes.js';
+import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons } from './buttons.js';
-import { findPersonById } from './helper.js';
-export let xArray = [{id: 0, x: window.innerWidth -  (window.innerWidth/2)}];
+
 export let duplicates = [];
+
+//Blank Data Template
 export let data = {
-  "people": [
-    {
-      "id": "0",
-      "firstName": "Add",
-      "middleName": "",
-      "familyName": "Node",
-      "gender": "",
-      "birthyear": "",
-      "mother": "",
-      "father": "",
-      "spouse": "",
-      "children": ""
-    }
-  ]};
+"people": [
+{
+"id": "0",
+"firstName": "Add",
+"middleName": "",
+"familyName": "Node",
+"gender": "",
+"birthyear": "",
+"mother": "",
+"father": "",
+"spouse": "",
+"children": ""
+}
+]};
 
-  //Function to upload .json files.
+//Function to upload .json files.
 function uploadData() {
-    const inputElement = document.getElementById('fileInput'); // Get the file input element
-    
-    inputElement.addEventListener('change', function(event) {
-        const file = event.target.files[0]; // Get the selected file
-        const reader = new FileReader();
+const inputElement = document.getElementById('fileInput'); // Get the file input element
 
-        reader.onload = function(event) {
-            const jsonData = JSON.parse(event.target.result);
-            document.getElementById('fileName').value = file.name; 
-            data = jsonData
-            generateFamilyTree(data)
-        };
+inputElement.addEventListener('change', function(event) {
+const file = event.target.files[0]; // Get the selected file
+const reader = new FileReader();
 
-        reader.readAsText(file);
-    });
+reader.onload = function(event) {
+    const jsonData = JSON.parse(event.target.result);
+    document.getElementById('fileName').value = file.name; 
+    data = jsonData
+    generateFamilyTree(data)
+};
+
+reader.readAsText(file);
+});
 }
 
 // Function to generate the family tree HTML
@@ -46,31 +48,17 @@ export async function generateFamilyTree(data) {
 const containers = ["tree","yearScale", "svgContainer"]
 
 containers.forEach(container => { 
-  container = document.getElementById(container);   
-  container.innerHTML = ''; 
+container = document.getElementById(container);   
+container.innerHTML = ''; 
 });
 
 duplicates = [];
-xArray = [{id: 0, x: window.innerWidth -  (window.innerWidth/2)}];
 
 const people = data.people
 const Y = 10 //window.innerHeight - (window.innerHeight/2)
-const X = xArray[xArray.length -1].x
-
-//Create Scale
-addTimeScale(people);
+const X = window.innerWidth -  (window.innerWidth/2)
 
 startTree(people[0], people, X, Y);
-
-//Position Nodes
-// people.forEach(ego => {
-// if (!duplicates.includes(ego)){
-// startTree(ego, people, X, Y);
-// };
-// })
-
-//Move Nodes
-moveWife(people);
 
 //Draw Lines
 addMarriageLine(people);
@@ -80,7 +68,7 @@ addChildrenLines(people);
 let focusedInput = null;
 
 document.addEventListener('focusin', (event) => {
-    if (['mother', 'father', 'spouse'].includes(event.target.name)) {
+    if (['mother', 'father', 'spouse', 'children'].includes(event.target.id)) {
         focusedInput = event.target;
     } else {
         focusedInput = null;
@@ -88,22 +76,50 @@ document.addEventListener('focusin', (event) => {
 });
 
 
+
 const nodes = document.querySelectorAll('.node');
 nodes.forEach(node => {
     node.addEventListener('click', () => {
-        const nodeId = node.getAttribute('id');
-
-        const index = people.findIndex(person => parseInt(person.id) === parseInt(nodeId));
+        
         const divId = node.getAttribute('id');
-       
 
+        //Returns the person clicked on.
+        const nodeIndex = people.findIndex(person => parseInt(person.id) === parseInt(divId));
+        
         const existingForm = document.getElementById('editForm');
         const inputKeys = ['mother', 'father', 'spouse'];
 
-        if (existingForm && focusedInput && inputKeys.includes(focusedInput.name)) {
+        if (existingForm && focusedInput && inputKeys.includes(focusedInput.id)) {
             focusedInput.value = divId;
-        } else{
-            createForm(index, divId);
+
+            //Add child to targetDiv Children
+            if(focusedInput.id === "mother" || focusedInput.id === "father"){
+              const childId = document.getElementById('id').value;
+              const targetDiv = findPersonById(people, divId);
+              
+              if(targetDiv.children === ""){
+                targetDiv.children = childId
+              }else{
+                targetDiv.children =  targetDiv.children + ',' + childId;
+              }
+  
+              };
+
+
+        } else if (existingForm && focusedInput && focusedInput.id === "children") {
+          
+          if(focusedInput.value === ""){
+            focusedInput.value = divId;
+
+          }else{ 
+            focusedInput.value += ',' + divId;
+          } 
+        
+        } else if(nodeIndex === -1){
+            createForm('new')
+
+        }else{
+            createForm(nodeIndex, divId);
         }
     });
 });
@@ -111,12 +127,8 @@ nodes.forEach(node => {
 
 }
 
-// Adds buttons to bottom-right
+// Start-Up Functions:
 createButtons();
-
-//Loads family tree
 generateFamilyTree(data);
-
-// Call the function to set up the event listener
 uploadData();
 

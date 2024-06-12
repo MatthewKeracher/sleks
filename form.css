@@ -39,6 +39,19 @@ form#editForm select {
     font-size: 1vw;
 }
 
+/* Form Inputs (text) */
+form#editForm input[type="number"] {
+    width: calc(100% - 0.1vw);
+    height: 1.5vw;
+    padding: 0.1vh;
+    margin-top: 0.1vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1vw;
+}
+
 /* Submit Button */
 form#editForm button[type="submit"] {
     margin-top: 2vh;

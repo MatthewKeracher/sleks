@@ -43,3 +43,12 @@ const yMid = (y1 + y2) / 2;
 return { xMid, yMid };
 }
 
+export function convertWidth(px) {
+    let viewportWidth = window.innerWidth;
+    return (px / viewportWidth) * 100;
+    }
+    
+    export function convertHeight(px) {
+    let viewportHeight = window.innerHeight;
+    return (px / viewportHeight) * 100;
+    }
