@@ -63,7 +63,7 @@ input.classList.add("formInput")
 input.value = index === 'new'? '' : person[key];
 
 // Make input mandatory
-const mandatoryKeys = ['firstName', 'familyName', 'gender', 'birthyear']
+const mandatoryKeys = ['firstName', 'gender']
 if(mandatoryKeys.includes(key)){
 input.required = true;
 }
@@ -140,7 +140,7 @@ form.addEventListener('submit', (event) => {
     if(spouse !== ''){
     let spouseIndex = data.people.findIndex(person => person.id === spouse)
    
-        console.log(data.people[spouseIndex])
+        //console.log(data.people[spouseIndex])
         data.people[spouseIndex].spouse = ID;
     }
 

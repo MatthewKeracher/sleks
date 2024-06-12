@@ -25,9 +25,21 @@ export function convertPixels(px) {
 }
 
 export function returnRect(id){
+const div = document.getElementById(id);
+const divRect = div.getClientRects();
+return divRect[0];
 
-    const div = document.getElementById(id);
-    const divRect = div.getClientRects();
-    return divRect[0];
-    
-    }
+}
+
+export function findPersonById(people, id) {
+return people.find(person => person.id === id);
+
+};
+
+// Function to calculate the midpoint of a line
+export function calculateMidpoint(x1, y1, x2, y2) {
+const xMid = (x1 + x2) / 2;
+const yMid = (y1 + y2) / 2;
+return { xMid, yMid };
+}
+

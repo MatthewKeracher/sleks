@@ -47,9 +47,18 @@ export function createButtons() {
     generateFamilyTree(data);
     });
 
+    const jsonButton = document.createElement('button');
+    jsonButton.id = 'jsonButton';
+    jsonButton.textContent = '.json';
+
+    // Add an event listener to the button
+    jsonButton.addEventListener('click', () => {
+    //Open .json Editor
+    });
 
     // Append buttons to container
     buttonContainer.appendChild(refreshButton);
+    buttonContainer.appendChild(jsonButton);
     buttonContainer.appendChild(saveButton);
     buttonContainer.appendChild(loadButton);
     buttonContainer.appendChild(addButton);

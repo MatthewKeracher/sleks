@@ -1,21 +1,26 @@
 import { createForm } from './form.js';
 import { addEgo, moveWife, addChildrenLines, addTimeScale, addMarriageLine} from './nodes.js';
 import { createButtons } from './buttons.js';
+import { findPersonById } from './helper.js';
+export let xArray = [{id: 0, x: window.innerWidth -  (window.innerWidth/2)}];
+export let duplicates = [];
 export let data = {
-    "people": [
-        {
-            "id": "0",
-            "firstName": "Click",
-            "middleName": "",
-            "familyName": "Here",
-            "gender": "other",
-            "birthyear": "1",
-            "mother": "",
-            "father": "",
-            "spouse": ""
-        }]};
-    
+  "people": [
+    {
+      "id": "0",
+      "firstName": "Add",
+      "middleName": "",
+      "familyName": "Node",
+      "gender": "",
+      "birthyear": "",
+      "mother": "",
+      "father": "",
+      "spouse": "",
+      "children": ""
+    }
+  ]};
 
+  //Function to upload .json files.
 function uploadData() {
     const inputElement = document.getElementById('fileInput'); // Get the file input element
     
@@ -36,18 +41,33 @@ function uploadData() {
 
 // Function to generate the family tree HTML
 export async function generateFamilyTree(data) {
-const treeContainer = document.getElementById("tree");   
-treeContainer.innerHTML = ''; 
-const scaleContainer = document.getElementById("yearScale");
-scaleContainer.innerHTML = '';
+
+//Erase old familyTree
+const containers = ["tree","yearScale", "svgContainer"]
+
+containers.forEach(container => { 
+  container = document.getElementById(container);   
+  container.innerHTML = ''; 
+});
+
+duplicates = [];
+xArray = [{id: 0, x: window.innerWidth -  (window.innerWidth/2)}];
 
 const people = data.people
+const Y = 10 //window.innerHeight - (window.innerHeight/2)
+const X = xArray[xArray.length -1].x
 
 //Create Scale
 addTimeScale(people);
 
+startTree(people[0], people, X, Y);
+
 //Position Nodes
-addEgo(people);
+// people.forEach(ego => {
+// if (!duplicates.includes(ego)){
+// startTree(ego, people, X, Y);
+// };
+// })
 
 //Move Nodes
 moveWife(people);
@@ -91,9 +111,10 @@ nodes.forEach(node => {
 
 }
 
-
-// Call the function to create the button
+// Adds buttons to bottom-right
 createButtons();
+
+//Loads family tree
 generateFamilyTree(data);
 
 // Call the function to set up the event listener

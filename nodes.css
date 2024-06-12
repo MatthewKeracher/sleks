@@ -1,0 +1,91 @@
+.node{
+
+/* position */
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+justify-content: space-between;
+z-index: 20;
+
+/* style */
+font-size: 14px;
+height: 80px;
+width: 100px; 
+background-color: rgb(216, 236, 204);
+padding: 10px;
+
+}
+
+.firstName {
+/* position */
+position: absolute;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 20px;
+
+width: 100px;
+
+/* style */
+color: black;
+font-family: monospace;
+}
+
+.familyName {
+/* position */
+position: absolute;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 5px;
+
+width: 100px;
+
+/* style */
+color: black;
+font-family: monospace;
+
+}
+
+.node:hover {
+
+/* style */
+background-color: yellow; 
+
+/* text */
+font-size: 20px;
+color: black;
+cursor: pointer;
+
+}
+
+.shape{
+top: 35px; /* Adjust as needed */
+transform: translateY(-90%);
+position: relative;
+}
+
+.triangle {
+width: 0;
+height: 0;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-bottom: 40px solid hotpink; 
+}
+
+.square {
+width: 40px;
+height: 40px;
+background-color: lightblue;
+}
+
+.circle {
+width: 40px;
+height: 40px;
+background-color: lime;
+border-radius: 50%;
+}

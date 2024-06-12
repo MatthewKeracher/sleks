@@ -1,3 +1,11 @@
+.container{
+    position: absolute;
+    left: 0;
+    width: 1000vw;
+    height: 1000vh;
+    overflow: auto;
+}
+
 .bottom-container {
     position: fixed; /* Fixed position to keep it in the same place */
     bottom: 0; /* Position from the bottom */

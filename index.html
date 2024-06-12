@@ -6,14 +6,20 @@
 <title>Slekstre</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="form.css">
+<link rel="stylesheet" href="nodes.css">
+<link rel="stylesheet" href="lines.css">
+<link rel="stylesheet" href="editor.css">
 </head>
 <body>
 
 <input type="file" id="fileInput" accept=".json" style="display: none;">
 
-<div id="exportContainer">
-    <div class="tree" id="tree"></div>
+<div id="container" class="container">
+
+    <div id="tree"></div>
+    <svg class="container" id="svgContainer"></svg>
     <div id="yearScale" class="year-scale"></div>
+
 </div>
 
 <div class="bottom-container" id="bottomContainer">
