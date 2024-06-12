@@ -2,6 +2,7 @@ import { createForm } from './form.js';
 import { startTree} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons } from './buttons.js';
+import { findPersonById } from './helper.js';
 
 export let duplicates = [];
 
@@ -55,8 +56,8 @@ container.innerHTML = '';
 duplicates = [];
 
 const people = data.people
-const Y = 10 //window.innerHeight - (window.innerHeight/2)
-const X = window.innerWidth -  (window.innerWidth/2)
+const Y = 100 //window.innerHeight - (window.innerHeight/2)
+const X = 300 //window.innerWidth -  (window.innerWidth/2)
 
 startTree(people[0], people, X, Y);
 

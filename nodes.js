@@ -1,3 +1,4 @@
+import { findPersonById } from "./helper.js";
 import {} from "./lines.js";
 import {duplicates } from "./script.js";
 
@@ -59,7 +60,6 @@ export function startTree(ego, people, X, Y){
 duplicates.push(ego); 
 drawNode(ego, X, Y);
 addParents(ego, people, X, Y);
-addSiblings(ego, people, X, Y);
 addSpouse(ego, people, X, Y);
 addChildren(ego, people, X, Y);
 
@@ -108,48 +108,6 @@ drawNode(mother, motherX, motherY);
 
 };
 
-export function addSiblings(ego, people, egoX, egoY){
-
-let siblings = [];
-
-if(ego.mother !== ""){
-const index = people.findIndex(person => person.id === ego.mother)
-const parent = people[index]
-const children = parent.children.split(',');
-const filter = children.filter(child => child !== ego.id)
-siblings = [...siblings, ...filter]
-}
-
-if(ego.father !== ""){
-const index = people.findIndex(person => person.id === ego.father)
-const parent = people[index]
-const children = parent.children.split(',');
-const filter = children.filter(child => child !== ego.id)
-siblings = [...siblings, ...filter]
-}
-
-//console.log(ego.id, siblings)
-
-if(siblings.length > 0){
-siblings.forEach(sibling => {
-//Add Sibling
-console.log('...adding Sibling')
-const person = people.find(person => person.id === sibling)
-const siblingX = egoX + (nodeSpace * 2)
-const siblingY = egoY 
-
-if(person && !duplicates.includes(person)){
-duplicates.push(person);
-drawNode(person, siblingX, siblingY);
-addSpouse(person, people, siblingX, siblingY)
-
-}
-
-})
-}
-
-};
-
 export function addSpouse(ego, people, egoX, egoY){
 
 const spouse = people.find(person => person.id === ego.spouse);
@@ -167,6 +125,8 @@ addParents(spouse, people, spouseX, spouseY)
 
 export function addChildren(ego, people, egoX, egoY){
 
+if(ego.children !== ""){
+
 const children = ego.children.split(',');
 
 children.forEach((child, index) => {
@@ -175,9 +135,9 @@ children.forEach((child, index) => {
 const person = people.find(person => person.id === child);
 
 const cousins = findCousins(person, people);
-//console.log(person.firstName, cousins)
+const siblingsChildren = findSiblingsChildren(person, people);
 
-const childX = egoX + ((nodeSpace) * (index + cousins));
+const childX = egoX + (nodeSpace * (index + siblingsChildren));
 const childY = egoY + (nodeSpace);
 
 if(person && !duplicates.includes(person)){
@@ -190,7 +150,7 @@ addChildren(person, people, childX, childY)
 }
 
 })
-
+}
 };
 
 export function findCousins(ego, people){
@@ -255,6 +215,74 @@ return cousins.length;
 return 0
 }
 };
+
+export function findSiblingsChildren(ego, people){
+
+        let siblingsChildren = 0;
+        let siblingsGrandchildren = 0;
+        let siblings = [];
+
+        if(ego.mother && ego.mother !== "" && ego.mother !== undefined){
+        const parent = findPersonById(people, ego.mother)
+        const children = parent.children.split(',');
+        const filter = children.filter(child => child !== ego.id)
+        siblings = [...siblings, ...filter]
+        }
+        
+        if(ego.father !== "" && ego.father !== undefined){
+        const parent = findPersonById(people, ego.father)
+        const children = parent.children.split(',');
+        const filter = children.filter(child => child !== ego.id)
+        siblings = [...siblings, ...filter]
+        }
+
+        
+    ///Filter only duplicate (so already drawn).
+    const duplicatedIDs = duplicates.map(duplicate => duplicate.id)
+    siblings = siblings.filter(sibling => duplicatedIDs.includes(sibling))
+    
+    //Filter only Unique Values.
+    siblings = Array.from(new Set(siblings));
+
+    siblings.forEach(id => {
+
+    const sibling = findPersonById(people, id)
+
+    if(sibling.children !== ""){
+    
+    const children = sibling.children.split(',');
+    const numberChildren = children.length;
+
+    siblingsChildren = siblingsChildren + numberChildren
+
+    children.forEach(id => {
+
+    const ego = findPersonById(people, id)
+    const children = ego.children.split(',');
+    const numberChildren = children.length;
+
+    siblingsGrandchildren = siblingsGrandchildren + numberChildren
+        
+    })
+
+    }
+
+    })
+
+    if(siblingsChildren > siblingsGrandchildren){
+
+        return siblingsChildren
+
+    }else{
+
+        return siblingsGrandchildren
+    }
+    
+   
+    
+    };
+
+    
 
 
 
