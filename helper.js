@@ -25,9 +25,13 @@ return (px / viewportWidth) * 100;
 }
 
 export function returnRect(id){
+try{
 const div = document.getElementById(id);
 const divRect = div.getClientRects();
 return divRect[0];
+}catch{
+console.log(error) 
+}
 
 }
 

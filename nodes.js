@@ -1,4 +1,4 @@
-import { findPersonById } from "./helper.js";
+import { findPersonById, returnRect } from "./helper.js";
 import {} from "./lines.js";
 import {duplicates } from "./script.js";
 
@@ -61,12 +61,18 @@ node.appendChild(egoShape);
 
 export function startTree(ego, people, X, Y){
 
-duplicates.push(ego); 
-drawNode(ego, X, Y, 'ego');
+
 addParents(ego, people, X, Y);
 addSpouse(ego, people, X, Y);
 addChildren(ego, people, X, Y);
 
+if(duplicates.includes(ego)){
+const egoDiv = document.getElementById(ego.id)
+egoDiv.classList.add('ego');
+}else{
+drawNode(ego, X, Y, 'ego');
+duplicates.push(ego); 
+}
 
 };
 
@@ -126,6 +132,7 @@ const spouseY = egoY
 
 if(spouse && !duplicates.includes(spouse)){
 drawNode(spouse, spouseX, spouseY, 'spouse')
+duplicates.push(spouse);
 //addParents(spouse, people, spouseX, spouseY)
 }
 
@@ -230,14 +237,15 @@ export function findSiblingsChildren(ego, people){
         let siblingsGrandchildren = 0;
         let siblings = [];
 
-        if(ego.mother && ego.mother !== "" && ego.mother !== undefined){
+
+        if(ego && ego.mother && ego.mother !== "" && ego.mother && ego.mother !== undefined){
         const parent = findPersonById(people, ego.mother)
         const children = parent.children.split(',');
         const filter = children.filter(child => child !== ego.id)
         siblings = [...siblings, ...filter]
         }
         
-        if(ego.father !== "" && ego.father !== undefined){
+        if(ego && ego.father !== "" && ego.father !== undefined){
         const parent = findPersonById(people, ego.father)
         const children = parent.children.split(',');
         const filter = children.filter(child => child !== ego.id)

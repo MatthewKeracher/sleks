@@ -136,7 +136,7 @@ form.addEventListener('submit', (event) => {
         // Set the new ID
         ID = formData.get('id');
 
-        console.log(newObj);
+        //console.log(newObj);
 
         // Add the new person to the people array
         data.people.push(newObj);

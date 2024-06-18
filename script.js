@@ -67,7 +67,6 @@ if(!ego){
 }else{
   const generations = findGenerations(ego.id, people);
   const Y = (generations * 400) + 100
-  console.log(Y)
   startTree(ego, people, X, Y);
 }
 
