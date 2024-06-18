@@ -62,7 +62,7 @@ node.appendChild(egoShape);
 export function startTree(ego, people, X, Y){
 
 duplicates.push(ego); 
-drawNode(ego, X, Y);
+drawNode(ego, X, Y, 'ego');
 addParents(ego, people, X, Y);
 addSpouse(ego, people, X, Y);
 addChildren(ego, people, X, Y);
@@ -91,6 +91,8 @@ fatherY = childY - nodeSpace;
 if(father && !duplicates.includes(father)){
 duplicates.push(father); 
 drawNode(father, fatherX, fatherY);
+addParents(father, people, fatherX, fatherY);
+addChildren(father, people, fatherX, fatherY);
 }
 
 //Add Mother
@@ -108,6 +110,8 @@ motherY = childY - nodeSpace;
 if(mother && !duplicates.includes(mother)){
 duplicates.push(mother); 
 drawNode(mother, motherX, motherY);
+addParents(mother, people, motherX, motherY);
+addChildren(mother, people, motherX, motherY);
 }
 
 };
@@ -122,7 +126,7 @@ const spouseY = egoY
 
 if(spouse && !duplicates.includes(spouse)){
 drawNode(spouse, spouseX, spouseY, 'spouse')
-addParents(spouse, people, spouseX, spouseY)
+//addParents(spouse, people, spouseX, spouseY)
 }
 
 };

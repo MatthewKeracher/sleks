@@ -1,31 +1,38 @@
 import { returnRect, findPersonById, calculateMidpoint, convertWidth, convertHeight } from "./helper.js";
 import { nodeSpace, cousinsArray } from "./nodes.js";
-import { data} from "./script.js";
+import { data, duplicates} from "./script.js";
 
 let marriages = []
 
 export function addMarriageLine(people){
 
-let husbands = people.filter(person => person.spouse !== "" && person.gender === "male");
+let activeSpouse = duplicates.filter(person => person.spouse !== "");
 marriages = [];
 
 
-husbands.forEach(husband =>{
+activeSpouse.forEach(activeSpouse =>{
 
-const husbandRect = returnRect(husband.id);
+const activeRect = returnRect(activeSpouse.id);
 
-//find Wife.
-const wife = findPersonById(people, husband.spouse);
-const wifeRect = returnRect(wife.id);
+//find passiveSpouse.
+const passiveSpouse = findPersonById(people, activeSpouse.spouse);
+const passiveRect = returnRect(passiveSpouse.id);
+
+//check to see if line already drawn
+const lineCheck = marriages.find(marriage => marriage.id === passiveSpouse.id)
+
+if(lineCheck){ 
+return
+}
 
 // Add Line for Marriage
 const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
 line.classList.add('marriageLine');
 
-const x1 = husbandRect.right + window.scrollX - 10;
-const y1 = husbandRect.top + husbandRect.height / 2 + window.scrollY;
-const x2 = wifeRect.left + window.scrollX;
-const y2 = wifeRect.top + wifeRect.height / 2 + window.scrollY;
+const x1 = activeRect.right + window.scrollX - 10;
+const y1 = activeRect.top + activeRect.height / 2 + window.scrollY;
+const x2 = passiveRect.left + window.scrollX;
+const y2 = passiveRect.top + passiveRect.height / 2 + window.scrollY;
 
 //Calculate Co-ordinates.
 line.setAttribute('x1', x1);
@@ -41,14 +48,14 @@ svgContainer.appendChild(line);
 // Calculate and return the midpoint
 const midpoint = calculateMidpoint(x1, y1, x2, y2);
 
-marriages.push({id: husband.id, x: midpoint.xMid, y: midpoint.yMid})
+marriages.push({id: activeSpouse.id, x: midpoint.xMid, y: midpoint.yMid})
 });
 
 };
 
 export function addChildrenLines(people){
 
-let children = people.filter(person => person.mother !== "" || person.father !== "");
+let children = duplicates.filter(person => person.mother !== "" || person.father !== "");
 
 const colors = ["red", "orange", "green", "indigo", "orange"]
 
@@ -61,8 +68,8 @@ const color = "gray" //colors[Math.floor(Math.random() * colors.length)];
 let x2;
 let y2;
 
-const mother = people.find(mother => mother.id === child.mother);
-const father = people.find(father => father.id === child.father);
+const mother = duplicates.find(mother => mother.id === child.mother);
+const father = duplicates.find(father => father.id === child.father);
 
 if(mother){
 const motherRect = returnRect(mother.id);

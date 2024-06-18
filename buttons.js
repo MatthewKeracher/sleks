@@ -1,7 +1,7 @@
 
 import { createForm } from './form.js';
 import { data, generateFamilyTree } from './script.js';
-import { downloadData } from './helper.js';
+import { downloadData, findPersonById } from './helper.js';
 
 export function createButtons() {
 
@@ -44,7 +44,8 @@ export function createButtons() {
 
     // Add an event listener to the button
     refreshButton.addEventListener('click', () => {
-    generateFamilyTree(data);
+   // Regenerate the family tree with the updated data
+   generateFamilyTree(data)
     });
 
     const jsonButton = document.createElement('button');
@@ -69,4 +70,81 @@ export function createButtons() {
 }
 
 
+export function createDropdown(data) {
 
+
+    // Remove any existing forms to prevent multiple forms from displaying
+    const oldDropDown = document.getElementById('dropDown');
+    if (oldDropDown) {
+    oldDropDown.remove();
+    }
+  
+    const select = document.createElement('select');
+    select.id = 'dropDown';
+
+    //transform data to dropdown options
+    const options = []
+
+    data.people.forEach(person => {
+
+    let option = {value: person.id, label: person.firstName + ' ' + person.familyName};
+
+    options.push(option);
+
+    })
+    
+    // Create and append the options
+    options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option.value;
+        optionElement.textContent = option.label;
+        select.appendChild(optionElement);
+    });
+
+    // Append the select element to the specified container
+    const container = document.getElementById('bottomContainer');
+    if (container) {
+        container.appendChild(select);
+    }
+
+    select.addEventListener('change', function(event) {
+        const id = event.target.value
+        const ego = findPersonById(data.people, id)
+        generateFamilyTree(data, ego)
+    });
+}
+
+export function createSearchBar(){
+
+const searchBar = document.getElementById('searchBar');
+const suggestionsContainer = document.getElementById('suggestions');
+const people = data.people;
+
+searchBar.addEventListener('input', () => {
+const query = searchBar.value.toLowerCase();
+suggestionsContainer.innerHTML = '';
+
+if (query) {
+const filteredData = people.filter(person => person.firstName.toLowerCase().includes(query) || person.familyName.toLowerCase().includes(query));
+filteredData.forEach(person => {
+    const suggestionItem = document.createElement('div');
+    suggestionItem.classList.add('suggestion-item');
+    suggestionItem.textContent = person.firstName + ' ' + person.familyName;
+    suggestionItem.setAttribute('id', person.id)
+    suggestionItem.addEventListener('click', () => {
+    const id = suggestionItem.getAttribute('id');
+    const person = findPersonById(people, id)
+    searchBar.value = person.firstName + ' ' + person.familyName;
+    suggestionsContainer.innerHTML = '';
+    console.log(data, person)
+    generateFamilyTree(data, person);
+    });
+    suggestionsContainer.appendChild(suggestionItem);
+
+
+    
+    
+});
+}
+});
+}

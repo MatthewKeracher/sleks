@@ -1,3 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* or scroll */
+}
+
+
 .container{
     position: absolute;
     left: 0;
@@ -6,10 +13,18 @@
     overflow: auto;
 }
 
+
+.tree {
+    position: relative;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    }
+
 .bottom-container {
     position: fixed; /* Fixed position to keep it in the same place */
     bottom: 0; /* Position from the bottom */
-    left: 0;
     background-color: rgba(238, 238, 161, 0.506);
     width: 200vw;
     height:5vh;
@@ -52,19 +67,18 @@
 
 
 /* Form Inputs (text) */
-#fileName {
-    width: 20vw;
-    bottom: 0.5vw;
-    left: 0.5vw;
-    padding: 0.5vw;
-    margin-top: 0.5vw;
-    border: 0.1vw solid #cccccc70;
-    border-radius: 0.5vw;
-    box-sizing: border-box;
-    font-family: monospace;
-    font-size: 1vw;
+#fileName{
+width: 20vw;
+bottom: 0.5vw;
+left: 0.5vw;
+padding: 0.5vw;
+margin-top: 0.5vw;
+border: 0.1vw solid #cccccc70;
+border-radius: 0.5vw;
+box-sizing: border-box;
+font-family: monospace;
+font-size: 1vw;
 }
-
 
 .year-scale {
 
@@ -219,14 +233,6 @@ transform-origin: top left;
 border-top: 0.6vw dotted hotpink;
 cursor: crosshair; 
 
-}
-
-
-.tree {
-position: relative;
-left: 0;
-width: 100vw;
-height: 90vh;
 }
 
 

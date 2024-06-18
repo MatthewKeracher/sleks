@@ -144,6 +144,10 @@ form.addEventListener('submit', (event) => {
         const existingForm = document.getElementById('editForm');
         existingForm.remove();
 
+         
+        // Regenerate the family tree with the updated data
+        generateFamilyTree(data, newObj)
+
 
     } else {
 
@@ -155,6 +159,9 @@ form.addEventListener('submit', (event) => {
         // Update the person in the people array
         ID = formData.get('id');
         data.people[index] = person;
+
+          // Regenerate the family tree with the updated data
+          generateFamilyTree(data,  data.people[index])
     }
 
     //Change information in other people's entries.
@@ -174,9 +181,11 @@ form.addEventListener('submit', (event) => {
     data.people[spouseIndex].spouse = ID;
     }
 
-    //Update Parent Entry on Added Children
-    if(parent.children === "" ){
     const parent = findPersonById(data.people, ID);
+
+    //Update Parent Entry on Added Children
+    if(parent.children !== "" ){
+    console.log('adding Children...')
     const children = parent.children.split(',');
     console.log(children)
    
@@ -219,9 +228,9 @@ form.addEventListener('submit', (event) => {
     }
 
     })};
-  
-    // Regenerate the family tree with the updated data
-    generateFamilyTree(data);
+
+
+ 
 });
 
 

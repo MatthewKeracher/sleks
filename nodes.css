@@ -19,8 +19,11 @@ padding: 10px;
 }
 
 .spouse{
-
 background-color:rgb(236, 204, 235);
+}
+
+.ego{
+background-color:rgb(236, 182, 119);
 }
 
 .firstName {

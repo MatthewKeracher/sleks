@@ -1,0 +1,42 @@
+/* styles.css */
+.autocomplete-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 500px;
+    z-index: 1000;
+    font-family: monospace;
+    font-size: 1vw;
+  }
+  
+  #searchBar {
+    width: 100%;
+    padding: 10px;
+    background-color: beige;
+    border: 0.1vw solid #cccccc70;
+    border-radius: 0.5vw;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 1vw;
+  }
+  
+  .suggestions {
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    background-color:  rgba(238, 238, 161, 0.506);
+    z-index: 1000;
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  

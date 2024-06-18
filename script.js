@@ -1,8 +1,8 @@
 import { createForm } from './form.js';
 import { startTree} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
-import { createButtons } from './buttons.js';
-import { findPersonById } from './helper.js';
+import { createButtons, createSearchBar } from './buttons.js';
+import { findPersonById, findGenerations } from './helper.js';
 
 export let duplicates = [];
 
@@ -35,7 +35,8 @@ reader.onload = function(event) {
     const jsonData = JSON.parse(event.target.result);
     document.getElementById('fileName').value = file.name; 
     data = jsonData
-    generateFamilyTree(data)
+    generateFamilyTree(data);
+
 };
 
 reader.readAsText(file);
@@ -43,7 +44,7 @@ reader.readAsText(file);
 }
 
 // Function to generate the family tree HTML
-export async function generateFamilyTree(data) {
+export async function generateFamilyTree(data, ego) {
 
 //Erase old familyTree
 const containers = ["tree","yearScale", "svgContainer"]
@@ -56,10 +57,19 @@ container.innerHTML = '';
 duplicates = [];
 
 const people = data.people
-const Y = 100 //window.innerHeight - (window.innerHeight/2)
-const X = 300 //window.innerWidth -  (window.innerWidth/2)
+createSearchBar(data);
 
-startTree(people[0], people, X, Y);
+const X = window.innerWidth -  (window.innerWidth/2)
+
+if(!ego){
+  const Y = 100 //window.innerHeight - (window.innerHeight/2)
+  startTree(people[0], people, X, Y);
+}else{
+  const generations = findGenerations(ego.id, people);
+  const Y = (generations * 400) + 100
+  console.log(Y)
+  startTree(ego, people, X, Y);
+}
 
 //Draw Lines
 addMarriageLine(people);
@@ -80,6 +90,21 @@ document.addEventListener('focusin', (event) => {
 
 const nodes = document.querySelectorAll('.node');
 nodes.forEach(node => {
+
+  node.addEventListener('contextmenu', (event) => {
+        
+    event.preventDefault();
+
+    const divId = node.getAttribute('id');
+
+    //Centre family tree around Ego
+    
+    const ego = findPersonById(data.people, divId)
+    generateFamilyTree(data, ego)
+
+  });
+
+
     node.addEventListener('click', () => {
         
         const divId = node.getAttribute('id');
@@ -136,6 +161,7 @@ spouseNodes.forEach(node => {
 
 // Start-Up Functions:
 createButtons();
+createSearchBar(data.people);
 generateFamilyTree(data);
 uploadData();
 

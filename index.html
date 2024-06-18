@@ -9,10 +9,16 @@
 <link rel="stylesheet" href="nodes.css">
 <link rel="stylesheet" href="lines.css">
 <link rel="stylesheet" href="editor.css">
+<link rel="stylesheet" href="searchBar.css">
 </head>
 <body>
 
 <input type="file" id="fileInput" accept=".json" style="display: none;">
+
+<div class="autocomplete-container">
+    <input type="text" id="searchBar" placeholder="Search..." />
+    <div id="suggestions" class="suggestions"></div>
+  </div>
 
 <div id="container" class="container">
 
@@ -28,6 +34,8 @@
 </div>
 
 <input type="text" id="fileName" placeholder="Enter fileName...">
+
+
 
 </div>
 
