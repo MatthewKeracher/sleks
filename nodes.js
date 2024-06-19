@@ -1,4 +1,4 @@
-import { findPersonById, returnRect } from "./helper.js";
+import { findPersonById, returnRect, getXFactor, returnSiblingsChildren } from "./helper.js";
 import {} from "./lines.js";
 import {duplicates } from "./script.js";
 
@@ -6,8 +6,17 @@ import {duplicates } from "./script.js";
 const nodeWidth = 100;
 export let cousinsArray = [];
 export let nodeSpace = nodeWidth * 4
+export let nodeIndex = 0
 
 function drawNode(ego, X, Y, option){
+
+if(option === 'ego'){
+nodeIndex = 0
+}else{
+nodeIndex++
+}
+
+//console.log(ego, X, Y, option)
 
 //Add Node Container
 const treeContainer = document.getElementById("tree");
@@ -61,18 +70,19 @@ node.appendChild(egoShape);
 
 export function startTree(ego, people, X, Y){
 
+// if(duplicates.includes(ego)){
+//     const egoDiv = document.getElementById(ego.id)
+//     egoDiv.classList.add('ego');
+//     }else{
+drawNode(ego, X, Y);
+duplicates.push(ego); 
+// }
 
 addParents(ego, people, X, Y);
 addSpouse(ego, people, X, Y);
 addChildren(ego, people, X, Y);
 
-if(duplicates.includes(ego)){
-const egoDiv = document.getElementById(ego.id)
-egoDiv.classList.add('ego');
-}else{
-drawNode(ego, X, Y, 'ego');
-duplicates.push(ego); 
-}
+
 
 };
 
@@ -96,7 +106,7 @@ fatherY = childY - nodeSpace;
 
 if(father && !duplicates.includes(father)){
 duplicates.push(father); 
-drawNode(father, fatherX, fatherY);
+drawNode(father, fatherX, fatherY, 'father');
 addParents(father, people, fatherX, fatherY);
 addChildren(father, people, fatherX, fatherY);
 }
@@ -115,7 +125,7 @@ motherY = childY - nodeSpace;
 
 if(mother && !duplicates.includes(mother)){
 duplicates.push(mother); 
-drawNode(mother, motherX, motherY);
+drawNode(mother, motherX, motherY, 'mother');
 addParents(mother, people, motherX, motherY);
 addChildren(mother, people, motherX, motherY);
 }
@@ -149,16 +159,18 @@ children.forEach((child, index) => {
 //Add Child
 const person = people.find(person => person.id === child);
 
-const cousins = findCousins(person, people);
-const siblingsChildren = findSiblingsChildren(person, people);
-
-const childX = egoX + (nodeSpace * (index + siblingsChildren));
-const childY = egoY + (nodeSpace);
-
 if(person && !duplicates.includes(person)){
 duplicates.push(person)
-//console.log('...adding ' + person.firstName + ' child of ' + ego.firstName)
-drawNode(person, childX, childY)
+
+const xFactor = getXFactor(person.id, duplicates);
+const siblingX = returnSiblingsChildren(person.id, duplicates)
+
+const childX = index === 0? egoX :  siblingX === 0? (egoX + (nodeSpace * index)): (siblingX + (nodeSpace * index));
+
+
+const childY = egoY + (nodeSpace);
+
+drawNode(person, childX, childY, 'child')
 addSpouse(person, people, childX, childY)
 addChildren(person, people, childX, childY)
 
@@ -168,137 +180,9 @@ addChildren(person, people, childX, childY)
 }
 };
 
-export function findCousins(ego, people){
-
-let grandParents = [];
-let cousins = [];
-
-try{
-
-const parents = people.filter(person => person.id === ego.father || person.id === ego.mother);
-//console.log(ego.firstName + ' parents:', parents)
-
-parents.forEach(parent => {
-
-const filter =  people.filter(person => person.id === parent.father || person.id === parent.mother);
-//console.log('Grandparents:', filter)
-
-grandParents = [...grandParents, ...filter];
-
-
-});
-
-grandParents.forEach(grandParent => {
-
-const auncles = people.filter(person => 
-person.father === grandParent.id && person.id !== ego.father && person.id !== ego.mother || 
-person.mother === grandParent.id && person.id !== ego.father && person.id !== ego.mother);
-
-//console.log(auncles)
-
-auncles.forEach(ego => {
-
-if(ego.children !== ""){
-
-const children = ego.children.split(',');
-
-cousins = [...cousins, ...children]
-
-}
-
-})
 
 
 
-})
-
-///Filter only duplicate (so already drawn).
-const duplicatedIDs = duplicates.map(duplicate => duplicate.id)
-cousins = cousins.filter(cousin => duplicatedIDs.includes(cousin))
-
-//Filter only Unique Values.
-cousins = Array.from(new Set(cousins));
-
-cousinsArray.push({id: ego.id, number: cousins.length});
-
-//console.log(cousins)
-
-return cousins.length;
-
-}catch{
-
-return 0
-}
-};
-
-export function findSiblingsChildren(ego, people){
-
-        let siblingsChildren = 0;
-        let siblingsGrandchildren = 0;
-        let siblings = [];
-
-
-        if(ego && ego.mother && ego.mother !== "" && ego.mother && ego.mother !== undefined){
-        const parent = findPersonById(people, ego.mother)
-        const children = parent.children.split(',');
-        const filter = children.filter(child => child !== ego.id)
-        siblings = [...siblings, ...filter]
-        }
-        
-        if(ego && ego.father !== "" && ego.father !== undefined){
-        const parent = findPersonById(people, ego.father)
-        const children = parent.children.split(',');
-        const filter = children.filter(child => child !== ego.id)
-        siblings = [...siblings, ...filter]
-        }
-
-        
-    ///Filter only duplicate (so already drawn).
-    const duplicatedIDs = duplicates.map(duplicate => duplicate.id)
-    siblings = siblings.filter(sibling => duplicatedIDs.includes(sibling))
-    
-    //Filter only Unique Values.
-    siblings = Array.from(new Set(siblings));
-
-    siblings.forEach(id => {
-
-    const sibling = findPersonById(people, id)
-
-    if(sibling.children !== ""){
-    
-    const children = sibling.children.split(',');
-    const numberChildren = children.length;
-
-    siblingsChildren = siblingsChildren + numberChildren
-
-    children.forEach(id => {
-
-    const ego = findPersonById(people, id)
-    const children = ego.children.split(',');
-    const numberChildren = children.length;
-
-    siblingsGrandchildren = siblingsGrandchildren + numberChildren
-        
-    })
-
-    }
-
-    })
-
-    if(siblingsChildren > siblingsGrandchildren){
-
-        return siblingsChildren
-
-    }else{
-
-        return siblingsGrandchildren
-    }
-    
-   
-    
-    };
-
-    
 
 
 

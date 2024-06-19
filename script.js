@@ -2,7 +2,7 @@ import { createForm } from './form.js';
 import { startTree} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons, createSearchBar } from './buttons.js';
-import { findPersonById, findGenerations } from './helper.js';
+import { findPersonById, countOlderGenerations, returnRect } from './helper.js';
 
 export let duplicates = [];
 
@@ -56,6 +56,7 @@ container.innerHTML = '';
 
 duplicates = [];
 
+
 const people = data.people
 createSearchBar(data);
 
@@ -65,15 +66,31 @@ if(!ego){
   const Y = 100 //window.innerHeight - (window.innerHeight/2)
   startTree(people[0], people, X, Y);
 }else{
-  const generations = findGenerations(ego.id, people);
-  const Y = (generations * 400) + 100
-  startTree(ego, people, X, Y);
+  const generations = countOlderGenerations(ego.id, people);
+  const numberGens = generations.generations
+  const startEgo = findPersonById(people, generations.egoId);
+  const Y = 100
+  startTree(startEgo, people, X, Y);
 }
 
 //Draw Lines
 addMarriageLine(people);
 addChildrenLines(people);
 
+//Centre family tree on Ego.
+if(ego){
+const egoDiv = document.getElementById(ego.id)
+egoDiv.classList.add('ego');
+
+const egoRect = returnRect(ego.id)
+
+window.scrollTo({
+  left: egoRect.left  - (window.innerWidth / 2) + (egoRect.width / 2) + window.scrollX,
+  top: egoRect.top  - (window.innerHeight / 2) + (egoRect.height / 2) + window.scrollY,
+  behavior: 'smooth' // Optional: adds a smooth scrolling effect
+});
+
+}
 
 let focusedInput = null;
 
@@ -116,7 +133,8 @@ nodes.forEach(node => {
 
         if (existingForm && focusedInput && inputKeys.includes(focusedInput.id)) {
             focusedInput.value = divId;
-
+            focusedInput.focus(); 
+            
             //Add child to targetDiv Children
             if(focusedInput.id === "mother" || focusedInput.id === "father"){
               const childId = document.getElementById('id').value;

@@ -70,6 +70,8 @@ const newId = (data.people.length + 1).toString();
 
 input.value = index === 'new' && input.id === 'id'? newId : index === 'new'? '' : person[key];
 
+
+
 // Make input mandatory
 const mandatoryKeys = ['firstName', 'gender']
 if(mandatoryKeys.includes(key)){
@@ -82,7 +84,6 @@ form.appendChild(input);
 form.appendChild(document.createElement('br'));
 }
 };
-
 
 // Create a submit button
 const submitButton = document.createElement('button');
@@ -107,130 +108,133 @@ const existingForm = document.getElementById('editForm');
 
 existingForm.remove();
 
-
-
 });
 
 //Append Form
 document.body.appendChild(form);
 
+// Focus on the firstName input
+    const firstNameInput = form.querySelector('input[name="firstName"]');
+    if (firstNameInput) {
+        firstNameInput.focus(); // Focus on firstName input
+    }
 
 //Handle Form submission
 form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent the default form submission
+event.preventDefault(); // Prevent the default form submission
 
-    // Update the person object with the new values
-    const formData = new FormData(form);
-    let ID
+// Update the person object with the new values
+const formData = new FormData(form);
+let ID
 
-    if (index === 'new') {
+if (index === 'new') {
 
-        // Create a new object for the new person
-        let newObj = {};
+// Create a new object for the new person
+let newObj = {};
 
-        // Populate the new object with form data
-        for (const key of formData.keys()) {
-            newObj[key] = formData.get(key);
-        }
+// Populate the new object with form data
+for (const key of formData.keys()) {
+newObj[key] = formData.get(key);
+}
 
-        // Set the new ID
-        ID = formData.get('id');
+// Set the new ID
+ID = formData.get('id');
 
-        //console.log(newObj);
+//console.log(newObj);
 
-        // Add the new person to the people array
-        data.people.push(newObj);
+// Add the new person to the people array
+data.people.push(newObj);
 
-        const existingForm = document.getElementById('editForm');
-        existingForm.remove();
-
-         
-        // Regenerate the family tree with the updated data
-        generateFamilyTree(data, newObj)
+const existingForm = document.getElementById('editForm');
+existingForm.remove();
 
 
-    } else {
-
-        // Update the existing person object with form data
-        for (const key of formData.keys()) {
-            person[key] = formData.get(key);
-        }
-
-        // Update the person in the people array
-        ID = formData.get('id');
-        data.people[index] = person;
-
-          // Regenerate the family tree with the updated data
-          generateFamilyTree(data,  data.people[index])
-    }
-
-    //Change information in other people's entries.
-
-    //Remove old Spouse
-    let existingSpouse = data.people.find(person => person.spouse === ID);
-    if(existingSpouse){
-    existingSpouse.spouse = '';
-    }
-
-    //Update Spouse
-    let spouse = formData.get('spouse');
-    if(spouse !== ''){
-    let spouseIndex = data.people.findIndex(person => person.id === spouse)
-
-    //console.log(data.people[spouseIndex])
-    data.people[spouseIndex].spouse = ID;
-    }
-
-    const parent = findPersonById(data.people, ID);
-
-    //Update Parent Entry on Added Children
-    if(parent.children !== "" ){
-    console.log('adding Children...')
-    const children = parent.children.split(',');
-    console.log(children)
-   
-
-    children.forEach(childId => {
-        
-        const childObj = findPersonById(data.people, childId);
-          
-        const parentGender = parent.gender;
-        const parentId = ID;
-
-        if(parentGender === 'male'){
-
-        childObj.father = parentId
-
-        }else if(parentGender === 'female'){
-
-        childObj.mother = parentId
-
-        }
-
-    })
-
-    //Remove Father/Mother status from entries.
-
-    data.people.forEach(person => {
-
-    const isChild = children.includes(person.id)
-    
-    if(isChild === false){
-
-    if(person.mother === ID){
-    person.mother = ""
-    }
-
-    if(person.father === ID){
-    person.father = ""
-    }
-
-    }
-
-    })};
+// Regenerate the family tree with the updated data
+generateFamilyTree(data, newObj)
 
 
- 
+} else {
+
+// Update the existing person object with form data
+for (const key of formData.keys()) {
+person[key] = formData.get(key);
+}
+
+// Update the person in the people array
+ID = formData.get('id');
+data.people[index] = person;
+
+// Regenerate the family tree with the updated data
+generateFamilyTree(data,  data.people[index])
+}
+
+//Change information in other people's entries.
+
+//Remove old Spouse
+let existingSpouse = data.people.find(person => person.spouse === ID);
+if(existingSpouse){
+existingSpouse.spouse = '';
+}
+
+//Update Spouse
+let spouse = formData.get('spouse');
+if(spouse !== ''){
+let spouseIndex = data.people.findIndex(person => person.id === spouse)
+
+//console.log(data.people[spouseIndex])
+data.people[spouseIndex].spouse = ID;
+}
+
+const parent = findPersonById(data.people, ID);
+
+//Update Parent Entry on Added Children
+if(parent.children !== "" ){
+console.log('adding Children...')
+const children = parent.children.split(',');
+console.log(children)
+
+
+children.forEach(childId => {
+
+const childObj = findPersonById(data.people, childId);
+
+const parentGender = parent.gender;
+const parentId = ID;
+
+if(parentGender === 'male'){
+
+childObj.father = parentId
+
+}else if(parentGender === 'female'){
+
+childObj.mother = parentId
+
+}
+
+})
+
+//Remove Father/Mother status from entries.
+
+data.people.forEach(person => {
+
+const isChild = children.includes(person.id)
+
+if(isChild === false){
+
+if(person.mother === ID){
+person.mother = ""
+}
+
+if(person.father === ID){
+person.father = ""
+}
+
+}
+
+})};
+
+
+
 });
 
 
