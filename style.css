@@ -28,48 +28,7 @@ body{
     overflow: auto;
     }
 
-.bottom-container {
-    position: fixed; /* Fixed position to keep it in the same place */
-    bottom: 0; /* Position from the bottom */
-    background-color: rgba(238, 238, 161, 0.506);
-    width: 200vw;
-    height:5vh;
-    display: flex; /* Use flexbox to align buttons side by side */
-    z-index: 1000;
-    padding: 1.5vh 1.5vw;
-}
 
-
-/* Container for the buttons */
-.button-container {
-    position: fixed; /* Fixed position to keep it in the same place */
-    bottom: 1vh; /* Position from the bottom */
-    right: 0.5vw; /* Position from the right */
-    display: flex; /* Use flexbox to align buttons side by side */
-    gap: 0.5vw; /* Space between buttons */
-}
-
-/* Style for the buttons */
-.button-container button {
-    padding: 1.5vh 1.5vw;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    border: none;
-    border-radius: 0.01vw;
-    font-size: 1.2vw;
-    cursor: pointer;
-    font-family: monospace;
-}
-
-
-/* Hover effect for the button */
-#addButton:hover,
-#saveButton:hover,
-#loadButton:hover,
-#refreshButton:hover,
-#exportImageButton:hover {
-    background-color: #156a19;
-}
 
 
 /* Form Inputs (text) */

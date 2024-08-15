@@ -1,0 +1,43 @@
+.bottom-container {
+position: fixed; 
+bottom: 0; 
+width: 200vw;
+height: 50px;
+display: flex; 
+z-index: 1000;
+background-color: rgba(238, 238, 161, 0.506);
+padding: 30px 30px;
+}
+
+
+/* Container for the buttons */
+.button-container {
+position: fixed; 
+bottom: 1vh; 
+right: 0.5vw; 
+display: flex; 
+gap: 0.5vw; 
+}
+
+/* Style for the buttons */
+.button-container button {
+padding: 30px 30px;
+background-color: #4CAF50; 
+color: white; 
+border: none;
+border-radius: 0.01vw;
+height: 40px;
+font-size: 30px;
+cursor: pointer;
+font-family: monospace;
+}
+
+
+/* Hover effect for the button */
+#addButton:hover,
+#saveButton:hover,
+#loadButton:hover,
+#refreshButton:hover,
+#exportImageButton:hover {
+background-color: #156a19;
+}
