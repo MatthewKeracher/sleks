@@ -118,19 +118,56 @@ export function createSearchBar(){
 
 const searchBar = document.getElementById('searchBar');
 const suggestionsContainer = document.getElementById('suggestions');
-const people = data.people;
+
+const fullNames = data.people
+  .map(person => ({
+    id: person.id,
+    fullName: person.firstName + ' ' + person.familyName,
+    familyName: person.familyName
+  }))
+  .sort((a, b) => a.familyName.localeCompare(b.familyName));
+  
+
+searchBar.addEventListener('click', () => {
+
+    suggestionsContainer.innerHTML = '';
+
+    fullNames.forEach(entry => {
+    
+    const newRow = document.createElement('div');
+    newRow.id = 'row' + entry.id
+    newRow.innerHTML = entry.fullName
+    newRow.classList.add('suggestion-item');
+
+    newRow.addEventListener('click', () => {
+
+        const ego = findPersonById(data.people, entry.id);
+        
+        generateFamilyTree(data, ego)
+        
+        });
+    
+    suggestionsContainer.appendChild(newRow)
+    
+    
+    })
+    
+});
+
 
 searchBar.addEventListener('input', () => {
 const query = searchBar.value.toLowerCase();
 suggestionsContainer.innerHTML = '';
 
 if (query) {
-const filteredData = people.filter(person => person.firstName.toLowerCase().includes(query) || person.familyName.toLowerCase().includes(query));
+const filteredData = fullNames.filter(person => person.fullName.toLowerCase().includes(query));
+
 filteredData.forEach(person => {
     const suggestionItem = document.createElement('div');
     suggestionItem.classList.add('suggestion-item');
     suggestionItem.textContent = person.firstName + ' ' + person.familyName;
     suggestionItem.setAttribute('id', person.id)
+
     suggestionItem.addEventListener('click', () => {
     const id = suggestionItem.getAttribute('id');
     const person = findPersonById(people, id)
