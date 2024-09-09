@@ -149,6 +149,18 @@ if (person.father && person.father !== "") {
  return largestX
 }
 
+export function editData(data){
+
+  const people = data.people
+
+  people.forEach(person => {
+
+    person.note = person.note? person.note : "Add Note Here."
+
+  })
+
+}
+
 
 // Function to find the largest generation size and total generations under a given person
 export function getXFactor(egoId, people) {

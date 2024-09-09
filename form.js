@@ -26,7 +26,8 @@ birthYear: 'text',
 mother: 'number',
 father: 'number',
 spouse: 'number',
-children: 'text'
+children: 'text',
+note: 'text',
 };
 
 // Labels
@@ -91,6 +92,12 @@ submitButton.type = 'submit';
 submitButton.textContent = 'Save';
 form.appendChild(submitButton);
 
+// Create a delete button
+const deleteButton = document.createElement('button');
+deleteButton.type = 'submit';
+deleteButton.textContent = 'Delete';
+form.appendChild(deleteButton);
+
 // Create a close button
 const closeButton = document.createElement('button');
 closeButton.type = 'submit';
@@ -100,7 +107,19 @@ form.appendChild(closeButton);
 // Append the form to the body (or any other container)
 document.body.appendChild(form);
 
-// Event listener for form submission
+// Event listener for close button
+deleteButton.addEventListener('click', (event) => {
+event.preventDefault(); // Prevent the default form submission
+
+const existingForm = document.getElementById('editForm');
+existingForm.remove();
+
+data.people.splice(index,1)
+generateFamilyTree(data.people)
+
+});
+
+// Event listener for close button
 closeButton.addEventListener('click', (event) => {
 event.preventDefault(); // Prevent the default form submission
 
@@ -114,10 +133,10 @@ existingForm.remove();
 document.body.appendChild(form);
 
 // Focus on the firstName input
-    const firstNameInput = form.querySelector('input[name="firstName"]');
-    if (firstNameInput) {
-        firstNameInput.focus(); // Focus on firstName input
-    }
+const firstNameInput = form.querySelector('input[name="firstName"]');
+if (firstNameInput) {
+firstNameInput.focus(); // Focus on firstName input
+}
 
 //Handle Form submission
 form.addEventListener('submit', (event) => {
@@ -231,10 +250,30 @@ person.father = ""
 
 }
 
-})};
+})
 
+//Update Children on added Parents
 
+//Update Spouse
+let parentIDs = [formData.get('mother'),formData.get('father')];
+parentIDs.forEach(parent => {
 
+console.log(parent)
+
+if(parent !== ''){
+let index = data.people.findIndex(person => person.id === parent)
+let person = data.people[index]
+
+if (person.children === "") {
+person.children = ID; // If no children, directly assign the ID
+} else if (!person.children.includes(ID)) {
+person.children = person.children + ',' + ID; // Append the new ID if it's not already present
+}
+
+}
+});
+
+};
 });
 
 

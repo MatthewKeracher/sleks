@@ -1,7 +1,7 @@
 
 import { createForm } from './form.js';
 import { data, generateFamilyTree } from './script.js';
-import { downloadData, findPersonById } from './helper.js';
+import { downloadData, findPersonById, editData } from './helper.js';
 
 export function createButtons() {
 
@@ -122,7 +122,7 @@ const suggestionsContainer = document.getElementById('suggestions');
 const fullNames = data.people
   .map(person => ({
     id: person.id,
-    fullName: person.firstName + ' ' + person.familyName,
+    fullName: person.firstName + ' ' + (person.middleName? person.middleName + ' ' : '') + person.familyName,
     familyName: person.familyName
   }))
   .sort((a, b) => a.familyName.localeCompare(b.familyName));
@@ -144,6 +144,8 @@ searchBar.addEventListener('click', () => {
         const ego = findPersonById(data.people, entry.id);
         
         generateFamilyTree(data, ego)
+        const index = data.people.findIndex(entry => entry.id === ego.id)
+        createForm(index)
         
         });
     
@@ -165,22 +167,23 @@ const filteredData = fullNames.filter(person => person.fullName.toLowerCase().in
 filteredData.forEach(person => {
     const suggestionItem = document.createElement('div');
     suggestionItem.classList.add('suggestion-item');
-    suggestionItem.textContent = person.firstName + ' ' + person.familyName;
+    suggestionItem.textContent = person.fullName + ' (' + person.id + ')';
     suggestionItem.setAttribute('id', person.id)
 
     suggestionItem.addEventListener('click', () => {
+   
     const id = suggestionItem.getAttribute('id');
-    const person = findPersonById(people, id)
+    const person = findPersonById(data.people, id)
     searchBar.value = person.firstName + ' ' + person.familyName;
     suggestionsContainer.innerHTML = '';
     console.log(data, person)
     generateFamilyTree(data, person);
+    const index = data.people.findIndex(entry => entry.id === person.id)
+    createForm(index)
     });
     suggestionsContainer.appendChild(suggestionItem);
 
 
-    
-    
 });
 }
 });

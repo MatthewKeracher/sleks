@@ -98,3 +98,28 @@ height: 40px;
 background-color: lime;
 border-radius: 50%;
 }
+
+.hover-info{
+/* Position */
+position: fixed;
+display: flex;
+flex-direction: column;
+z-index: 400;
+bottom: 0;
+left: 0;
+ /* Size */
+width: auto; 
+min-width: 5vw;
+max-width: 10vw;
+height: auto; 
+min-height: 5vh;
+max-height: 10vh;
+padding: 0.5vw;
+font-size: 0.8vw;
+/* Style */
+background-color: rgba(238, 238, 161, 0.9); 
+border: 0.1vw solid rgba(0, 0, 0, 0.44);
+border-radius: 0.1vw;
+box-shadow: none;
+font-family: monospace; 
+}

@@ -2,7 +2,7 @@ import { createForm } from './form.js';
 import { startTree} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons, createSearchBar } from './buttons.js';
-import { findPersonById, countOlderGenerations, returnRect } from './helper.js';
+import { findPersonById, countOlderGenerations, returnRect, editData } from './helper.js';
 
 export let duplicates = [];
 
@@ -36,6 +36,7 @@ reader.onload = function(event) {
     document.getElementById('fileName').value = file.name; 
     data = jsonData
     generateFamilyTree(data);
+    editData(data);
 
 };
 
@@ -80,6 +81,7 @@ addChildrenLines(people);
 //Centre family tree on Ego.
 if(ego){
 const egoDiv = document.getElementById(ego.id)
+
 egoDiv.classList.add('ego');
 
 const egoRect = returnRect(ego.id)
@@ -106,6 +108,49 @@ document.addEventListener('focusin', (event) => {
 
 const nodes = document.querySelectorAll('.node');
 nodes.forEach(node => {
+
+  node.addEventListener('mouseover', (event) => {
+    event.preventDefault();
+  
+    const divId = node.getAttribute('id');
+    const ego = findPersonById(data.people, divId);
+
+    // Remove any existing forms to prevent multiple forms from displaying
+    const existingDiv = document.getElementById('hoverDiv');
+    if (existingDiv) {
+    existingDiv.remove();
+    }
+    
+
+    const hoverDiv = document.createElement('div');
+    hoverDiv.id = 'hoverDiv'
+    hoverDiv.classList.add('hover-info'); // Add a class for styling
+  
+    // Set the content of the div
+    hoverDiv.innerHTML = ego.note || ''; // Display the note or a fallback message
+  
+    // Append the div to the body (or another container)
+    document.body.appendChild(hoverDiv);
+  
+    // Get the position of the node and apply an offset for the hoverDiv
+  const nodeRect = node.getBoundingClientRect();
+  const offsetX = 20; // Adjust horizontal offset from the node
+  const offsetY = 10; // Adjust vertical offset from the node
+
+  // Position the div relative to the node's position
+  hoverDiv.style.position = 'absolute';
+  hoverDiv.style.left = window.pageXOffset + nodeRect.right + offsetX + 'px'; // Position it to the right of the node
+  hoverDiv.style.top = window.pageYOffset + nodeRect.top + offsetY + 'px';  // Slightly below the node
+});
+
+  node.addEventListener('mouseout', () => {
+    // Remove the hover div when mouse leaves the node
+    const hoverDiv = document.querySelector('.hover-info');
+    if (hoverDiv) {
+      hoverDiv.remove();
+    }
+  });
+  
 
   node.addEventListener('contextmenu', (event) => {
         
@@ -182,4 +227,5 @@ createButtons();
 createSearchBar(data.people);
 generateFamilyTree(data);
 uploadData();
+
 
