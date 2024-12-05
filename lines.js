@@ -3,6 +3,7 @@ import { nodeSpace, cousinsArray } from "./nodes.js";
 import { data, duplicates} from "./script.js";
 
 let marriages = []
+let lineColor = 'orange'
 
 export function addMarriageLine(people){
 
@@ -39,7 +40,7 @@ line.setAttribute('x1', x1);
 line.setAttribute('y1', y1);
 line.setAttribute('x2', x2);
 line.setAttribute('y2', y2);
-line.setAttribute('stroke', 'gray');
+line.setAttribute('stroke', lineColor);
 line.setAttribute('stroke-width', '5');
 
 const svgContainer = document.getElementById('svgContainer');
@@ -63,7 +64,7 @@ children.forEach(child =>{
 const childRect = returnRect(child.id);
 const x1 = childRect.left + childRect.width / 2 + window.scrollX;
 const y1 = childRect.top + childRect.height / 2 + window.scrollY;
-const color = "gray" //colors[Math.floor(Math.random() * colors.length)];
+const color = lineColor //colors[Math.floor(Math.random() * colors.length)];
 
 let x2;
 let y2;

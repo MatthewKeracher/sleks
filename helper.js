@@ -155,7 +155,7 @@ export function editData(data){
 
   people.forEach(person => {
 
-    person.note = person.note? person.note : "Add Note Here."
+    person.note = person.note? person.note : ""
 
   })
 
@@ -238,6 +238,28 @@ export function getXFactor(egoId, people) {
   return { number: totalGenerations, largest: largestGenerationSize };
 }
 
+// Function to save the array to local storage
+export function saveArray(array) {
+  try {
+    localStorage.setItem('savedArray', JSON.stringify(array));
+    console.log('Array saved successfully');
+    return true;
+  } catch (error) {
+    console.error('Error saving array:', error);
+    return false;
+  }
+}
+
+// Function to load the array from local storage
+export function loadArray() {
+  try {
+    const savedArray = localStorage.getItem('savedArray');
+    return savedArray ? JSON.parse(savedArray) : null;
+  } catch (error) {
+    console.error('Error loading array:', error);
+    return null;
+  }
+}
 
 
 

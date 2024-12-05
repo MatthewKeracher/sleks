@@ -1,7 +1,7 @@
 
 import { createForm } from './form.js';
 import { data, generateFamilyTree } from './script.js';
-import { downloadData, findPersonById, editData } from './helper.js';
+import { downloadData, findPersonById, editData, saveArray } from './helper.js';
 
 export function createButtons() {
 
@@ -54,7 +54,10 @@ export function createButtons() {
 
     // Add an event listener to the button
     jsonButton.addEventListener('click', () => {
-    //Open .json Editor
+        const editor = document.getElementById('editor');
+        const jsonEditor = document.getElementById('jsonEditor');
+        editor.style.display = 'block';
+        jsonEditor.value = JSON.stringify(data, null, 2);
     });
 
     // Append buttons to container
@@ -68,7 +71,6 @@ export function createButtons() {
     const bottom = document.getElementById('bottomContainer')
     bottom.appendChild(buttonContainer);
 }
-
 
 export function createDropdown(data) {
 

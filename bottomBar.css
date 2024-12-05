@@ -12,7 +12,7 @@ height: 5%;
 padding: 0.5vw;
 font-size: 0.8vw;
 /* Style */
-background-color: rgba(238, 238, 161, 0.506); 
+background-color: rgba(88, 88, 56, 0.506); 
 border: 0.1vw solid rgba(0, 0, 0, 0.44);
 border-radius: 0.1vw;
 box-shadow: none;
@@ -30,7 +30,8 @@ gap: 0.5vw;
 }
 
 /* Style for the buttons */
-.button-container button {
+.button-container button,
+.jsonButton {
 display: flex;
 padding: 1vw 1vw;
 bottom: 0px; 
@@ -51,7 +52,8 @@ justify-content: center;
 
 .fileName{
 position: fixed;
-background-color: white;
+background-color: black;
+color: whitesmoke;
 position: absolute;
 bottom: 0px;
 z-index: 1000;
@@ -63,6 +65,7 @@ z-index: 1000;
 #saveButton:hover,
 #loadButton:hover,
 #refreshButton:hover,
-#exportImageButton:hover {
+#exportImageButton:hover,
+.jsonButton:hover {
 background-color: #156a19;
 }

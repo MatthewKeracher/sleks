@@ -1,0 +1,22 @@
+#editor {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: orange;
+    padding: 1vw;
+    border: 0.1vw solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+#jsonEditor {
+    width: 30vw;
+    height: 80vh;
+    margin-bottom: 5vh;
+    background-color: black;
+    color: orange;
+    font-size: 1.5vh;
+}

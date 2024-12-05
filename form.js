@@ -1,5 +1,5 @@
 import { generateFamilyTree, data } from './script.js';
-import { findPersonById } from './helper.js';
+import { findPersonById, saveArray } from './helper.js';
 
 export function createForm(index, divId) {
 
@@ -274,6 +274,9 @@ person.children = person.children + ',' + ID; // Append the new ID if it's not a
 });
 
 };
+
+saveArray(data)
+
 });
 
 

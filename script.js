@@ -2,7 +2,7 @@ import { createForm } from './form.js';
 import { startTree} from './nodes.js';
 import { addChildrenLines, addMarriageLine} from './lines.js';
 import { createButtons, createSearchBar } from './buttons.js';
-import { findPersonById, countOlderGenerations, returnRect, editData } from './helper.js';
+import { findPersonById, countOlderGenerations, returnRect, editData, saveArray, loadArray } from './helper.js';
 
 export let duplicates = [];
 
@@ -22,6 +22,31 @@ export let data = {
 "children": ""
 }
 ]};
+
+let savedData = loadArray()
+if(savedData !== null){data = savedData}
+console.log(data)
+
+function saveJsonEditor() {
+  let jsonEditor = document.getElementById('jsonEditor');
+  // try {
+      data = JSON.parse(jsonEditor.value);
+      saveArray(data);
+      generateFamilyTree(data)
+      closeEditor();
+      console.log('Array saved:', data);
+  // } catch (error) {
+  //     alert('Invalid JSON. Please check your input.');
+  // }
+}
+
+function closeEditor() {
+  document.getElementById('editor').style.display = 'none';
+}
+
+document.getElementById('saveButton').addEventListener('click', saveJsonEditor);
+document.getElementById('cancelButton').addEventListener('click', closeEditor);
+
 
 //Function to upload .json files.
 function uploadData() {
@@ -130,8 +155,10 @@ nodes.forEach(node => {
     hoverDiv.innerHTML = ego.note || ''; // Display the note or a fallback message
   
     // Append the div to the body (or another container)
+    if(hoverDiv.innerHTML !== ''){
     document.body.appendChild(hoverDiv);
-  
+    }
+    
     // Get the position of the node and apply an offset for the hoverDiv
   const nodeRect = node.getBoundingClientRect();
   const offsetX = 20; // Adjust horizontal offset from the node
