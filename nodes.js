@@ -30,6 +30,11 @@ if(option){
 node.classList.add(option);
 }
 
+//Add Dead
+if(ego.deathyear && ego.deathyear !== ""){
+node.classList.add("dead");   
+}
+
 node.classList.add('node');
 node.setAttribute('id', ego.id);
 node.style.top = Y + 'px';
@@ -64,6 +69,8 @@ const egoShape = document.createElement("div");
 egoShape.classList.add("shape");
 egoShape.classList.add(shape);
 egoShape.setAttribute('id', ego.id);
+
+
 node.appendChild(egoShape);
 
 };

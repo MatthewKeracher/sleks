@@ -54,7 +54,7 @@ form#editForm input[type="number"] {
 
 /* Submit Button */
 form#editForm button[type="submit"] {
-    margin-top: 2vh;
+    margin-top: 1vh;
     padding: 0.5vw;
     border: none;
     border-radius: 0.5vw;

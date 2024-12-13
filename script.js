@@ -16,6 +16,7 @@ export let data = {
 "familyName": "Node",
 "gender": "",
 "birthyear": "",
+"deathyear": "",
 "mother": "",
 "father": "",
 "spouse": "",
@@ -254,5 +255,7 @@ createButtons();
 createSearchBar(data.people);
 generateFamilyTree(data);
 uploadData();
+
+
 
 

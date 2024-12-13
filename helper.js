@@ -1,3 +1,4 @@
+
 export function downloadData(data, filename) {
 // Convert data to JSON string
 const jsonData = JSON.stringify(data, null, 2); // Use null and 2 for pretty formatting
@@ -153,12 +154,25 @@ export function editData(data){
 
   const people = data.people
 
-  people.forEach(person => {
+  people.forEach((person, index) => {
+    let order = {
+      id: person.id,
+      firstName: person.firstName,
+      middleName: person.middleName,
+      familyName: person.familyName,
+      gender: person.gender,
+      birthyear: person.birthyear,
+      deathyear: "", 
+      mother: person.mother,
+      father: person.father,
+      spouse: person.spouse,
+      children: person.children,
+      note: person.note === "Add Note Here."? "" : person.note
+    };
 
-    person.note = person.note? person.note : ""
+    data.people[index] = order;
 
   })
-
 }
 
 
