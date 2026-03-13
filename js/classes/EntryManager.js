@@ -283,4 +283,80 @@ class EntryManager {
     document.getElementById("status").textContent = "New project started";
     return true;
   }
+
+  loadOldData() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".json";
+
+    input.onchange = (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const oldData = JSON.parse(e.target.result);
+
+          // **NEW: Clear existing entries**
+          this.entries = [];
+          const entriesById = new Map();
+
+          // First pass: convert old format to new Entry objects
+          oldData.people.forEach((oldEntryData) => {
+            const newEntry = new Entry({
+              id: oldEntryData.id,
+              name: [
+                oldEntryData.firstName || "",
+                oldEntryData.middleName || "",
+                oldEntryData.familyName || "",
+              ],
+              sex:
+                oldEntryData.gender === "male"
+                  ? "male"
+                  : oldEntryData.gender === "female"
+                    ? "female"
+                    : null,
+              age: oldEntryData.birthyear
+                ? [parseInt(oldEntryData.birthyear) || null, null]
+                : [null, null],
+              mother: oldEntryData.mother || "",
+              father: oldEntryData.father || "",
+              spouse: oldEntryData.spouse || "",
+              notes: oldEntryData.note || "",
+            });
+
+            entriesById.set(newEntry.id, newEntry);
+            this.entries.push(newEntry);
+          });
+
+          // Second pass: restore references by ID (strings from old format)
+          this.entries.forEach((entry) => {
+            if (typeof entry.mother === "string" && entry.mother) {
+              entry.mother = entriesById.get(entry.mother) || {};
+            }
+            if (typeof entry.father === "string" && entry.father) {
+              entry.father = entriesById.get(entry.father) || {};
+            }
+            if (typeof entry.spouse === "string" && entry.spouse) {
+              entry.spouse = entriesById.get(entry.spouse) || {};
+            }
+          });
+
+          console.log(
+            `${this.entries.length} old entries converted and loaded`,
+          );
+          document.getElementById("status").textContent =
+            `${this.entries.length} old entries converted successfully`;
+        } catch (error) {
+          console.error("Invalid old JSON format:", error);
+          document.getElementById("status").textContent =
+            "Error loading old data";
+        }
+      };
+      reader.readAsText(file);
+    };
+
+    input.click();
+  }
 }

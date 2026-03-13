@@ -1,11 +1,47 @@
 #rightPanel {
-    flex: 0 0 74%;  /* Takes remaining 75% */
-    height: 100%;
-    border: 1px solid #ddd;
-    padding: 15px;
-    overflow: scroll;
-    background: white;
-    position: relative;  /* Required for absolute node positioning */
+  flex: 0 0 79%; /* Takes remaining 75% */
+  height: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  overflow: scroll;
+  background: white;
+  position: relative; /* Required for absolute node positioning */
 }
 
+.line {
+  position: absolute;
+  height: 2px;
+  background: black;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  }
 
+.spouseLine {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #666 30%,
+    #666 70%,
+    transparent 100%
+  );
+  height: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.node {
+  position: relative;
+  z-index: 10;
+}

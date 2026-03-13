@@ -1,88 +1,137 @@
 
 #leftPanel {
-  flex: 0 0 25%;
+  flex: 0 0 20%;
   height: 100%;
-  border: 1px solid #ddd;
-  padding: 15px;
+  border: 2px inset #dfdfdf;
+  padding: 12px;
   overflow-y: auto;
-  background: white;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #ececec 100%);
+  font-family: 'MS Sans Serif', Tahoma, Verdana, sans-serif;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Form styling */
 #leftPanel h3 {
-  margin-bottom: 20px;
-  color: #333;
+  margin: 0 0 16px 0;
+  color: #000;
+  font-size: 14pt;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
 }
 
 #leftPanel label {
   display: block;
-  margin-bottom: 4px;
-  font-weight: 500;
-  color: #555;
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  color: #000;
+  font-size: 11pt;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
 }
 
 #leftPanel input,
 #leftPanel select {
   width: 100%;
-  height: 32px;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  font-size: 14pt;
-  margin-bottom: 15px;
+  height: 28px;
+  padding: 4px 8px;
+  border: 2px inset #dfdfdf;
+  background: white;
+  color: #000;
+  font-size: 12pt;
+  margin-bottom: 12px;
   box-sizing: border-box;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 
 #leftPanel input:focus,
 #leftPanel select:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+  border-color: #000080;
+  background: linear-gradient(145deg, #ffffff, #e8e8e8);
+  box-shadow: 
+    0 0 0 2px #c0c0c0,
+    inset 0 1px 2px rgba(255,255,255,0.8);
 }
 
 .age-container {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .age-container input {
   width: 100px;
+  height: 26px;
+  font-size: 11pt;
 }
 
 .relationship-container {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .link-dropdown {
-  position: relative;
+  position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background: white;
-  border: 1px solid #999;
-  border-top: none;
-  max-height: 200px;
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  border-top: 1px inset #dfdfdf;
+  max-height: 160px;
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 
+    2px 2px 8px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.5);
   display: none;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  font-size: 11pt;
 }
+
+.link-dropdown div:hover {
+  background: #e0e0e0;
+}
+
 
 .save-btn {
   bottom: 15px;
   width: 100%;
   height: 42px;
-  padding: 8px;
+  padding: 8px 16px;
   font-size: 14pt;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #c0c0c0, #a0a0a0);
+  color: #000;
+  border: 2px outset #dfdfdf;
+  border-radius: 6px;
   cursor: pointer;
   margin-top: 10px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: 
+    0 3px 6px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: all 0.15s ease;
 }
 
 .save-btn:hover {
-  background: #0056b3;
+  background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+  border-color: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 5px 10px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.7);
 }
+
+.save-btn:active {
+  border-style: inset;
+  transform: translateY(0);
+  box-shadow: 
+    0 1px 3px rgba(0,0,0,0.4),
+    inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+

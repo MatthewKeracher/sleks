@@ -11,24 +11,24 @@
   /* style */
   /* use rem */
   font-size: 14px;
-  height: 50px;
+  height: 70px;
   width: 100px;
-  background-color: rgba(218, 216, 214, 0);
+  background-color: rgb(243, 247, 246);
   padding: 10px;
 }
 
 .ego {
-  
+background-color: rgb(218, 216, 214);
 }
 
 .spouse {
-
+ background-color: rgb(243, 247, 246);
 }
 
 
 
 .dead {
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(243, 247, 246);
   
 }
 
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
+  top: 10px;
   width: 100px;
 
   /* style */
@@ -54,7 +54,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 5px;
+  bottom: 10px;
   width: 100px;
 
   /* style */
@@ -64,7 +64,7 @@
 
 .node:hover {
   /* style */
-  background-color: lime;
+  background-color: rgb(0, 255, 0);
 
   /* text */
   font-size: 20px;

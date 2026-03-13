@@ -39,25 +39,60 @@ class Entry {
     return this.age[0];
   }
 
+  get ancestor() {
+    let current = this;
+
+    // Traverse father → father's father → etc until no more father
+    while (Object.keys(current.father).length > 0) {
+      current = current.father;
+    }
+
+    return current;
+  }
+
+  get familyTree() {
+  const familyTree = [];
+  let currentGeneration = [this.ancestor];  // Start with ancestor
+  
+  while (currentGeneration.length > 0) {
+    
+    familyTree.push([...currentGeneration]);  
+    
+    // Collect ALL children from this entire generation (cousins connected!)
+    const nextGen = [];
+    currentGeneration.forEach(parent => {
+      if (parent.children && parent.children.length > 0) {
+        parent.children.forEach(child => {
+          nextGen.push(child);  // Full child object
+        });
+      }
+    });
+    
+    currentGeneration = [...new Set(nextGen)];  // Remove duplicates
+  }
+  
+  return familyTree;
+}
+
   get children() {
-    return people.entries.filter(person =>
-      (person.mother === this || person.father === this)
+    return people.entries.filter(
+      (person) => person.mother === this || person.father === this,
     );
   }
 
   get siblings() {
     if (!this.mother && !this.father) return [];
-    
+
     // Get all people who share the same mother OR father (excluding self)
-    const candidates = people.entries.filter(person => 
+    const candidates = people.entries.filter(
+      (person) =>
         (person.mother === this.mother || person.father === this.father) &&
-        person !== this
+        person !== this,
     );
-    
+
     // Remove duplicates (person could match both parents)
     return [...new Set(candidates)];
-}
-
+  }
 
   link(fieldName, linkEntry) {
     if (!linkEntry || this[fieldName] === linkEntry) return false; // ← Guard!
@@ -121,34 +156,7 @@ class Entry {
   }
 
   loadTree() {
-    eraseNodes(); // Clear existing tree before redrawing
-    drawFamily(this);
-  }
-
-  // Number of patrilineal generations (father -> grandfather -> etc.)
-  get patrilinealGenerations() {
-    let generations = 0;
-    let current = this.father;
-
-    while (current && Object.keys(current).length > 0) {
-      generations++;
-      current = current.father;
-    }
-
-    return generations;
-  }
-
-  // Number of matrilineal generations (mother -> grandmother -> etc.)
-  get matrilinealGenerations() {
-    let generations = 0;
-    let current = this.mother;
-
-    while (current && Object.keys(current).length > 0) {
-      generations++;
-      current = current.mother;
-    }
-
-    return generations;
+    drawTree(this);
   }
 
   savePerson() {

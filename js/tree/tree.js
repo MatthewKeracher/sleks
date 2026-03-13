@@ -1,98 +1,83 @@
-// Get rightPanel dimensions and calculate center
-const rightPanel = document.getElementById("rightPanel");
+let lastNode = {};
+let genX = []
 
-function eraseNodes() {
-  const existingNodes = document.querySelectorAll(".node");
-  existingNodes.forEach((node) => node.remove());
-}
-
-
-function drawEgo(ego = window.currentPerson){
-
-const rightPanel = document.getElementById("rightPanel");
-const panelRect = rightPanel.getBoundingClientRect();
-
-
-}
-
-
-
-function drawFamily(ego = window.currentPerson) {
+function drawTree(ego = window.currentPerson) {
   const rightPanel = document.getElementById("rightPanel");
   const panelRect = rightPanel.getBoundingClientRect();
 
-  // Draw ego in center
-  const startX = panelRect.width / 2 - 50;
-  const startY = panelRect.height / 2 - 50;
-  drawNode(ego, startX, startY);
-
-  // Get ego position once
-  const egoX = startX;
-  const egoY = startY;
-
-  // **NEW: Draw grandparents (parents of parents)**
-  // Paternal grandparents (father's parents)
-  if (Object.keys(ego.father).length > 0) {
-    if (Object.keys(ego.father.father).length > 0) {
-      drawNode(ego.father.father, egoX - 250, egoY - 400, "grandparent");
-    }
-    if (Object.keys(ego.father.mother).length > 0) {
-      drawNode(ego.father.mother, egoX - 100, egoY - 400, "grandparent");
-    }
-  }
-  
-  // Maternal grandparents (mother's parents)
-  if (Object.keys(ego.mother).length > 0) {
-    if (Object.keys(ego.mother.father).length > 0) {
-      drawNode(ego.mother.father, egoX + 100, egoY - 400, "grandparent");
-    }
-    if (Object.keys(ego.mother.mother).length > 0) {
-      drawNode(ego.mother.mother, egoX + 250, egoY - 400, "grandparent");
-    }
+  function eraseNodes() {
+    const existingNodes = document.querySelectorAll(".node");
+    existingNodes.forEach((node) => node.remove());
   }
 
-  // Draw parents (existing)
-  if (Object.keys(ego.father).length > 0) {
-    drawNode(ego.father, egoX - 100, egoY - 200, "parent");
-  }
-  if (Object.keys(ego.mother).length > 0) {
-    drawNode(ego.mother, egoX + 100, egoY - 200, "parent");
-  }
+  eraseNodes(); 
 
-  // Draw spouse (existing)
-  if (Object.keys(ego.spouse).length > 0) {
-    drawNode(ego.spouse, egoX + 200, egoY, "spouse");
-  }
-
-  // Draw ego's children (using getter)
-  ego.children.forEach((child, index) => {
-    drawNode(
-      child,
-      egoX + (index - ego.children.length / 2) * 150,
-      egoY + 200,
-      "child",
-    );
-  });
-
-  // Draw siblings + spouses + children (existing)
-  const siblings = ego.siblings;
-  siblings.forEach((sibling, index) => {
-    const siblingX = egoX + 400 + index * 150;
-    drawNode(sibling, siblingX, egoY, "sibling");
-    
-    if (Object.keys(sibling.spouse).length > 0) {
-      drawNode(sibling.spouse, siblingX + 200, egoY, "sibling-spouse");
-    }
-    
-    sibling.children.forEach((child, childIndex) => {
-      drawNode(
-        child,
-        siblingX + (childIndex - sibling.children.length / 2) * 100,
-        egoY + 200,
-        "niece-nephew",
-      );
-    });
-  });
+  const ancestor = ego.ancestor;
+  const familyTree = ancestor.familyTree;
+  lastNode = {}; 
+  genX = [];
+  drawNode(familyTree, ancestor, 20, 20, "ego");
+  drawLines();
+  centreEgo(ego);
 }
 
+function generation(ego, familyTree) {
+  // Find which generation contains this ego (ancestor = 0)
+  for (let i = 0; i < familyTree.length; i++) {
+    if (familyTree[i].some((person) => person === ego)) {
+      return i; // Generation number (0 = ancestor)
+    }
+  }
+
+  return -1; // Not found
+}
+
+function drawNode(familyTree, ego, X, Y, option) {
+  //if last node is of a younger generation, X = lastNode.X + 200
+
+  if (lastNode.ego) {
+    const thisGen = generation(ego, familyTree);
+    const lastGen = generation(lastNode.ego, familyTree);
+
+    if (thisGen < lastGen) {
+      X = lastNode.X + 400;
+    }else{
+      X = genX[thisGen];
+    }
+
+    if(ego.father === lastNode.ego || ego.mother === lastNode.ego){
+      X = lastNode.X + 75;
+    }
+  }
+
+  genX[generation(ego, familyTree)] = X; // Store last X for this generation
+  lastNode = { ego, X };
+
+  newNode(ego, X, Y, option);
+  let spouseX = X + 150;
+  let genY = Y + 150;
+
+  //spouse
+  if (Object.keys(ego.spouse).length > 0) {
+    newNode(ego.spouse, spouseX, Y, "spouse");
+  }
+
+  if (ego.children.length > 0) {
+    ego.children.forEach((child, index) => {
+      const childX = X + (index * 200); //of last descendent
+      drawNode(familyTree, child, childX, genY, option);
+    });
+  }
+}
+
+function centreEgo(ego) {
+  const egoNode = document.querySelector(`[id="${ego.id}"]`);
+  if (egoNode) {
+    egoNode.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  }
+}
 
