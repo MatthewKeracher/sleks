@@ -1,58 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slekstre</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="form.css">
-<link rel="stylesheet" href="nodes.css">
-<link rel="stylesheet" href="lines.css">
-<link rel="stylesheet" href="editor.css">
-<link rel="stylesheet" href="searchBar.css">
-<link rel="stylesheet" href="bottomBar.css">
-</head>
-<body>
-  
-<input type="file" id="fileInput" accept=".json" style="display: none;">
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/form/form.css" />
+    <link rel="stylesheet" href="styles/top/buttons.css" />
+    <link rel="stylesheet" href="styles/top/search.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/tree/nodes.css" />
+    <link rel="stylesheet" href="styles/tree/tree.css" />
 
-<div class="autocomplete-container">
-    <input type="text" id="searchBar" placeholder="Search..." />
-    <div id="suggestions" class="suggestions"></div>
-  </div>
+    <title>Slekskapp 2.0</title>
+  </head>
+  <body>
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <!-- LEFT -->
+      <div class="searchBar">
+        <input
+          id="searchBox"
+          placeholder="Search by name..."
+          autocomplete="off"
+        />
+        <div id="searchResults"></div>
+      </div>
 
-<div id="container" class="container">
+      <!-- RIGHT -->
+      <div class="buttons-section">
+        <button onclick="people.addNew()">✏️ Add Person</button>
+        <button onclick="people.delete()">💾 Delete Person</button>
+        <button onclick="people.clearAll()">📁 New Project</button>
+        <button onclick="people.load()">📁 Load Data</button>
+        <button onclick="people.save()">💾 Save Data</button>
+      </div>
+    </div>
 
-    <div id="tree"></div>
-    <svg class="container" id="svgContainer"></svg>
-    <div id="yearScale" class="year-scale"></div>
+    <div id="middle">
+      <div id="leftPanel">
+        <h3 id="formTitle">Select a person</h3>
 
-</div>
+        <label>First Name:</label>
+        <input id="firstName" placeholder="First name" />
 
-<div id="editor">
-  <textarea id="jsonEditor"></textarea>
-  <br>
-  <div class="button-container">
-  <button class="jsonButton" id="saveButton">Save</button>
-  <button class="jsonButton" id="cancelButton">Cancel</button>
-</div>
-</div>
+        <label>Middle Name:</label>
+        <input id="middleName" placeholder="Middle name (optional)" />
 
-<div class="bottom-container" id="bottomContainer">
+        <label>Last Name:</label>
+        <input id="lastName" placeholder="Last name" />
 
-<div class="button-container">
-</div>
+        <label>Age:</label>
+        <div class="age-container">
+          <input id="birthYear" placeholder="Birth Year" />
+          <input id="deathYear" placeholder="Death Year" />
+        </div>
 
-<input type="text" id="fileName" class="fileName" placeholder="Enter fileName...">
+        <label>Sex:</label>
+        <select id="sex">
+          <option value="">Select...</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
 
-</div>
+        <label>Father:</label>
+        <div class="relationship-container">
+          <input
+            id="fatherInput"
+            placeholder="Type name..."
+            autocomplete="off"
+          />
+          <div id="fatherDropdown" class="link-dropdown"></div>
+        </div>
 
+        <label>Mother:</label>
+        <div class="relationship-container">
+          <input
+            id="motherInput"
+            placeholder="Type name..."
+            autocomplete="off"
+          />
+          <div id="motherDropdown" class="link-dropdown"></div>
+        </div>
 
+        <label>Spouse:</label>
+        <div class="relationship-container">
+          <input
+            id="spouseInput"
+            placeholder="Type name..."
+            autocomplete="off"
+          />
+          <div id="spouseDropdown" class="link-dropdown"></div>
+        </div>
 
-<script type="module" src="script.js"></script>
-<script type="module" src="form.js"></script>
-<script type="module" src="nodes.js"></script>
-<script type="module" src="helper.js"></script>
-<script type="module" src="buttons.js"></script>
-</body>
+        <button
+          class="save-btn"
+          onclick="if (window.currentPerson) currentPerson.savePerson();"
+        >
+          Save Changes
+        </button>
+      </div>
+
+      <div id="rightPanel"></div>
+    </div>
+
+    <!-- Status bar -->
+    <div id="status" class="status"></div>
+
+    <!-- Import Javascript -->
+    <script src="js/interface/search.js"></script>
+
+    <script src="js/classes/EntryManager.js"></script>
+    <script src="js/classes/Entry.js"></script>
+
+    <script src="js/tree/nodes.js"></script>
+    <script src="js/tree/lines.js"></script>
+    <script src="js/tree/tree.js"></script>
+
+    <!-- <script src="js/classes/Simpsons.js"></script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setupMainSearch();
+        setupFormSearch();
+
+        // Use window.people directly - no local const
+        window.people = new EntryManager();
+        window.people.autoLoad();
+
+        console.log(window.people); // Use window.people here too
+
+        if (window.people.entries.length > 0) {
+          window.currentPerson = window.people.entries[0];
+          window.currentPerson.loadForm();
+          window.currentPerson.loadTree();
+        }
+      });
+    </script>
+  </body>
 </html>

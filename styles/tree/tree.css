@@ -1,0 +1,11 @@
+#rightPanel {
+    flex: 0 0 74%;  /* Takes remaining 75% */
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    overflow: scroll;
+    background: white;
+    position: relative;  /* Required for absolute node positioning */
+}
+
+

@@ -1,0 +1,31 @@
+/* Toolbar */
+.toolbar {
+  background: #e8e8e8;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.buttons-section {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.buttons-section button {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-size: 12pt;
+  white-space: nowrap;
+}
+
+.buttons-section button:hover {
+  background: #f0f0f0;
+}
