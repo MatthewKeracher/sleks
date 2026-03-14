@@ -1,6 +1,5 @@
 class Entry {
   name = ["", "", ""]; // [first, middle, last]
-  sex = null;
   age = [null, null]; // [birthYear, deathYear]
   mother = {};
   father = {};
@@ -10,7 +9,6 @@ class Entry {
 
   constructor(data = {}) {
     this.name = data.name || ["", "", ""];
-    this.sex = data.sex || null;
     this.age = data.age || [null, null];
     this.mother = data.mother || {};
     this.father = data.father || {};
@@ -110,9 +108,7 @@ class Entry {
     if (!this.id) {
       // Clear all form fields
       const inputs = document.querySelectorAll("#leftPanel input");
-      const select = document.getElementById("sex");
       inputs.forEach((input) => (input.value = ""));
-      if (select) select.value = "";
       document.getElementById("formTitle").textContent = "";
       window.currentPerson = null;
       return;
@@ -131,9 +127,6 @@ class Entry {
     // Fill age fields
     document.getElementById("birthYear").value = this.age[0] || "";
     document.getElementById("deathYear").value = this.age[1] || "";
-
-    // Fill sex dropdown
-    document.getElementById("sex").value = this.sex || "";
 
     // Relationships with color update
     const fatherInput = document.getElementById("fatherInput");
@@ -170,8 +163,6 @@ class Entry {
       document.getElementById("birthYear").value || null,
       document.getElementById("deathYear").value || null,
     ];
-
-    this.sex = document.getElementById("sex").value || null;
 
     // Handle ALL relationships first
     ["father", "mother", "spouse"].forEach((field) => {

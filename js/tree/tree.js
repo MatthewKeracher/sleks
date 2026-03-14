@@ -16,7 +16,7 @@ function drawTree(ego = window.currentPerson) {
   const familyTree = ancestor.familyTree;
   lastNode = {}; 
   genX = [];
-  drawNode(familyTree, ancestor, 20, 20, "ego");
+  drawNode(familyTree, ancestor, 20, 20, "family");
   drawLines();
   centreEgo(ego);
 }
@@ -42,7 +42,7 @@ function drawNode(familyTree, ego, X, Y, option) {
     if (thisGen < lastGen) {
       X = lastNode.X + 400;
     }else{
-      X = genX[thisGen];
+      X = genX[thisGen] + 300;
     }
 
     if(ego.father === lastNode.ego || ego.mother === lastNode.ego){
@@ -73,6 +73,9 @@ function drawNode(familyTree, ego, X, Y, option) {
 function centreEgo(ego) {
   const egoNode = document.querySelector(`[id="${ego.id}"]`);
   if (egoNode) {
+
+    egoNode.classList.add("ego"); // Add "ego" class to the ego node
+
     egoNode.scrollIntoView({
       behavior: "smooth",
       block: "center",

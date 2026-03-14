@@ -16,7 +16,7 @@ function drawLines() {
     }
   });
 
-  const egoNodes = document.querySelectorAll(".ego");
+  const egoNodes = document.querySelectorAll(".family");
 
   egoNodes.forEach((node) => {
     const id = node.getAttribute("id");

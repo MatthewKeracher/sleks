@@ -8,7 +8,6 @@ class EntryManager {
     const newPerson = new Entry({
       name: ["", "", ""],
       age: [null, null],
-      sex: null,
       mother: {},
       father: {},
       spouse: {},
@@ -164,7 +163,6 @@ class EntryManager {
       id: entry.id,
       name: entry.name,
       age: entry.age,
-      sex: entry.sex,
       mother: replaceWithId(entry.mother),
       father: replaceWithId(entry.father),
       spouse: replaceWithId(entry.spouse),
@@ -200,7 +198,6 @@ class EntryManager {
       id: entry.id,
       name: entry.name,
       age: entry.age, // Changed
-      sex: entry.sex,
       mother: replaceWithId(entry.mother),
       father: replaceWithId(entry.father),
       spouse: replaceWithId(entry.spouse),
@@ -311,12 +308,6 @@ class EntryManager {
                 oldEntryData.middleName || "",
                 oldEntryData.familyName || "",
               ],
-              sex:
-                oldEntryData.gender === "male"
-                  ? "male"
-                  : oldEntryData.gender === "female"
-                    ? "female"
-                    : null,
               age: oldEntryData.birthyear
                 ? [parseInt(oldEntryData.birthyear) || null, null]
                 : [null, null],

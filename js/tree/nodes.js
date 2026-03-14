@@ -2,7 +2,7 @@ function newNode(ego, X, Y, option) {
 
   const rightPanel = document.getElementById("rightPanel");
   const node = document.createElement("div");
-  const nodeWidth = 100; // Set a fixed width for name divs
+  const nodeWidth = 120; // Set a fixed width for name divs
 
   //if node with ego.id already exists, return that node instead of creating a new one
   const existingNode = document.getElementById(ego.id);
