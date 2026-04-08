@@ -1,0 +1,5671 @@
+[
+  {
+    "id": "0",
+    "name": [
+      "Ingolf",
+      "Olai",
+      "Gabrielson"
+    ],
+    "age": [
+      "1898",
+      "1970"
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "2",
+    "notes": "Vegarbeidar. f. 1898 d. 1970"
+  },
+  {
+    "id": "2",
+    "name": [
+      "Anna",
+      "Oline Jensdatter",
+      "Fauske"
+    ],
+    "age": [
+      "1897",
+      "1961"
+    ],
+    "mother": "270",
+    "father": "269",
+    "spouse": "0",
+    "notes": "d. 1961"
+  },
+  {
+    "id": "3",
+    "name": [
+      "Mauritz",
+      "Ingolfson",
+      "Flekke"
+    ],
+    "age": [
+      "1924",
+      null
+    ],
+    "mother": "2",
+    "father": "0",
+    "spouse": "4",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "4",
+    "name": [
+      "Oddny ",
+      "Berntsdatter",
+      "Flekke"
+    ],
+    "age": [
+      "1927",
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": "3",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "5",
+    "name": [
+      "Ingvard",
+      "Andreas",
+      "Flekke"
+    ],
+    "age": [
+      "1963",
+      null
+    ],
+    "mother": "4",
+    "father": "3",
+    "spouse": "6",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "6",
+    "name": [
+      "Eva",
+      "",
+      "Kyrkjebø"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "121",
+    "father": "120",
+    "spouse": "5",
+    "notes": "Skriver on Grendelag."
+  },
+  {
+    "id": "7",
+    "name": [
+      "Elror",
+      "",
+      "Flekke"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "6",
+    "father": "5",
+    "spouse": "8",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "8",
+    "name": [
+      "Alex",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": "7",
+    "notes": "Works in Voss, travels for construction work. Has three tompts near Frank. Lives in Eva Flekke's basement."
+  },
+  {
+    "id": "9",
+    "name": [
+      "Jans",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "7",
+    "father": "8",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "10",
+    "name": [
+      "Bente",
+      "Helene",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "4",
+    "father": "3",
+    "spouse": "11",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "11",
+    "name": [
+      "Åge",
+      "Henry Ledvinson",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "96",
+    "father": "95",
+    "spouse": "10",
+    "notes": "Haugland"
+  },
+  {
+    "id": "12",
+    "name": [
+      "Harald",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "10",
+    "father": "11",
+    "spouse": "15",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "13",
+    "name": [
+      "Kjetil",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "10",
+    "father": "11",
+    "spouse": "16",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "14",
+    "name": [
+      "Karto",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "10",
+    "father": "11",
+    "spouse": "17",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "15",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "12",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "16",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "13",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "17",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "14",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "18",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "15",
+    "father": "12",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "19",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "16",
+    "father": "13",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "20",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "17",
+    "father": "14",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "21",
+    "name": [
+      "Anje",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "10",
+    "father": "11",
+    "spouse": "22",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "22",
+    "name": [
+      "Kjartan",
+      "",
+      "Haberstad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "21",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "23",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "6",
+    "father": "5",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "24",
+    "name": [
+      "Roy",
+      "",
+      "Mylkebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "36",
+    "father": "31",
+    "spouse": "25",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "25",
+    "name": [
+      "Hildiga",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": "24",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "26",
+    "name": [
+      "Amalia",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": {},
+    "notes": "Works in Jonny Pederson's Office."
+  },
+  {
+    "id": "27",
+    "name": [
+      "Adrian",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "28",
+    "name": [
+      "Amadeus",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "29",
+    "name": [
+      "Axel",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "30",
+    "name": [
+      "August",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "25",
+    "father": "24",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "31",
+    "name": [
+      "Markjel",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "33",
+    "father": "32",
+    "spouse": "36",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "32",
+    "name": [
+      "Johannes",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "33",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "33",
+    "name": [
+      "Ragne",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "32",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "34",
+    "name": [
+      "Andreas",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "33",
+    "father": "32",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "35",
+    "name": [
+      "Gunar",
+      "",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "33",
+    "father": "32",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "36",
+    "name": [
+      "Ana",
+      "",
+      "Brit"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "37",
+    "father": "38",
+    "spouse": "31",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "37",
+    "name": [
+      "Aslaog",
+      "",
+      "Haugsbakk"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "44",
+    "father": "42",
+    "spouse": "38",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "38",
+    "name": [
+      "Leif",
+      "",
+      "Brit"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "37",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "39",
+    "name": [
+      "Lilian",
+      "",
+      "Brit"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "37",
+    "father": "38",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "40",
+    "name": [
+      "Gaire",
+      "",
+      "Brit"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "37",
+    "father": "38",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "41",
+    "name": [
+      "Odd",
+      "",
+      "Brit"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "37",
+    "father": "38",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "42",
+    "name": [
+      "Unknown",
+      "",
+      "Haugsbakk"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "44",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "43",
+    "name": [
+      "Bjarne",
+      "",
+      "Haugsbakk"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "44",
+    "father": "42",
+    "spouse": "45",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "44",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "42",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "45",
+    "name": [
+      "Astrid",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "43",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "46",
+    "name": [
+      "Jonny",
+      "",
+      "Haugsbakk"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "45",
+    "father": "43",
+    "spouse": "123",
+    "notes": "Founded Hansen Technologies."
+  },
+  {
+    "id": "48",
+    "name": [
+      "Marte",
+      "",
+      "Haugsbakk"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "123",
+    "father": "46",
+    "spouse": "aee5eb32-437d-4377-8cde-9c7e8c63d3f5",
+    "notes": "Is varaordførar for Venstrepartiet."
+  },
+  {
+    "id": "49",
+    "name": [
+      "Aksel",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "52",
+    "father": "51",
+    "spouse": "50",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "50",
+    "name": [
+      "Hjordis",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "49",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "51",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "52",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "52",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "51",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "53",
+    "name": [
+      "Ane",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "52",
+    "father": "51",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "54",
+    "name": [
+      "Oddfried",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "52",
+    "father": "51",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "55",
+    "name": [
+      "Liv",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "52",
+    "father": "51",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "56",
+    "name": [
+      "Odd",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "57",
+    "name": [
+      "Elisabet",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "58",
+    "name": [
+      "Venke",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "59",
+    "name": [
+      "Arvid",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "60",
+    "name": [
+      "Tarje",
+      "",
+      "Hennes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "50",
+    "father": "49",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "61",
+    "name": [
+      "Josephine",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "56",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "62",
+    "name": [
+      "Martin",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "57",
+    "father": {},
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "63",
+    "name": [
+      "Olivia",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "56",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "64",
+    "name": [
+      "Ola",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "56",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "65",
+    "name": [
+      "Torkjell",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "57",
+    "father": {},
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "66",
+    "name": [
+      "Kamile",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "57",
+    "father": {},
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "67",
+    "name": [
+      "Øystein ",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "71",
+    "father": "69",
+    "spouse": "68",
+    "notes": "Flekke laerar and data architect"
+  },
+  {
+    "id": "68",
+    "name": [
+      "Lone",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "67",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "69",
+    "name": [
+      "Halvard",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      "1961",
+      null
+    ],
+    "mother": "147",
+    "father": "146",
+    "spouse": "71",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "70",
+    "name": [
+      "Inga",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "71",
+    "father": "69",
+    "spouse": {},
+    "notes": "Is an anthropolgist and used to live with Liusaidh."
+  },
+  {
+    "id": "71",
+    "name": [
+      "Beret",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "69",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "72",
+    "name": [
+      "Anders",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "71",
+    "father": "69",
+    "spouse": "73",
+    "notes": "Works in Jonny Pederson's Office."
+  },
+  {
+    "id": "73",
+    "name": [
+      "Ana-Nikolina",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "72",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "74",
+    "name": [
+      "Anton",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "73",
+    "father": "72",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "75",
+    "name": [
+      "Aden",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "73",
+    "father": "72",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "76",
+    "name": [
+      "Ottar",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "73",
+    "father": "72",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "77",
+    "name": [
+      "Lars",
+      "Peterson",
+      "Eikevik"
+    ],
+    "age": [
+      1918,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "78",
+    "notes": "laerar"
+  },
+  {
+    "id": "78",
+    "name": [
+      "Berljot",
+      "Kristiansdtr",
+      "Hovland"
+    ],
+    "age": [
+      1925,
+      null
+    ],
+    "mother": "237",
+    "father": "180",
+    "spouse": "77",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "79",
+    "name": [
+      "Gjertrud",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      1951,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": "80",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "80",
+    "name": [
+      "Erling ",
+      "",
+      "Hjelle"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "79",
+    "notes": "arkitekt, busette Hovland"
+  },
+  {
+    "id": "81",
+    "name": [
+      "Sissel",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      1953,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": "82",
+    "notes": "sjukepleiar"
+  },
+  {
+    "id": "82",
+    "name": [
+      "Knut",
+      "",
+      "Høiby"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "81",
+    "notes": "Stavanger"
+  },
+  {
+    "id": "83",
+    "name": [
+      "Solgunn",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      1953,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": "84",
+    "notes": "agronom"
+  },
+  {
+    "id": "84",
+    "name": [
+      "Kåre",
+      "",
+      "Sandvik"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "83",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "85",
+    "name": [
+      "Peter",
+      "Nikolai",
+      "Eikevik"
+    ],
+    "age": [
+      1955,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": "89",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "86",
+    "name": [
+      "Kristin",
+      "",
+      ""
+    ],
+    "age": [
+      1956,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": {},
+    "notes": "d.1958"
+  },
+  {
+    "id": "87",
+    "name": [
+      "Oddfrid",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      1960,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "88",
+    "name": [
+      "Velaug",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      1968,
+      null
+    ],
+    "mother": "78",
+    "father": "77",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "89",
+    "name": [
+      "Marit",
+      "",
+      "Reisner"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "85",
+    "notes": "fr. Sunnfjord"
+  },
+  {
+    "id": "90",
+    "name": [
+      "Elisa",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "89",
+    "father": "85",
+    "spouse": "92",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "91",
+    "name": [
+      "Torkel",
+      "",
+      "Eikevik"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "89",
+    "father": "85",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "92",
+    "name": [
+      "Rolf",
+      "",
+      "Magnar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "90",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "93",
+    "name": [
+      "Sturle",
+      "",
+      "Sandvik"
+    ],
+    "age": [
+      1992,
+      null
+    ],
+    "mother": "83",
+    "father": "84",
+    "spouse": "94",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "94",
+    "name": [
+      "Thea ",
+      "Nistad ",
+      "Sunde"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "93",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "95",
+    "name": [
+      "Ledvin",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "96",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "96",
+    "name": [
+      "Ana",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "95",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "97",
+    "name": [
+      "Ane Lise",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "96",
+    "father": "95",
+    "spouse": "98",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "98",
+    "name": [
+      "Nils",
+      "",
+      "Nitter"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "97",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "99",
+    "name": [
+      "Atle ",
+      "Kåre",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "96",
+    "father": "95",
+    "spouse": "100",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "100",
+    "name": [
+      "Ingjerd",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": "99",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "101",
+    "name": [
+      "Ivar",
+      "",
+      "Ness"
+    ],
+    "age": [
+      1992,
+      null
+    ],
+    "mother": "100",
+    "father": "99",
+    "spouse": {},
+    "notes": "A teacher in Byggstad and lives in Dale. Is in the choir."
+  },
+  {
+    "id": "102",
+    "name": [
+      "Ola",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "100",
+    "father": "99",
+    "spouse": "104",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "103",
+    "name": [
+      "Pål",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "100",
+    "father": "99",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "104",
+    "name": [
+      "Amalia",
+      "",
+      "Sandemose"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "102",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "105",
+    "name": [
+      "Almar",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "104",
+    "father": "102",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "106",
+    "name": [
+      "Eli",
+      "",
+      "Sandemose"
+    ],
+    "age": [
+      2022,
+      null
+    ],
+    "mother": "104",
+    "father": "102",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "107",
+    "name": [
+      "Tore",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "96",
+    "father": "95",
+    "spouse": "108",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "108",
+    "name": [
+      "Anita",
+      "",
+      "Ness"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "107",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "109",
+    "name": [
+      "Leif",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "110",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "110",
+    "name": [
+      "Sigbjorn",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "109",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "111",
+    "name": [
+      "Maria",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "112",
+    "name": [
+      "Olva",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "113",
+    "name": [
+      "Gudmund",
+      "",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "114",
+    "name": [
+      "Ragnhild",
+      "Lise",
+      "Furnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "115",
+    "name": [
+      "Jorunn",
+      "",
+      "Nigstard"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "110",
+    "father": "109",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "116",
+    "name": [
+      "Asbjørn",
+      "Andersson",
+      "Igeklkjøn"
+    ],
+    "age": [
+      1948,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "117",
+    "notes": "Skoglund"
+  },
+  {
+    "id": "117",
+    "name": [
+      "Singe",
+      "Margrethe Hansdatter",
+      "Grotle"
+    ],
+    "age": [
+      "1949",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "116",
+    "notes": "Bremanger"
+  },
+  {
+    "id": "118",
+    "name": [
+      "Sven ",
+      "Arve",
+      "Igeklkjøn"
+    ],
+    "age": [
+      1968,
+      null
+    ],
+    "mother": "117",
+    "father": "116",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "119",
+    "name": [
+      "Frank",
+      "",
+      "Igeklkjøn"
+    ],
+    "age": [
+      1969,
+      null
+    ],
+    "mother": "117",
+    "father": "116",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "120",
+    "name": [
+      "Arne",
+      "Ragnvaldson",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1940,
+      null
+    ],
+    "mother": "238",
+    "father": "239",
+    "spouse": "121",
+    "notes": "Bakken 1973"
+  },
+  {
+    "id": "121",
+    "name": [
+      "Magnhild",
+      "Leivsdatter",
+      "Espedal"
+    ],
+    "age": [
+      "1941",
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": "120",
+    "notes": "fr. Espedal"
+  },
+  {
+    "id": "122",
+    "name": [
+      "Janne ",
+      "Elise",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1966,
+      null
+    ],
+    "mother": "121",
+    "father": "120",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "123",
+    "name": [
+      "Randi",
+      "Linda",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1969,
+      null
+    ],
+    "mother": "121",
+    "father": "120",
+    "spouse": "46",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "124",
+    "name": [
+      "Mari",
+      "",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1976,
+      null
+    ],
+    "mother": "121",
+    "father": "120",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "125",
+    "name": [
+      "Jofred",
+      "Gudmundson",
+      "Solheim"
+    ],
+    "age": [
+      1927,
+      null
+    ],
+    "mother": "170",
+    "father": "171",
+    "spouse": "126",
+    "notes": "Solstad"
+  },
+  {
+    "id": "126",
+    "name": [
+      "Sonja",
+      "Nansy",
+      "Sigurdsdtr"
+    ],
+    "age": [
+      1930,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "125",
+    "notes": "Hovland"
+  },
+  {
+    "id": "127",
+    "name": [
+      "Sigbjørn",
+      "",
+      "Solheim"
+    ],
+    "age": [
+      1955,
+      null
+    ],
+    "mother": "126",
+    "father": "125",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "128",
+    "name": [
+      "Grethe ",
+      "Helene",
+      "Solheim"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "126",
+    "father": "125",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "129",
+    "name": [
+      "Norvald",
+      "",
+      "Solheim"
+    ],
+    "age": [
+      1962,
+      null
+    ],
+    "mother": "126",
+    "father": "125",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "130",
+    "name": [
+      "Mona",
+      "",
+      "Solheim"
+    ],
+    "age": [
+      1966,
+      null
+    ],
+    "mother": "126",
+    "father": "125",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "131",
+    "name": [
+      "Leif ",
+      "Olson",
+      "Espedal"
+    ],
+    "age": [
+      1909,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "132",
+    "notes": "Bjordal"
+  },
+  {
+    "id": "132",
+    "name": [
+      "Jenny",
+      "",
+      "Johannesdtr"
+    ],
+    "age": [
+      1913,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "131",
+    "notes": "Bjordal"
+  },
+  {
+    "id": "133",
+    "name": [
+      "Ola",
+      "Leifson",
+      "Espedal"
+    ],
+    "age": [
+      1941,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": "140",
+    "notes": "Bygningsmann; fekk garden i 1974"
+  },
+  {
+    "id": "134",
+    "name": [
+      "Liv",
+      "Hildur",
+      "Espedal"
+    ],
+    "age": [
+      1943,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": "135",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "135",
+    "name": [
+      "Alf",
+      "",
+      "Nesse"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "134",
+    "notes": "småbrukkar"
+  },
+  {
+    "id": "136",
+    "name": [
+      "Solfrid",
+      "Jolaug",
+      "Espedal"
+    ],
+    "age": [
+      1945,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "137",
+    "name": [
+      "Kari",
+      "Olaug",
+      "Espedal"
+    ],
+    "age": [
+      1947,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "138",
+    "name": [
+      "Jens",
+      "Olav",
+      "Espedal"
+    ],
+    "age": [
+      1953,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "139",
+    "name": [
+      "Oddgun",
+      "Solmøy",
+      "Espedal"
+    ],
+    "age": [
+      1957,
+      null
+    ],
+    "mother": "132",
+    "father": "131",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "140",
+    "name": [
+      "Audny",
+      "Olavsdtr",
+      "Eikås"
+    ],
+    "age": [
+      1946,
+      null
+    ],
+    "mother": "213",
+    "father": "212",
+    "spouse": "133",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "141",
+    "name": [
+      "Randi",
+      "",
+      "Espedal"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "140",
+    "father": "133",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "142",
+    "name": [
+      "Leif Jarle",
+      "",
+      "Espedal"
+    ],
+    "age": [
+      "1972",
+      null
+    ],
+    "mother": "140",
+    "father": "133",
+    "spouse": {},
+    "notes": "Is Fjaler Ordførar for Arbeidspartiet"
+  },
+  {
+    "id": "143",
+    "name": [
+      "Alfred",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "68",
+    "father": "67",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "144",
+    "name": [
+      "Fuoydis",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "68",
+    "father": "67",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "145",
+    "name": [
+      "Laura",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "68",
+    "father": "67",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "146",
+    "name": [
+      "Oddgeir",
+      "Hjalmarson",
+      "Hålaand"
+    ],
+    "age": [
+      "1930",
+      null
+    ],
+    "mother": "161",
+    "father": "160",
+    "spouse": "147",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "147",
+    "name": [
+      "Sigrunn",
+      "Persdatter",
+      "Halsnes"
+    ],
+    "age": [
+      "1934",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "146",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "148",
+    "name": [
+      "Norwald",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      "1972",
+      null
+    ],
+    "mother": "147",
+    "father": "146",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "149",
+    "name": [
+      "Johanna",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      "1970",
+      null
+    ],
+    "mother": "147",
+    "father": "146",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "150",
+    "name": [
+      "Perr",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      "1965",
+      null
+    ],
+    "mother": "147",
+    "father": "146",
+    "spouse": "153",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "151",
+    "name": [
+      "Kåre",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      "1958",
+      null
+    ],
+    "mother": "147",
+    "father": "146",
+    "spouse": "152",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "152",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "151",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "153",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "150",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "154",
+    "name": [
+      "Kornelius",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "152",
+    "father": "151",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "155",
+    "name": [
+      "Jalmar",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "152",
+    "father": "151",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "156",
+    "name": [
+      "Ena-Sofie",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "152",
+    "father": "151",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "157",
+    "name": [
+      "Thea",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "153",
+    "father": "150",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "158",
+    "name": [
+      "Eled",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "153",
+    "father": "150",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "159",
+    "name": [
+      "Simon",
+      "",
+      "Halaand"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "153",
+    "father": "150",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "160",
+    "name": [
+      "Jelmar",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "161",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "161",
+    "name": [
+      "Nilsk-Maria",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "160",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "162",
+    "name": [
+      "Andreas",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "161",
+    "father": "160",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "163",
+    "name": [
+      "Jakob",
+      "Botlovson",
+      "Flekke"
+    ],
+    "age": [
+      1845,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "164",
+    "notes": "sjå husmannsplassen Velenne d.1933"
+  },
+  {
+    "id": "164",
+    "name": [
+      "Marte",
+      "Ellingsdtr",
+      "Flekke"
+    ],
+    "age": [
+      1849,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "163",
+    "notes": "d. 1935"
+  },
+  {
+    "id": "165",
+    "name": [
+      "Kristine",
+      "",
+      "Flekke"
+    ],
+    "age": [
+      "1876",
+      null
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": "166",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "166",
+    "name": [
+      "Odin",
+      "",
+      "Olson"
+    ],
+    "age": [
+      1879,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "165",
+    "notes": "til USA"
+  },
+  {
+    "id": "167",
+    "name": [
+      "Oline",
+      "Jakobsdtr",
+      "Flekke"
+    ],
+    "age": [
+      1879,
+      null
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": "168",
+    "notes": "d. 1955"
+  },
+  {
+    "id": "168",
+    "name": [
+      "David",
+      "Monsson",
+      "Huustvedt"
+    ],
+    "age": [
+      "1874",
+      "1958"
+    ],
+    "mother": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "father": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "spouse": "167",
+    "notes": "fekk skøyte i 1906 d.1958"
+  },
+  {
+    "id": "169",
+    "name": [
+      "Elling",
+      "",
+      ""
+    ],
+    "age": [
+      1882,
+      null
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": {},
+    "notes": "d. ung"
+  },
+  {
+    "id": "170",
+    "name": [
+      "Helene",
+      "Sofie",
+      ""
+    ],
+    "age": [
+      1885,
+      null
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": "171",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "171",
+    "name": [
+      "Gudmund ",
+      "",
+      "Solheim"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "170",
+    "notes": "lærer"
+  },
+  {
+    "id": "172",
+    "name": [
+      "Bernt",
+      "Andreas Jakobson",
+      "Flekke"
+    ],
+    "age": [
+      "1888",
+      "1952"
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": "173",
+    "notes": "d. 1952"
+  },
+  {
+    "id": "173",
+    "name": [
+      "Helene",
+      "Marie",
+      "Andreasdtr"
+    ],
+    "age": [
+      1899,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "172",
+    "notes": "Hellebust"
+  },
+  {
+    "id": "174",
+    "name": [
+      "Anton",
+      "Jakobson",
+      "Flekke"
+    ],
+    "age": [
+      "1890",
+      null
+    ],
+    "mother": "164",
+    "father": "163",
+    "spouse": "175",
+    "notes": "d. 1927"
+  },
+  {
+    "id": "175",
+    "name": [
+      "Signe",
+      "",
+      "Hansdtr"
+    ],
+    "age": [
+      1893,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "174",
+    "notes": "d. 1975"
+  },
+  {
+    "id": "176",
+    "name": [
+      "Marit",
+      "Antonsdatter",
+      "Flekke"
+    ],
+    "age": [
+      "1921",
+      null
+    ],
+    "mother": "175",
+    "father": "174",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "177",
+    "name": [
+      "Hagbart",
+      "Johan Antonson",
+      "Flekke"
+    ],
+    "age": [
+      "1923",
+      null
+    ],
+    "mother": "175",
+    "father": "174",
+    "spouse": "178",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "178",
+    "name": [
+      "Sonja Klara",
+      "Kristiansdatter",
+      "Hovland"
+    ],
+    "age": [
+      "1933",
+      null
+    ],
+    "mother": "237",
+    "father": "180",
+    "spouse": "177",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "179",
+    "name": [
+      "Anton",
+      "Sigvard",
+      "Antonson"
+    ],
+    "age": [
+      1928,
+      null
+    ],
+    "mother": "175",
+    "father": "174",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "180",
+    "name": [
+      "Kristian",
+      "Østenson",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "237",
+    "father": {},
+    "spouse": "237",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "181",
+    "name": [
+      "Marta",
+      "Alvida Berntsdatter",
+      "Flekke"
+    ],
+    "age": [
+      "1928",
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": "182",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "182",
+    "name": [
+      "Håkon",
+      "Nilsson",
+      "Vagstad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "255",
+    "father": "254",
+    "spouse": "181",
+    "notes": "Igelkjøn Erik Vagstad"
+  },
+  {
+    "id": "183",
+    "name": [
+      "John",
+      "Arnold Berndtson ",
+      "Flekke"
+    ],
+    "age": [
+      1930,
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": "184",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "184",
+    "name": [
+      "Ragna",
+      "",
+      "Myrmel"
+    ],
+    "age": [
+      1934,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "183",
+    "notes": "i Gaular"
+  },
+  {
+    "id": "185",
+    "name": [
+      "Aslaug",
+      "",
+      "Flekke"
+    ],
+    "age": [
+      1932,
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "186",
+    "name": [
+      "Kåre",
+      "Hermod",
+      "Flekke"
+    ],
+    "age": [
+      1933,
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": "187",
+    "notes": "installasjonskontrollør"
+  },
+  {
+    "id": "187",
+    "name": [
+      "Bjørg",
+      "Signy",
+      "Olavsdtr"
+    ],
+    "age": [
+      1934,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "186",
+    "notes": "Holten"
+  },
+  {
+    "id": "188",
+    "name": [
+      "Asbjørn",
+      "Einar Berntson",
+      "Flekke"
+    ],
+    "age": [
+      "1935",
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": {},
+    "notes": "fabrikkarbeidar"
+  },
+  {
+    "id": "189",
+    "name": [
+      "Borgfinn",
+      "Harald",
+      "Flekke"
+    ],
+    "age": [
+      1938,
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "190",
+    "name": [
+      "Audun",
+      "",
+      "Flekke"
+    ],
+    "age": [
+      "1941",
+      null
+    ],
+    "mother": "173",
+    "father": "172",
+    "spouse": {},
+    "notes": "fekk bruket"
+  },
+  {
+    "id": "191",
+    "name": [
+      "Oddleif",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "192",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "192",
+    "name": [
+      "Jørin",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "191",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "193",
+    "name": [
+      "Anita",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "192",
+    "father": "191",
+    "spouse": "194",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "194",
+    "name": [
+      "Leif Arne",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": "193",
+    "notes": "His uncle said farmers don't play tennis."
+  },
+  {
+    "id": "195",
+    "name": [
+      "Monika",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "192",
+    "father": "191",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "196",
+    "name": [
+      "Thor Jarle",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "192",
+    "father": "191",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "197",
+    "name": [
+      "Myrtle",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "193",
+    "father": "194",
+    "spouse": "205",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "198",
+    "name": [
+      "Molfrid",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "199",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "199",
+    "name": [
+      "Olav",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "198",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "200",
+    "name": [
+      "Gustav",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "201",
+    "name": [
+      "Sigvard",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": {},
+    "notes": "Sillan"
+  },
+  {
+    "id": "202",
+    "name": [
+      "Øystein",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "203",
+    "name": [
+      "Mildrid",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "204",
+    "name": [
+      "Bergjlot",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "198",
+    "father": "199",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "205",
+    "name": [
+      "Arne",
+      "",
+      "Fisman"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "210",
+    "father": "209",
+    "spouse": "197",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "206",
+    "name": [
+      "Liv",
+      "Fisman",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "197",
+    "father": "205",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "207",
+    "name": [
+      "Even",
+      "Fisman",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "197",
+    "father": "205",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "208",
+    "name": [
+      "Brother",
+      "",
+      "Skaar"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "193",
+    "father": "194",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "209",
+    "name": [
+      "Doctor",
+      "",
+      "Fisman"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "210",
+    "notes": "Askvøll"
+  },
+  {
+    "id": "210",
+    "name": [
+      "Møter ",
+      "",
+      "Fisman"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "209",
+    "notes": "Askvøll"
+  },
+  {
+    "id": "211",
+    "name": [
+      "Brother",
+      "",
+      "Fisman"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "210",
+    "father": "209",
+    "spouse": {},
+    "notes": "Columbia"
+  },
+  {
+    "id": "212",
+    "name": [
+      "Olav",
+      "",
+      "Eikås"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "213",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "213",
+    "name": [
+      "Mother",
+      "",
+      "Eikås"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "212",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "214",
+    "name": [
+      "Nina",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      1967,
+      null
+    ],
+    "mother": "216",
+    "father": "217",
+    "spouse": "215",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "215",
+    "name": [
+      "Jonny ",
+      "",
+      "Pederson"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "214",
+    "notes": "f. Bergen"
+  },
+  {
+    "id": "216",
+    "name": [
+      "Oddbjørg ",
+      "Alvhild",
+      "Johannesdtr"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "217",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "217",
+    "name": [
+      "Kølbjorn",
+      "Jofred Sigurdson",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "221",
+    "father": "220",
+    "spouse": "216",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "218",
+    "name": [
+      "Lidun",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      1964,
+      null
+    ],
+    "mother": "216",
+    "father": "217",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "219",
+    "name": [
+      "Svante",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      1962,
+      null
+    ],
+    "mother": "216",
+    "father": "217",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "220",
+    "name": [
+      "Sigurd",
+      "Martin Gabrielson",
+      "Hovland"
+    ],
+    "age": [
+      "1903",
+      null
+    ],
+    "mother": "223",
+    "father": "222",
+    "spouse": "221",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "221",
+    "name": [
+      "Nelly",
+      "Severine Jensdatter",
+      "Fauske"
+    ],
+    "age": [
+      "1904",
+      null
+    ],
+    "mother": "270",
+    "father": "269",
+    "spouse": "220",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "222",
+    "name": [
+      "Gabriel",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "223",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "223",
+    "name": [
+      "Kristiane",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      1897,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "222",
+    "notes": "Igelkjøn"
+  },
+  {
+    "id": "224",
+    "name": [
+      "Gustav",
+      "Gabrielson",
+      "Hovland"
+    ],
+    "age": [
+      1964,
+      null
+    ],
+    "mother": "223",
+    "father": "222",
+    "spouse": "225",
+    "notes": "fekk Myreng 1964"
+  },
+  {
+    "id": "225",
+    "name": [
+      "Sigrid",
+      "Solbø",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "224",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "226",
+    "name": [
+      "Gabriel",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "225",
+    "father": "224",
+    "spouse": "231",
+    "notes": "fekk Myreng"
+  },
+  {
+    "id": "227",
+    "name": [
+      "Sylvi",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "225",
+    "father": "224",
+    "spouse": "229",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "228",
+    "name": [
+      "Nina",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "227",
+    "father": "229",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "229",
+    "name": [
+      "Husband",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "227",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "230",
+    "name": [
+      "Susane",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "227",
+    "father": "229",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "231",
+    "name": [
+      "Anna",
+      "",
+      "Maret"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "226",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "232",
+    "name": [
+      "Hannah",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "231",
+    "father": "226",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "233",
+    "name": [
+      "Gøran",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "231",
+    "father": "226",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "234",
+    "name": [
+      "Jarle",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      1971,
+      null
+    ],
+    "mother": "216",
+    "father": "217",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "235",
+    "name": [
+      "Severin",
+      "",
+      "Sandvik"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "83",
+    "father": "84",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "236",
+    "name": [
+      "Brother",
+      "",
+      "Sandvik"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "83",
+    "father": "84",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "237",
+    "name": [
+      "Mother",
+      "",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "180",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "238",
+    "name": [
+      "Elisabeth",
+      "Petersdtr",
+      "Igeklkjøn"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "239",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "239",
+    "name": [
+      "Ragnvald",
+      "Eivindson",
+      "Kyrkjebø"
+    ],
+    "age": [
+      "1914",
+      null
+    ],
+    "mother": "243",
+    "father": "242",
+    "spouse": "238",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "47",
+    "name": [
+      "Steinar",
+      "Magne",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1942,
+      null
+    ],
+    "mother": "238",
+    "father": "239",
+    "spouse": "240",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "240",
+    "name": [
+      "Annbjørg",
+      "",
+      "Fadnes"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "47",
+    "notes": "f. Voss"
+  },
+  {
+    "id": "241",
+    "name": [
+      "Liv Elisabeth",
+      "",
+      "Kyrkjebø"
+    ],
+    "age": [
+      1956,
+      null
+    ],
+    "mother": "238",
+    "father": "239",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "242",
+    "name": [
+      "Mikal",
+      "",
+      "Østenson"
+    ],
+    "age": [
+      "1876",
+      null
+    ],
+    "mother": "245",
+    "father": "244",
+    "spouse": "243",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "243",
+    "name": [
+      "Unknown",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "242",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "244",
+    "name": [
+      "Østen ",
+      "",
+      "Ingebrigtsen"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "245",
+    "notes": "Bruk Nr 5 Flekke"
+  },
+  {
+    "id": "245",
+    "name": [
+      "Anne",
+      "Lovise Torsteinsdtr",
+      "Furnes"
+    ],
+    "age": [
+      "1844",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "244",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "246",
+    "name": [
+      "Sister",
+      "Oslo",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "225",
+    "father": "224",
+    "spouse": {},
+    "notes": "Lives in Oslo"
+  },
+  {
+    "id": "247",
+    "name": [
+      "Sister 2",
+      "Oslo",
+      "Hovland"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "225",
+    "father": "224",
+    "spouse": {},
+    "notes": "Lives in Oslo"
+  },
+  {
+    "id": "248",
+    "name": [
+      "Torkjell",
+      "Davidsøner",
+      "Huustvedt"
+    ],
+    "age": [
+      1909,
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "249",
+    "name": [
+      "Inger",
+      "Davidsdtr",
+      "Huustvedt"
+    ],
+    "age": [
+      1911,
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "250",
+    "name": [
+      "Erling",
+      "Davidsdtr",
+      "Huustvedt"
+    ],
+    "age": [
+      1913,
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": {},
+    "notes": "d.1933"
+  },
+  {
+    "id": "251",
+    "name": [
+      "Audun",
+      "Davidsøner",
+      "Huustvedt"
+    ],
+    "age": [
+      1915,
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": "256",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "252",
+    "name": [
+      "Margrethe",
+      "Davidsdtr",
+      "Huustvedt"
+    ],
+    "age": [
+      1918,
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": "253",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "253",
+    "name": [
+      "David",
+      "Nilsson",
+      "Vagstad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "255",
+    "father": "254",
+    "spouse": "252",
+    "notes": "Igelkjøn"
+  },
+  {
+    "id": "254",
+    "name": [
+      "Nils",
+      "",
+      "Vagstad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "255",
+    "notes": "Igelkjøn"
+  },
+  {
+    "id": "255",
+    "name": [
+      "Nilswife",
+      "",
+      "Vagstad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "254",
+    "notes": "Igelkjøn"
+  },
+  {
+    "id": "256",
+    "name": [
+      "Jonny",
+      "Monradsdtr",
+      "Strand"
+    ],
+    "age": [
+      1916,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "251",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "257",
+    "name": [
+      "Eldbjørg",
+      "",
+      ""
+    ],
+    "age": [
+      1942,
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": "258",
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "258",
+    "name": [
+      "Jostein",
+      "",
+      "Obrestad"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "257",
+    "notes": "f. Nærbo"
+  },
+  {
+    "id": "259",
+    "name": [
+      "Knut David",
+      "",
+      "Huustvedt"
+    ],
+    "age": [
+      "1946",
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "260",
+    "name": [
+      "Anna",
+      "",
+      "Huustvedt"
+    ],
+    "age": [
+      "1948",
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "261",
+    "name": [
+      "Asbjørg",
+      "",
+      "Huustvedt"
+    ],
+    "age": [
+      "1950",
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "262",
+    "name": [
+      "Lars",
+      "",
+      "Huustvedt"
+    ],
+    "age": [
+      "1953",
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "263",
+    "name": [
+      "Solveig",
+      "",
+      "Huustvedt"
+    ],
+    "age": [
+      "1958",
+      null
+    ],
+    "mother": "256",
+    "father": "251",
+    "spouse": {},
+    "notes": "Add Note Here."
+  },
+  {
+    "id": "560d9dca-91c2-4dd2-bb8a-14f3bf8e33ee",
+    "name": [
+      "Torkjell",
+      "",
+      ""
+    ],
+    "age": [
+      "1909",
+      null
+    ],
+    "mother": "167",
+    "father": "168",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "name": [
+      "Anders",
+      "Bendikson",
+      "Flekke"
+    ],
+    "age": [
+      null,
+      "1831"
+    ],
+    "mother": "276",
+    "father": "275",
+    "spouse": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "notes": ""
+  },
+  {
+    "id": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "name": [
+      "Anne",
+      "Reinhardsdatter",
+      "Igelkjøn"
+    ],
+    "age": [
+      "1755",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "notes": ""
+  },
+  {
+    "id": "98c39470-7662-446f-a756-db062d769ece",
+    "name": [
+      "Brita",
+      "",
+      "Bjordal"
+    ],
+    "age": [
+      "1790",
+      null
+    ],
+    "mother": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "father": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "spouse": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "notes": ""
+  },
+  {
+    "id": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "name": [
+      "Jørgen ",
+      "Tolleivson ",
+      "Bjordal"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "98c39470-7662-446f-a756-db062d769ece",
+    "notes": ""
+  },
+  {
+    "id": "88de0a56-ed0a-4471-9ddc-64b6c222cf50",
+    "name": [
+      "Bendik",
+      "",
+      "Anderson"
+    ],
+    "age": [
+      "1792",
+      "1795"
+    ],
+    "mother": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "father": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "7609e62f-821d-4fa8-aee8-6f61c51b0b4f",
+    "name": [
+      "Johanne",
+      "Bendiksdottir",
+      "Kusæl"
+    ],
+    "age": [
+      "1795",
+      null
+    ],
+    "mother": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "father": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "spouse": "0a68afa8-4dab-4305-90e6-cb8e9905fc27",
+    "notes": ""
+  },
+  {
+    "id": "0a68afa8-4dab-4305-90e6-cb8e9905fc27",
+    "name": [
+      "Østen",
+      "Jørgenson",
+      "Kusæl"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "7609e62f-821d-4fa8-aee8-6f61c51b0b4f",
+    "notes": ""
+  },
+  {
+    "id": "8977bdb7-5319-49ac-bf83-deb1fce67501",
+    "name": [
+      "Reinert",
+      "Anderson",
+      ""
+    ],
+    "age": [
+      "1798",
+      "1817"
+    ],
+    "mother": "f7a24f0a-13a5-4672-939a-5cad08d45da4",
+    "father": "26665078-8f14-4ff9-81a4-7d0392f45a5c",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "95b09e93-c137-4cd8-a0b5-45ea37de9fa8",
+    "name": [
+      "Regina",
+      "Tolleivsdatter",
+      "Bjordal"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "name": [
+      "Mons",
+      "Davidson",
+      "Huustvedt"
+    ],
+    "age": [
+      "1832",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "notes": ""
+  },
+  {
+    "id": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "name": [
+      "Inger ",
+      "Knutsdatter",
+      "Afdal"
+    ],
+    "age": [
+      "1842",
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "notes": ""
+  },
+  {
+    "id": "3ad5f2cf-1792-4429-bbc2-f3c299cb4282",
+    "name": [
+      "Anna",
+      "Monsdatter",
+      "Huustvedt"
+    ],
+    "age": [
+      "1872",
+      null
+    ],
+    "mother": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "father": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "spouse": "300",
+    "notes": "m. 1896 kjøpmann Mads Johannesson Sande, Gaular"
+  },
+  {
+    "id": "c2bfd0e5-8e22-438a-be7a-8fc52aa1fcef",
+    "name": [
+      "",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "622c9443-4fc8-4ba1-9738-da80e5af1f37",
+    "name": [
+      "",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "e888e05a-d191-427a-9552-8759df148984",
+    "name": [
+      "Vigdis",
+      "",
+      "Vagstad"
+    ],
+    "age": [
+      "1949",
+      null
+    ],
+    "mother": "181",
+    "father": "182",
+    "spouse": "07c6236b-23cf-4440-b9c9-a918dddf72ef",
+    "notes": ""
+  },
+  {
+    "id": "07c6236b-23cf-4440-b9c9-a918dddf72ef",
+    "name": [
+      "Kjartan",
+      "Akselson",
+      "Reksten"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "e888e05a-d191-427a-9552-8759df148984",
+    "notes": ""
+  },
+  {
+    "id": "a3024098-d304-4c83-bafa-50730fa02f2b",
+    "name": [
+      "Magnar",
+      "",
+      "Vagstad"
+    ],
+    "age": [
+      "1950",
+      null
+    ],
+    "mother": "181",
+    "father": "182",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "abd160ed-c14f-4a1b-ae19-7894f46969a0",
+    "name": [
+      "Bernt",
+      "Henning",
+      "Vagstad"
+    ],
+    "age": [
+      "1952",
+      null
+    ],
+    "mother": "181",
+    "father": "182",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "d7f66f56-4dd4-4e35-954a-4bc99f91ebbe",
+    "name": [
+      "Nils",
+      "Harry",
+      "Vagstad"
+    ],
+    "age": [
+      "1957",
+      null
+    ],
+    "mother": "181",
+    "father": "182",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "444e48d8-1e65-4968-b689-119e86cbcc7c",
+    "name": [
+      "Iren",
+      "",
+      ""
+    ],
+    "age": [
+      "1966",
+      null
+    ],
+    "mother": "181",
+    "father": "182",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "062fb0eb-b94c-4be8-a93c-9ed1c6558134",
+    "name": [
+      "Helene Marie",
+      "",
+      ""
+    ],
+    "age": [
+      "1878",
+      "1961"
+    ],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "da824139-26a3-4c16-b310-dfdb7c96eadc",
+    "name": [
+      "Karl",
+      "",
+      "Østenson"
+    ],
+    "age": [
+      "1885",
+      null
+    ],
+    "mother": "245",
+    "father": "244",
+    "spouse": "579708d2-9086-423a-a21d-ccbb7fb6614a",
+    "notes": ""
+  },
+  {
+    "id": "579708d2-9086-423a-a21d-ccbb7fb6614a",
+    "name": [
+      "Marte ",
+      "Johannesdatter",
+      "Myklebust"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "da824139-26a3-4c16-b310-dfdb7c96eadc",
+    "notes": ""
+  },
+  {
+    "id": "31a8f480-6964-4827-b050-e173c419b850",
+    "name": [
+      "Finn",
+      "Jeremiasson",
+      "Leirpoll"
+    ],
+    "age": [
+      "1900",
+      null
+    ],
+    "mother": "316",
+    "father": "d2621745-93f2-4113-afca-fb3c58f7c9c8",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "name": [
+      "Dagfinn",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      "1926",
+      null
+    ],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "notes": ""
+  },
+  {
+    "id": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "name": [
+      "Norbjorg",
+      "",
+      "Svardal"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "notes": ""
+  },
+  {
+    "id": "d2621745-93f2-4113-afca-fb3c58f7c9c8",
+    "name": [
+      "Jeremias",
+      "Klemetson",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "316",
+    "notes": ""
+  },
+  {
+    "id": "57e5c9fe-c8ca-4d54-8d49-455e016519c2",
+    "name": [
+      "Harald",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "d2621745-93f2-4113-afca-fb3c58f7c9c8",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "f22ceaec-932e-4b47-99c9-a78994a1996c",
+    "name": [
+      "Kjartan",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "57e5c9fe-c8ca-4d54-8d49-455e016519c2",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "820c10e0-5197-40d4-92e6-de61aad5362e",
+    "name": [
+      "Beorn",
+      "Harald",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "f22ceaec-932e-4b47-99c9-a78994a1996c",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "d95863c3-52aa-4505-b14f-b7c978adbdce",
+    "name": [
+      "Knut Johan",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": "f22ceaec-932e-4b47-99c9-a78994a1996c",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "0112b195-a975-45b8-9ecc-51a85ffd310a",
+    "name": [
+      "Inger",
+      "Helene",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "father": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "77612cd3-9071-4dc1-9da5-f0885c1eedad",
+    "name": [
+      "Finn Atle",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "father": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "spouse": "5f74e122-01c9-435c-bc43-6a7c4685b398",
+    "notes": ""
+  },
+  {
+    "id": "c6b69469-7a3b-4e6f-a87b-2049f6de6c73",
+    "name": [
+      "Norunn",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "father": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "spouse": "8ae4c062-fdb6-4538-a267-1c927c51e323",
+    "notes": ""
+  },
+  {
+    "id": "31b620fd-5577-4b1b-b549-4604448b74b7",
+    "name": [
+      "Jorunn",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "father": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "spouse": "e63cd99a-ea7a-41b3-bae4-b76cba7e6fb9",
+    "notes": ""
+  },
+  {
+    "id": "529014dc-bc0a-4e75-a738-ed512d8091a3",
+    "name": [
+      "Gunnar",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "3452016c-9465-4517-9fcf-45c5f012d542",
+    "father": "e1b3e1d9-52da-4441-9110-b3fbc76aac99",
+    "spouse": "8e4677ba-3795-4acd-b84d-7d6ca90462c7",
+    "notes": ""
+  },
+  {
+    "id": "8e4677ba-3795-4acd-b84d-7d6ca90462c7",
+    "name": [
+      "June",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "529014dc-bc0a-4e75-a738-ed512d8091a3",
+    "notes": ""
+  },
+  {
+    "id": "5f74e122-01c9-435c-bc43-6a7c4685b398",
+    "name": [
+      "Sigrunn",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "77612cd3-9071-4dc1-9da5-f0885c1eedad",
+    "notes": ""
+  },
+  {
+    "id": "e63cd99a-ea7a-41b3-bae4-b76cba7e6fb9",
+    "name": [
+      "Kjell Erik",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "31b620fd-5577-4b1b-b549-4604448b74b7",
+    "notes": ""
+  },
+  {
+    "id": "8ae4c062-fdb6-4538-a267-1c927c51e323",
+    "name": [
+      "Bjarne",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "c6b69469-7a3b-4e6f-a87b-2049f6de6c73",
+    "notes": ""
+  },
+  {
+    "id": "880ffaef-3aba-434c-a4d5-fdf16192c10d",
+    "name": [
+      "Dag Magnar",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "31b620fd-5577-4b1b-b549-4604448b74b7",
+    "father": "e63cd99a-ea7a-41b3-bae4-b76cba7e6fb9",
+    "spouse": "59c74a5f-809b-42e8-99a6-14dc93dfd653",
+    "notes": ""
+  },
+  {
+    "id": "59c74a5f-809b-42e8-99a6-14dc93dfd653",
+    "name": [
+      "Kari Mette",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "880ffaef-3aba-434c-a4d5-fdf16192c10d",
+    "notes": ""
+  },
+  {
+    "id": "ab776ebf-bb69-4753-88be-90e11fe0bdc9",
+    "name": [
+      "Kent Marius",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "31b620fd-5577-4b1b-b549-4604448b74b7",
+    "father": "e63cd99a-ea7a-41b3-bae4-b76cba7e6fb9",
+    "spouse": "d8a013c2-7a96-434d-bacf-f6621c3fb268",
+    "notes": ""
+  },
+  {
+    "id": "d8a013c2-7a96-434d-bacf-f6621c3fb268",
+    "name": [
+      "Silje",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "ab776ebf-bb69-4753-88be-90e11fe0bdc9",
+    "notes": ""
+  },
+  {
+    "id": "9566062c-780b-4e4c-b335-91702bef6210",
+    "name": [
+      "Eleanor",
+      "",
+      "Leirpoll"
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": "31b620fd-5577-4b1b-b549-4604448b74b7",
+    "father": "e63cd99a-ea7a-41b3-bae4-b76cba7e6fb9",
+    "spouse": "a7d8a6c3-c342-4ed0-a85e-238a432220e6",
+    "notes": ""
+  },
+  {
+    "id": "a7d8a6c3-c342-4ed0-a85e-238a432220e6",
+    "name": [
+      "Jan Bjarte",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "9566062c-780b-4e4c-b335-91702bef6210",
+    "notes": ""
+  },
+  {
+    "id": "aee5eb32-437d-4377-8cde-9c7e8c63d3f5",
+    "name": [
+      "Adrian",
+      "",
+      ""
+    ],
+    "age": [
+      null,
+      null
+    ],
+    "mother": {},
+    "father": {},
+    "spouse": "48",
+    "notes": ""
+  },
+  {
+    "id": "264",
+    "name": ["Roald", "Ditlef Ingolfson", "Flekke"],
+    "age": ["1936", null],
+    "mother": "2",
+    "father": "0",
+    "spouse": "265",
+    "notes": "Br.nr. 44 Roaldplass. Fabrikkarbeidar."
+  },
+  {
+    "id": "265",
+    "name": ["Ida", "Inger Baardsdatter", "Småland"],
+    "age": ["1933", null],
+    "mother": {},
+    "father": {},
+    "spouse": "264",
+    "notes": "f. Haus"
+  },
+  {
+    "id": "266",
+    "name": ["Ingolf", "", "Flekke"],
+    "age": ["1963", null],
+    "mother": "265",
+    "father": "264",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "267",
+    "name": ["Lillian", "", "Flekke"],
+    "age": ["1966", null],
+    "mother": "265",
+    "father": "264",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "268",
+    "name": ["Bård", "André", "Flekke"],
+    "age": ["1973", null],
+    "mother": "265",
+    "father": "264",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "269",
+    "name": ["Jens", "Korneliusson", "Fauske"],
+    "age": ["1866", "1955"],
+    "mother": {},
+    "father": {},
+    "spouse": "270",
+    "notes": "Tømmermann, f. Gaular"
+  },
+  {
+    "id": "270",
+    "name": ["Karoline", "Olsdatter", "Lyngstad"],
+    "age": ["1868", "1938"],
+    "mother": {},
+    "father": {},
+    "spouse": "269",
+    "notes": "f. Gaular"
+  },
+  {
+    "id": "271",
+    "name": ["Karoline", "Dorthea Jensdatter", "Fauske"],
+    "age": ["1895", null],
+    "mother": "270",
+    "father": "269",
+    "spouse": {},
+    "notes": "m. bonde Konrad Isakson Solheim"
+  },
+  {
+    "id": "272",
+    "name": ["Mina", "Jensdatter", "Fauske"],
+    "age": ["1900", null],
+    "mother": "270",
+    "father": "269",
+    "spouse": {},
+    "notes": "Hotelleigar Oslo"
+  },
+  {
+    "id": "273",
+    "name": ["Kornelius", "Jensson", "Fauske"],
+    "age": ["1901", null],
+    "mother": "270",
+    "father": "269",
+    "spouse": {},
+    "notes": "Ugift, vaktmann Oslo"
+  },
+  {
+    "id": "274",
+    "name": ["Olga", "Jensdatter", "Fauske"],
+    "age": [null, null],
+    "mother": "270",
+    "father": "269",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "275",
+    "name": ["Bendik", "Andersson", "Heggheim"],
+    "age": [null, "1791"],
+    "mother": {},
+    "father": {},
+    "spouse": "276",
+    "notes": "Haldt bruk nr. 1 Flekke 1764–1783"
+  },
+  {
+    "id": "276",
+    "name": ["Regina", "Paulsdatter", ""],
+    "age": [null, "1780"],
+    "mother": {},
+    "father": {},
+    "spouse": "275",
+    "notes": ""
+  },
+  {
+    "id": "277",
+    "name": ["Anna", "Bendiksdatter", ""],
+    "age": ["1756", null],
+    "mother": "276",
+    "father": "275",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "278",
+    "name": ["Pernille", "Bendiksdatter", "Flekke"],
+    "age": ["1758", null],
+    "mother": "276",
+    "father": "275",
+    "spouse": "279",
+    "notes": "m. 1783 Tolleiv Madsson Flekke; flytte til Øvre Bjordal"
+  },
+  {
+    "id": "279",
+    "name": ["Tolleiv", "Madsson", "Flekke"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "278",
+    "notes": ""
+  },
+  {
+    "id": "280",
+    "name": ["Brite", "Bendiksdatter", ""],
+    "age": ["1761", "1801"],
+    "mother": "276",
+    "father": "275",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "281",
+    "name": ["Gjertrud", "Bendiksdatter", ""],
+    "age": ["1761", null],
+    "mother": "276",
+    "father": "275",
+    "spouse": "282",
+    "notes": "Tvilling; m. 1793 Ivar Olson Brendehaug"
+  },
+  {
+    "id": "282",
+    "name": ["Ivar", "Olson", "Brendehaug"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "281",
+    "notes": ""
+  },
+  {
+    "id": "283",
+    "name": ["Ingevald", "Bendikson", ""],
+    "age": ["1766", null],
+    "mother": "276",
+    "father": "275",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "284",
+    "name": ["Janikke", "Bendiksdatter", ""],
+    "age": ["1772", null],
+    "mother": "276",
+    "father": "275",
+    "spouse": "285",
+    "notes": "m. 1799 Hartvig Kolbeinson Haugsbakke"
+  },
+  {
+    "id": "285",
+    "name": ["Hartvig", "Kolbeinson", "Haugsbakke"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "284",
+    "notes": ""
+  },
+  {
+    "id": "286",
+    "name": ["Petrine", "", "Bjordal"],
+    "age": ["1816", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": {},
+    "notes": "d. ung"
+  },
+  {
+    "id": "287",
+    "name": ["Reinhard", "", "Bjordal"],
+    "age": ["1817", "1851"],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "288",
+    "name": ["Ingevald", "", "Bjordal"],
+    "age": ["1821", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "289",
+    "name": ["Anne", "", "Bjordal"],
+    "age": ["1824", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": "290",
+    "notes": "m. 1848 Nils Rasmusson Solheim, Leirpoll"
+  },
+  {
+    "id": "290",
+    "name": ["Nils", "Rasmusson", "Solheim"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "289",
+    "notes": "Leirpoll"
+  },
+  {
+    "id": "291",
+    "name": ["Anders", "", "Bjordal"],
+    "age": ["1827", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "292",
+    "name": ["Pernille", "", "Bjordal"],
+    "age": ["1831", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": "293",
+    "notes": "m. 1863 Hans Olson Guddal, husmann Hellebust"
+  },
+  {
+    "id": "293",
+    "name": ["Hans", "Olson", "Guddal"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "292",
+    "notes": "Husmann Hellebust"
+  },
+  {
+    "id": "294",
+    "name": ["Oline", "", "Bjordal"],
+    "age": ["1833", null],
+    "mother": "98c39470-7662-446f-a756-db062d769ece",
+    "father": "ae86263e-ab9e-469c-8939-abb43bb720cb",
+    "spouse": "295",
+    "notes": "m. 1865 Mons Axelson Lunde, Gaular"
+  },
+  {
+    "id": "295",
+    "name": ["Mons", "Axelson", "Lunde"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "294",
+    "notes": "Gaular"
+  },
+  {
+    "id": "296",
+    "name": ["Knut", "Monsson", "Huustvedt"],
+    "age": ["1876", null],
+    "mother": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "father": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "spouse": {},
+    "notes": "Ugift, til USA"
+  },
+  {
+    "id": "297",
+    "name": ["Gjertrud", "Monsdatter", "Huustvedt"],
+    "age": ["1882", "1884"],
+    "mother": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "father": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "298",
+    "name": ["Lars", "Monsson", "Huustvedt"],
+    "age": ["1888", null],
+    "mother": "192a7471-3f3a-4dc0-b33c-eff17b0bdcf2",
+    "father": "baa96673-b07a-4439-b3af-627683c27d5c",
+    "spouse": "299",
+    "notes": "Rektor Mo Landbruksskule"
+  },
+  {
+    "id": "299",
+    "name": ["Henriette", "Hansdatter", "Storaker"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "298",
+    "notes": ""
+  },
+  {
+    "id": "300",
+    "name": ["Mads", "Johannesson", "Sande"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "3ad5f2cf-1792-4429-bbc2-f3c299cb4282",
+    "notes": "Kjøpmann, Gaular"
+  },
+  {
+    "id": "301",
+    "name": ["Matias", "Østenson", "Flekke"],
+    "age": ["1867", null],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Prest, til USA"
+  },
+  {
+    "id": "302",
+    "name": ["Olivia", "Østenson", "Flekke"],
+    "age": ["1868", "1922"],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Ugift"
+  },
+  {
+    "id": "303",
+    "name": ["Theodor", "Østenson", "Flekke"],
+    "age": ["1870", null],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Ugift, til USA"
+  },
+  {
+    "id": "304",
+    "name": ["Lorents", "Østenson", "Flekke"],
+    "age": ["1872", null],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Ugift, til USA"
+  },
+  {
+    "id": "305",
+    "name": ["Ingebrikt", "Østenson", "Flekke"],
+    "age": ["1880", null],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Ugift, til USA"
+  },
+  {
+    "id": "306",
+    "name": ["Jørgina", "Østenson", "Flekke"],
+    "age": ["1882", "1965"],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": "Ugift, til USA; d. 1965 Flekke"
+  },
+  {
+    "id": "307",
+    "name": ["Magnus", "Østenson", "Flekke"],
+    "age": ["1888", "1890"],
+    "mother": "245",
+    "father": "244",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "308",
+    "name": ["Kornelius", "Finnson", "Hovland"],
+    "age": ["1803", null],
+    "mother": {},
+    "father": {},
+    "spouse": "309",
+    "notes": "Bonde Hovland; m. 1829 Marte Olsdatter Løseth, dotter Ole Hansson Myklebust"
+  },
+  {
+    "id": "309",
+    "name": ["Marte", "Olsdatter", "Løseth"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "308",
+    "notes": ""
+  },
+  {
+    "id": "310",
+    "name": ["Finn", "Korneliusson", "Hovland"],
+    "age": ["1831", "1927"],
+    "mother": "309",
+    "father": "308",
+    "spouse": "311",
+    "notes": "Bruk 211a Flekke; eigar frå 1884"
+  },
+  {
+    "id": "311",
+    "name": ["Helene", "Karstensdatter", "Kalhagen"],
+    "age": ["1835", "1906"],
+    "mother": {},
+    "father": {},
+    "spouse": "310",
+    "notes": ""
+  },
+  {
+    "id": "312",
+    "name": ["Janikke", "Finnsdatter", "Hovland"],
+    "age": ["1865", null],
+    "mother": "311",
+    "father": "310",
+    "spouse": {},
+    "notes": "m. Andreas Undal, Fana"
+  },
+  {
+    "id": "313",
+    "name": ["Marta", "Kristine Finnsdatter", "Hovland"],
+    "age": ["1867", "1966"],
+    "mother": "311",
+    "father": "310",
+    "spouse": {},
+    "notes": "Ugift"
+  },
+  {
+    "id": "314",
+    "name": ["Kornelius", "Finnson", "Flekke"],
+    "age": ["1870", "1932"],
+    "mother": "311",
+    "father": "310",
+    "spouse": "315",
+    "notes": "Fekk skøyte 1900"
+  },
+  {
+    "id": "315",
+    "name": ["Karen", "Andrea Monsdatter", ""],
+    "age": ["1879", "1906"],
+    "mother": {},
+    "father": {},
+    "spouse": "314",
+    "notes": ""
+  },
+  {
+    "id": "316",
+    "name": ["Johanne", "Finnsdatter", "Leirpoll"],
+    "age": ["1872", null],
+    "mother": "311",
+    "father": "310",
+    "spouse": "d2621745-93f2-4113-afca-fb3c58f7c9c8",
+    "notes": "m. Jeremias Klemetson Leirpoll"
+  },
+  {
+    "id": "317",
+    "name": ["Kristianne", "Finnsdatter", "Hovland"],
+    "age": ["1875", "1965"],
+    "mother": "311",
+    "father": "310",
+    "spouse": {},
+    "notes": "Ugift, d. 1965 Dale"
+  },
+  {
+    "id": "318",
+    "name": ["Nikoline", "Finnsdatter", "Hovland"],
+    "age": ["1877", "1969"],
+    "mother": "311",
+    "father": "310",
+    "spouse": {},
+    "notes": "Ugift"
+  },
+  {
+    "id": "319",
+    "name": ["Helene", "Jensdatter", "Buttedal"],
+    "age": ["1903", null],
+    "mother": {},
+    "father": {},
+    "spouse": "31a8f480-6964-4827-b050-e173c419b850",
+    "notes": ""
+  },
+  {
+    "id": "320",
+    "name": ["Johanna", "Judit", "Leirpoll"],
+    "age": ["1924", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. lagerarbeidar Henry Løvlien, Oslo"
+  },
+  {
+    "id": "321",
+    "name": ["Frida", "Nansy", "Leirpoll"],
+    "age": ["1928", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. fabrikkarbeidar Hans Johanson Arstein, Straumsnes"
+  },
+  {
+    "id": "322",
+    "name": ["Hjørdis", "", "Leirpoll"],
+    "age": ["1930", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. fabrikkarbeidar Jørgen Bendikson Brynestad, Bjerga"
+  },
+  {
+    "id": "323",
+    "name": ["Svanhild", "", "Leirpoll"],
+    "age": ["1932", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. bonde Ole Lasseson Mo, Lærdal"
+  },
+  {
+    "id": "324",
+    "name": ["Jatgeir", "", "Leirpoll"],
+    "age": ["1935", "1968"],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "Tømmermann; m. Signe Knappskauen/Solør"
+  },
+  {
+    "id": "325",
+    "name": ["Kornelius", "", "Leirpoll"],
+    "age": ["1937", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "Anleggsarbeidar; m. Borghild Hambro, Ullnes/Valdres"
+  },
+  {
+    "id": "326",
+    "name": ["Karen", "", "Leirpoll"],
+    "age": ["1937", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. politimann Olav Seljesæter/Gildeskål, Røyken"
+  },
+  {
+    "id": "327",
+    "name": ["Hildur", "", "Leirpoll"],
+    "age": ["1944", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "m. bonde Annfinn Rivedal"
+  },
+  {
+    "id": "328",
+    "name": ["Finn", "", "Leirpoll"],
+    "age": ["1951", null],
+    "mother": "319",
+    "father": "31a8f480-6964-4827-b050-e173c419b850",
+    "spouse": {},
+    "notes": "Arbeidar; m. Åse Hobusek/Hamar, Brummundal"
+  },
+  {
+    "id": "329",
+    "name": ["Godtfred", "Sigurdson", "Hovland"],
+    "age": ["1927", null],
+    "mother": "221",
+    "father": "220",
+    "spouse": "330",
+    "notes": "Overingeniør Vegdirektoratet"
+  },
+  {
+    "id": "330",
+    "name": ["Berit", "Bjørnsdatter", "Wiker"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "329",
+    "notes": "Oslo"
+  },
+  {
+    "id": "331",
+    "name": ["Aud", "Sigurdsdatter", "Hovland"],
+    "age": ["1938", null],
+    "mother": "221",
+    "father": "220",
+    "spouse": "332",
+    "notes": ""
+  },
+  {
+    "id": "332",
+    "name": ["Oddleif", "Øyvindson", "Skarstein"],
+    "age": [null, null],
+    "mother": {},
+    "father": {},
+    "spouse": "331",
+    "notes": "Tannlege, Tertnes"
+  },
+  {
+    "id": "333",
+    "name": ["Atle", "", "Flekke"],
+    "age": ["1959", null],
+    "mother": "178",
+    "father": "177",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "334",
+    "name": ["Liv", "", "Flekke"],
+    "age": ["1961", null],
+    "mother": "178",
+    "father": "177",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "335",
+    "name": ["Sveinung", "", "Flekke"],
+    "age": ["1963", null],
+    "mother": "178",
+    "father": "177",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "336",
+    "name": ["Helge", "", "Flekke"],
+    "age": ["1966", null],
+    "mother": "178",
+    "father": "177",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "337",
+    "name": ["Asta", "May", "Flekke"],
+    "age": ["1972", null],
+    "mother": "178",
+    "father": "177",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "338",
+    "name": ["Anita", "", "Flekke"],
+    "age": ["1966", null],
+    "mother": "184",
+    "father": "183",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "339",
+    "name": ["Rune", "", "Flekke"],
+    "age": ["1967", null],
+    "mother": "184",
+    "father": "183",
+    "spouse": {},
+    "notes": ""
+  },
+  {
+    "id": "340",
+    "name": ["Bjørn", "Ole", "Flekke"],
+    "age": ["1970", null],
+    "mother": "184",
+    "father": "183",
+    "spouse": {},
+    "notes": ""
+  }
+]
